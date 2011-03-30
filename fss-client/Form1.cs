@@ -16,18 +16,52 @@ namespace fss_client
     public partial class Form_config : Form
     {
         private bool if_config_legal;
+        private Files files;
+        private FileSystemWatcher watcher;
 
         public Form_config()
         {
+            string server = "";
+            string path = "";
+
             InitializeComponent();
-            if (InitializeFunction())
+            if (LoadConfig())
             {
+                ReadSettings(ref server, ref path);
+                files = new Files(path);
+                InitializeMonitor(path);
             }
 
 
         }
 
-        private bool InitializeFunction()
+        private void InitializeMonitor(string path)
+        {
+            watcher = new FileSystemWatcher();
+
+            watcher.Path = path;
+
+            watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite
+               | NotifyFilters.FileName | NotifyFilters.DirectoryName;
+
+            watcher.Changed += new FileSystemEventHandler(OnChanged);
+            watcher.Created += new FileSystemEventHandler(OnChanged);
+            watcher.Deleted += new FileSystemEventHandler(OnChanged);
+            watcher.Renamed += new RenamedEventHandler(OnChanged);
+
+            watcher.EnableRaisingEvents = true;
+
+        }
+
+
+        private static void OnChanged(object source, FileSystemEventArgs e)
+        {
+            MessageBox.Show(@"FUCK " + "File: " + e.FullPath + " " + e.ChangeType ,
+                    "Path Invalid", MessageBoxButtons.OK);
+        }
+
+
+        private bool LoadConfig()
         {
             int flag = 0;
             if (!File.Exists("fss.conf"))
@@ -71,7 +105,7 @@ namespace fss_client
                     IPHostEntry iphost = Dns.GetHostEntry(server);
                     flag++;
                 }
-                catch (Exception e)
+                catch (Exception )
                 {
                     flag--;
                     this.Text = "FSS - Server address \"" + server +"\" is not available !";
@@ -195,7 +229,7 @@ namespace fss_client
         private void button_ok_Click(object sender, EventArgs e)
         {
             this.SaveSettings(this.textBox_server.Text, this.textBox_path.Text);
-            if (InitializeFunction())
+            if (LoadConfig())
                  this.disappear();
 
             //if (!Directory.Exists(this.textBox_path.Text))
