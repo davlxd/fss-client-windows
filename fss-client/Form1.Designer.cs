@@ -87,6 +87,7 @@
             this.button_ok.TabIndex = 4;
             this.button_ok.Text = "OK";
             this.button_ok.UseVisualStyleBackColor = true;
+            this.button_ok.Click += new System.EventHandler(this.button_ok_Click);
             // 
             // button_cancel
             // 
@@ -96,6 +97,7 @@
             this.button_cancel.TabIndex = 5;
             this.button_cancel.Text = "Cancel";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // notifyIcon_tray
             // 
@@ -103,6 +105,7 @@
             this.notifyIcon_tray.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon_tray.Icon")));
             this.notifyIcon_tray.Text = "FSS";
             this.notifyIcon_tray.Visible = true;
+            this.notifyIcon_tray.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_tray_MouseDoubleClick);
             // 
             // contextMenuStrip_tray
             // 
@@ -111,7 +114,7 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.contextMenuStrip_tray.Name = "contextMenuStrip_tray";
-            this.contextMenuStrip_tray.Size = new System.Drawing.Size(153, 76);
+            this.contextMenuStrip_tray.Size = new System.Drawing.Size(145, 54);
             this.contextMenuStrip_tray.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_tray_Opening);
             // 
             // preferencesToolStripMenuItem
