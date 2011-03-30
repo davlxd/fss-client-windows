@@ -1,0 +1,9 @@
+D:\fss\fss-client\fss-client\bin\Debug\fss-client.exe
+D:\fss\fss-client\fss-client\bin\Debug\fss-client.pdb
+D:\fss\fss-client\fss-client\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\fss\fss-client\fss-client\obj\x86\Debug\fss_client.Properties.Resources.resources
+D:\fss\fss-client\fss-client\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\fss\fss-client\fss-client\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\fss\fss-client\fss-client\obj\x86\Debug\fss-client.exe
+D:\fss\fss-client\fss-client\obj\x86\Debug\fss-client.pdb
+D:\fss\fss-client\fss-client\obj\x86\Debug\fss_client.Form_config.resources
