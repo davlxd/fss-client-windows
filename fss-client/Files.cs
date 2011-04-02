@@ -37,6 +37,8 @@ namespace fss_client
 
         public bool if_to_skip(string fullpath)
         {
+            if (!File.Exists(fullpath) && !Directory.Exists(fullpath))
+                return true;
             FileAttributes attr = File.GetAttributes(fullpath);
             if ((attr & FileAttributes.Hidden) == FileAttributes.Hidden)
                 return true;

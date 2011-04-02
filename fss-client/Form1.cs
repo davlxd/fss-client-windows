@@ -41,6 +41,8 @@ namespace fss_client
 
             watcher.Path = path;
 
+            // BUG fixed
+            watcher.IncludeSubdirectories = true;
             watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite
                | NotifyFilters.FileName | NotifyFilters.DirectoryName;
 
@@ -60,8 +62,8 @@ namespace fss_client
                 return;
 
             files.update_files();
-            MessageBox.Show(@"FUCK " + "File: " + e.FullPath + " " + e.ChangeType ,
-                    "Path Invalid", MessageBoxButtons.OK);
+            //MessageBox.Show(@"FUCK " + "File: " + e.FullPath + " " + e.ChangeType ,
+                   // "Path Invalid", MessageBoxButtons.OK);
         }
 
 
