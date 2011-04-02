@@ -16,7 +16,7 @@ namespace fss_client
     public partial class Form_config : Form
     {
         private bool if_config_legal;
-        private Files files;
+        private fss_client.Files files;
         private FileSystemWatcher watcher;
 
         public Form_config()
@@ -54,8 +54,12 @@ namespace fss_client
         }
 
 
-        private static void OnChanged(object source, FileSystemEventArgs e)
+        private void OnChanged(object source, FileSystemEventArgs e)
         {
+            if (files.if_to_skip(e.FullPath))
+                return;
+
+            files.update_files();
             MessageBox.Show(@"FUCK " + "File: " + e.FullPath + " " + e.ChangeType ,
                     "Path Invalid", MessageBoxButtons.OK);
         }
