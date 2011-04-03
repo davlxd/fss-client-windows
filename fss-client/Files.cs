@@ -17,35 +17,42 @@ namespace fss_client
         private string finfo_fss_path;
         private string sha1_fss_path;
         private string temp_sha1_fss_path;
+        private string remote_sha1_fss_path;
 
         private Sha1 sha1;
+        private fss_client.Net net;
 
         private Ftw ftw;
 
-        public Files()
+        public Files(string path, fss_client.Net net)
         {
             sha1 = new Sha1();
 
-        }
-        public Files(string path)
-        {
-            sha1 = new Sha1();
+            this.net = net;
 
             this.global_root_path = path;
             this.fss_dir_path = Path.Combine(path, ".fss");
             this.finfo_fss_path = Path.Combine(this.fss_dir_path, "finfo.fss");
             this.sha1_fss_path = Path.Combine(this.fss_dir_path, "sha1.fss");
+            this.remote_sha1_fss_path = Path.Combine(this.fss_dir_path, "remote.sha1.fss");
             this.temp_sha1_fss_path = Path.Combine(this.fss_dir_path, "temp.sha1.fss");
 
         }
 
-        public void set_path(string path)
+        public void receive_sha1_fss(long size)
         {
-            this.global_root_path = path;
-            this.fss_dir_path = Path.Combine(path, ".fss");
-            this.finfo_fss_path = Path.Combine(this.fss_dir_path, "finfo.fss");
-            this.sha1_fss_path = Path.Combine(this.fss_dir_path, "sha1.fss");
-            this.temp_sha1_fss_path = Path.Combine(this.fss_dir_path, "temp.sha1.fss");
+            this.receive_file(this.remote_sha1_fss_path, size);
+        }
+        public void receive_file(string path, long size)
+        {
+            net.receive_file(path, size);
+        }
+
+        public long sha1_fss_mtime()
+        {
+            FileInfo fi = new FileInfo(this.sha1_fss_path);
+            return fi.LastWriteTime.Ticks;
+
         }
 
         public bool if_to_skip(string fullpath)

@@ -16,16 +16,16 @@ namespace fss_client
     public partial class Form_config : Form
     {
         private bool if_config_legal;
-        private fss_client.Files files;
-        private FileSystemWatcher watcher;
+        
+       
         private fss_client.Net net = null;
         private fss_client.Protocol protocol;
 
-        private bool LOCK;
+        
 
         public Form_config()
         {
-            LOCK = true;
+            
 
             InitializeComponent();
             if (LoadConfig())
@@ -37,16 +37,10 @@ namespace fss_client
 
         private void restart()
         {
-            LOCK = true;
             string server = string.Empty;
             string path = string.Empty;
 
             ReadSettings(ref server, ref path);
-
-            files = null;
-            files = new Files(path);
-
-            InitializeMonitor(path);
 
             if (net != null)
                 net.disconnect();
@@ -62,46 +56,16 @@ namespace fss_client
                 this.Text = "FSS - Cannot connect to server \"" + server + "\" !";
                 if_config_legal = false;
                 this.appear();
+                return;
             }
 
             protocol = null;
-            protocol = new fss_client.Protocol();
+            protocol = new fss_client.Protocol(server, path, net);
+            protocol.init();
 
         }
 
-        private void InitializeMonitor(string path)
-        {
-            watcher = new FileSystemWatcher();
-
-            watcher.Path = path;
-
-            // BUG fixed
-            watcher.IncludeSubdirectories = true;
-            watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite
-               | NotifyFilters.FileName | NotifyFilters.DirectoryName;
-
-            watcher.Changed += new FileSystemEventHandler(OnChanged);
-            watcher.Created += new FileSystemEventHandler(OnChanged);
-            watcher.Deleted += new FileSystemEventHandler(OnChanged);
-            watcher.Renamed += new RenamedEventHandler(OnChanged);
-
-            watcher.EnableRaisingEvents = true;
-
-        }
-
-
-        private void OnChanged(object source, FileSystemEventArgs e)
-        {
-            if (LOCK)
-                return;
-
-            if (files.if_to_skip(e.FullPath))
-                return;
-
-            files.update_files();
-            //MessageBox.Show(@"FUCK " + "File: " + e.FullPath + " " + e.ChangeType ,
-                   // "Path Invalid", MessageBoxButtons.OK);
-        }
+        
 
 
         private bool LoadConfig()
