@@ -18,20 +18,54 @@ namespace fss_client
         private bool if_config_legal;
         private fss_client.Files files;
         private FileSystemWatcher watcher;
+        private fss_client.Net net = null;
+        private fss_client.Protocol protocol;
+
+        private bool LOCK;
 
         public Form_config()
         {
-            string server = "";
-            string path = "";
+            LOCK = true;
 
             InitializeComponent();
             if (LoadConfig())
             {
-                ReadSettings(ref server, ref path);
-                files = new Files(path);
-                InitializeMonitor(path);
+                restart();
             }
 
+        }
+
+        private void restart()
+        {
+            LOCK = true;
+            string server = string.Empty;
+            string path = string.Empty;
+
+            ReadSettings(ref server, ref path);
+
+            files = null;
+            files = new Files(path);
+
+            InitializeMonitor(path);
+
+            if (net != null)
+                net.disconnect();
+
+            net = null;
+            net = new Net(server);
+            try
+            {
+                net.connect();
+            }
+            catch (Exception)
+            {
+                this.Text = "FSS - Cannot connect to server \"" + server + "\" !";
+                if_config_legal = false;
+                this.appear();
+            }
+
+            protocol = null;
+            protocol = new fss_client.Protocol();
 
         }
 
@@ -58,6 +92,9 @@ namespace fss_client
 
         private void OnChanged(object source, FileSystemEventArgs e)
         {
+            if (LOCK)
+                return;
+
             if (files.if_to_skip(e.FullPath))
                 return;
 
@@ -236,7 +273,10 @@ namespace fss_client
         {
             this.SaveSettings(this.textBox_server.Text, this.textBox_path.Text);
             if (LoadConfig())
-                 this.disappear();
+            {
+                this.disappear();
+                this.restart();
+            }
 
             //if (!Directory.Exists(this.textBox_path.Text))
             //{

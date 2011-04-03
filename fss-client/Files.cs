@@ -22,6 +22,11 @@ namespace fss_client
 
         private Ftw ftw;
 
+        public Files()
+        {
+            sha1 = new Sha1();
+
+        }
         public Files(string path)
         {
             sha1 = new Sha1();
@@ -31,8 +36,16 @@ namespace fss_client
             this.finfo_fss_path = Path.Combine(this.fss_dir_path, "finfo.fss");
             this.sha1_fss_path = Path.Combine(this.fss_dir_path, "sha1.fss");
             this.temp_sha1_fss_path = Path.Combine(this.fss_dir_path, "temp.sha1.fss");
-            this.update_files();
 
+        }
+
+        public void set_path(string path)
+        {
+            this.global_root_path = path;
+            this.fss_dir_path = Path.Combine(path, ".fss");
+            this.finfo_fss_path = Path.Combine(this.fss_dir_path, "finfo.fss");
+            this.sha1_fss_path = Path.Combine(this.fss_dir_path, "sha1.fss");
+            this.temp_sha1_fss_path = Path.Combine(this.fss_dir_path, "temp.sha1.fss");
         }
 
         public bool if_to_skip(string fullpath)
