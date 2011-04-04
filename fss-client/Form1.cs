@@ -47,6 +47,10 @@ namespace fss_client
 
             net = null;
             net = new Net(server);
+
+            protocol = null;
+            protocol = new fss_client.Protocol(server, path, net);
+
             try
             {
                 net.connect();
@@ -59,9 +63,8 @@ namespace fss_client
                 return;
             }
 
-            protocol = null;
-            protocol = new fss_client.Protocol(server, path, net);
-            protocol.init();
+            
+            //protocol.init();
 
         }
 

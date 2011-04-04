@@ -63,7 +63,6 @@ namespace fss_client
             //return BitConverter.ToString(digest);
             return digest_str0;
 
-
         }
 
         // calculate normal sha1 digest

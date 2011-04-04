@@ -39,13 +39,15 @@ namespace fss_client
 
         }
 
-        public void receive_sha1_fss(long size)
+        public bool receive_sha1_fss(ref long size, IAsyncResult ar)
         {
-            this.receive_file(this.remote_sha1_fss_path, size);
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In recieve_sha1_fss of Files.cs");
+            return this.receive_file(this.remote_sha1_fss_path, ref size, ar);
         }
-        public void receive_file(string path, long size)
+        public bool receive_file(string path, ref long size, IAsyncResult ar)
         {
-            net.receive_file(path, size);
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In receive_file of Files.cs");
+            return net.receive_file(path, ref size, ar);
         }
 
         public long sha1_fss_mtime()
@@ -53,6 +55,12 @@ namespace fss_client
             FileInfo fi = new FileInfo(this.sha1_fss_path);
             return fi.LastWriteTime.Ticks;
 
+        }
+
+        public void remove_specific_file(string relapath)
+        {
+            if (File.Exists(Path.Combine(this.global_root_path, relapath)))
+                File.Delete(Path.Combine(this.global_root_path, relapath));
         }
 
         public bool if_to_skip(string fullpath)
