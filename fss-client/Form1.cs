@@ -74,6 +74,10 @@ namespace fss_client
             t1 = null;
             t1 = new Thread(ThreadMain);
             t1.Start();
+            
+
+            //if (!t1.IsAlive)
+                //Application.Exit();
         }
 
         public void ThreadMain()
@@ -153,7 +157,7 @@ namespace fss_client
 
         private void SaveSettings(string server, string path)
         {
-            XmlTextWriter writer = new XmlTextWriter("fss.conf", Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter("fss.conf", Encoding.Default);
             writer.WriteStartDocument();
             writer.WriteStartElement("Settings");
 
@@ -243,11 +247,17 @@ namespace fss_client
                 e.Cancel = true;
             }
             else
+            {
+                if (t1.IsAlive)
+                    t1.Abort();
                 Application.Exit();
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (t1.IsAlive)
+                t1.Abort();
             Application.Exit();
         }
 
@@ -286,7 +296,11 @@ namespace fss_client
             if (this.if_config_legal)
                 this.disappear();
             else
+            {
+                if (t1.IsAlive)
+                    t1.Abort();
                 Application.Exit();
+            }
         }
 
         private void notifyIcon_tray_MouseDoubleClick(object sender, MouseEventArgs e)

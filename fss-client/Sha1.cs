@@ -10,15 +10,11 @@ namespace fss_client
 {
     class Sha1
     {
-        private SHA1CryptoServiceProvider provider;
-        public Sha1()
-        {
-            provider = new SHA1CryptoServiceProvider();
-        }
 
         // unique algorithm sha1 digest for fss
-        public string sha1_file_via_fname_fss(string rootpath, string fullname)
+        public static string sha1_file_via_fname_fss(string rootpath, string fullname)
         {
+            SHA1CryptoServiceProvider provider = new SHA1CryptoServiceProvider();
             byte[] digest;
             string digest_str0, digest_str1;
 
@@ -66,10 +62,12 @@ namespace fss_client
         }
 
         // calculate normal sha1 digest
-        public string sha1_file_via_fname(string fullname)
+        public static string sha1_file_via_fname(string fullname)
         {
+            SHA1CryptoServiceProvider provider = new SHA1CryptoServiceProvider();
             byte[] digest;
-            FileStream fs = new FileStream(fullname, FileMode.Open, FileAccess.Read, FileShare.None);
+
+            FileStream fs = new FileStream(fullname, FileMode.Open, FileAccess.Read);
             digest = provider.ComputeHash(fs);
             fs.Close();
 

@@ -15,6 +15,11 @@ namespace fss_client
 
             try
             {
+                if (File.Exists(fout0))
+                    File.Delete(fout0);
+                if(File.Exists(fout1))
+                    File.Delete(fout1);
+
                 FileStream f_in_0 = new FileStream(fin0, FileMode.Open, FileAccess.Read);
                 FileStream f_in_1 = new FileStream(fin1, FileMode.Open, FileAccess.Read);
                 FileStream f_out_0 = new FileStream(fout0, FileMode.Create, FileAccess.Write);
@@ -111,6 +116,9 @@ namespace fss_client
         // get_line via fs's internal position
         public static string get_line(FileStream fs)
         {
+            if (fs.Position == fs.Length)
+                return string.Empty;
+
             byte[] record = new byte[Net.MAX_PATH_LEN];
             int c;
             int count = 0;
@@ -123,7 +131,7 @@ namespace fss_client
 
                 c = fs.ReadByte();
             }
-            return Encoding.UTF8.GetString(record, 0, count);
+            return Encoding.Default.GetString(record, 0, count);
 
         }
 
@@ -134,7 +142,10 @@ namespace fss_client
             try
             {
                 FileStream fs = new FileStream(fullpath, FileMode.Open, FileAccess.Read);
-                return get_line_via_linenum(fs, linenum);
+                string record =  get_line_via_linenum(fs, linenum);
+                fs.Close();
+                return record;
+                     
             }
             catch (Exception e)
             {
@@ -146,7 +157,7 @@ namespace fss_client
 
         public static string get_line_via_linenum(FileStream fs, int linenum)
         {
-            if (linenum > fs.Length)
+            if (fs.Position == fs.Length || linenum > fs.Length)
                 return string.Empty;
 
             int c = 0;
@@ -185,7 +196,7 @@ namespace fss_client
         private static void write_line_num(int num, FileStream fs)
         {
             string num_str = Convert.ToString(num);
-            byte[] num_byte = Encoding.UTF8.GetBytes(num_str);
+            byte[] num_byte = Encoding.Default.GetBytes(num_str);
             fs.Write(num_byte, 0, num_byte.Length);
             fs.WriteByte((byte)'\n');
 

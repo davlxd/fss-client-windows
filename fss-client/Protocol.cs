@@ -40,7 +40,7 @@ namespace fss_client
         private long req_sz;
 
         // lock for filesystemwather
-        private bool LOCK;
+        volatile private bool LOCK;
 
         private FileSystemWatcher watcher;
         private fss_client.Files files;
@@ -83,93 +83,49 @@ namespace fss_client
         }
         private void OnChanged(object source, FileSystemEventArgs e)
         {
+            int rv, rvv;
+
             if (files.if_to_skip(e.FullPath))
                 return;
 
             Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In Onchanged(), " + e.FullPath);
-            Log.logon(files.sha1_fss_mtime().ToString());
             if (LOCK)
                 return;
 
             files.update_files();
+            rv = files.generate_diffs();
+
+            Log.logon("updated and genearted");
+
+            if(rv == Files.DIFF_BOTH_UNIQ || rv == Files.DIFF_LOCAL_UNIQ)
+            {
+                LOCK = true;
+                rvv = files.send_entryinfo_or_reqsha1info(true, FILE_INFO, DIR_INFO,
+                    CLI_REQ_SHA1_FSS_INFO);
+
+                if (rvv == Files.PREFIX0_SENT)
+                    status = WAIT_MSG_SER_REQ_FILE;
+
+                else if (rvv == Files.PREFIX1_SENT)
+                    status = WAIT_MSG_SER_RECEIVED;
+
+                else if (rvv == Files.PREFIX2_SENT)
+                    status = WAIT_SHA1_FSS_INFO;
+            }
+            else if (rv == Files.DIFF_REMOTE_UNIQ)
+            {
+                LOCK = true;
+
+                files.send_del_index_info(DEL_IDX_INFO);
+                status = WAIT_MSG_SER_REQ_DEL_IDX;
+
+            }
+
             //System.Windows.Forms.MessageBox.Show(@"FUCK " + "File: " + e.FullPath + " " + e.ChangeType,
              //"Path Invalid", System.Windows.Forms.MessageBoxButtons.OK);
         }
 
 
-        public bool recieve_line_or_file(ref string relapath, ref long size)
-        {
-            switch (status)
-            {
-
-                case WAIT_SHA1_FSS_INFO:
-                    return true;
-
-                case WAIT_SHA1_FSS:
-
-                    // TODO: Attention: capsulatoin is been corrupted here
-                    relapath = "remote.sha1.fss";
-                    size = this.req_sz;
-                    return false;
-
-                case WAIT_FILE:
-                    relapath = this.rela_name;
-                    size = this.req_sz;
-                    return false;
-
-                case WAIT_MSG_SER_REQ_FILE:
-                    return true;
-
-                case WAIT_MSG_SER_RECEIVED:
-                    return true;
-
-                case WAIT_MSG_SER_REQ_DEL_IDX:
-                    return true;
-
-            }
-
-            return true;
-
-        }
-
-
-        
-
-        //public void ReceiveCallBack(IAsyncResult ar)
-        //{
-        //    while (true)
-        //    {
-        //        switch (status)
-        //        {
-
-        //            case WAIT_SHA1_FSS_INFO:
-        //                status_WAIT_SHA1_FSS_INFO(ar);
-        //                break;
-
-        //            case WAIT_SHA1_FSS:
-        //                status_WAIT_SHA1_FSS(ar);
-        //                break;
-
-        //            case WAIT_FILE:
-        //                status_WAIT_FILE(ar);
-        //                break;
-
-        //            case WAIT_MSG_SER_REQ_FILE:
-        //                status_WAIT_MSG_SER_REQ_FILE(ar);
-        //                break;
-
-        //            case WAIT_MSG_SER_RECEIVED:
-        //                status_WAIT_MSG_SER_RECEIVED(ar);
-        //                break;
-
-        //            case WAIT_MSG_SER_REQ_DEL_IDX:
-        //                status_WAIT_MSG_SER_REQ_DEL_IDX(ar);
-        //                break;
-
-        //        } // end switch()
-
-        //    }
-        //}
 
         public void init()
         {
@@ -279,20 +235,22 @@ namespace fss_client
                 Log.logon("sha1_fss_mtime(): " + files.sha1_fss_mtime());
                 if (mtime <= files.sha1_fss_mtime())
                 {
-                    if (rv == 0 || rv == 3)
+                    if (rv == Files.DIFF_BOTH_UNIQ || rv == Files.DIFF_LOCAL_UNIQ)
                     {
                         rvv = files.send_entryinfo_or_reqsha1info(
                             true, FILE_INFO, DIR_INFO, CLI_REQ_SHA1_FSS_INFO);
 
-                        if (rvv == 0)
+                        if (rvv == Files.PREFIX0_SENT)
                             status = WAIT_MSG_SER_REQ_FILE;
-                        else if (rvv == 2)
+
+                        else if (rvv == Files.PREFIX1_SENT)
                             status = WAIT_MSG_SER_RECEIVED;
-                        else if (rvv == 3)
+
+                        else if (rvv == Files.PREFIX2_SENT)
                             status = WAIT_SHA1_FSS_INFO;
 
                     }
-                    else if (rv == 3)
+                    else if (rv == Files.DIFF_IDENTICAL)
                     {
                         if (mtime == 1)
                         {
@@ -307,7 +265,7 @@ namespace fss_client
                         LOCK = false;
 
                     }
-                    else if (rv == 4)
+                    else if (rv == Files.DIFF_REMOTE_UNIQ)
                     {
                         files.send_del_index_info(DEL_IDX_INFO);
                         status = WAIT_MSG_SER_REQ_DEL_IDX;
@@ -317,12 +275,12 @@ namespace fss_client
                 }
                 else // remote.sha1.fss is nower
                 {
-                    if (rv == 0 || rv == 4)
+                    if (rv == Files.DIFF_BOTH_UNIQ || rv == Files.DIFF_REMOTE_UNIQ)
                     {
                         files.send_linenum_or_done(true, LINE_NUM, DONE);
                         status = WAIT_ENTRY_INFO;
                     }
-                    else if (rv == 2)
+                    else if (rv == Files.DIFF_IDENTICAL)
                     {
                         net.send_msg(DONE);
 
@@ -330,7 +288,7 @@ namespace fss_client
                         status = WAIT_SHA1_FSS_INFO;
 
                     }
-                    else if (rv == 3)
+                    else if (rv == Files.DIFF_LOCAL_UNIQ)
                     {
                         files.remove_files();
                         files.update_files();
@@ -425,18 +383,20 @@ namespace fss_client
 
                     rvv = files.generate_diffs();
 
-                    if (rvv == 0 || rvv == 4)
+                    if (rvv == Files.DIFF_BOTH_UNIQ || rvv == Files.DIFF_REMOTE_UNIQ)
                     {
                         rvvv = files.send_entryinfo_or_reqsha1info(true, FILE_INFO, DIR_INFO, CLI_REQ_SHA1_FSS_INFO);
 
-                        if (rvvv == 0)
+                        if (rvvv == Files.PREFIX0_SENT)
                             status = WAIT_MSG_SER_REQ_FILE;
-                        else if (rvvv == 2)
+
+                        else if (rvvv == Files.PREFIX1_SENT)
                             status = WAIT_MSG_SER_RECEIVED;
-                        else if (rvvv == 3)
+
+                        else if (rvvv == Files.PREFIX2_SENT)
                             status = WAIT_SHA1_FSS_INFO;
                     }
-                    else if (rvv == 3 || rvv == 2)
+                    else if (rvv == Files.DIFF_LOCAL_UNIQ || rvv == Files.DIFF_IDENTICAL)
                     {
                         if (rvv == 3)
                         {
@@ -496,11 +456,13 @@ namespace fss_client
                 {
                     rv = files.send_entryinfo_or_reqsha1info(false, FILE_INFO, DIR_INFO, CLI_REQ_SHA1_FSS_INFO);
 
-                    if (rv == 0)
+                    if (rv == Files.PREFIX0_SENT)
                         status = WAIT_MSG_SER_REQ_FILE;
-                    else if (rv == 2)
+
+                    else if (rv == Files.PREFIX1_SENT)
                         status = WAIT_MSG_SER_RECEIVED;
-                    else if (rv == 3)
+
+                    else if (rv == Files.PREFIX2_SENT)
                         status = WAIT_SHA1_FSS_INFO;
                 }
                 else
@@ -527,7 +489,7 @@ namespace fss_client
                 {
                     files.send_del_index();
 
-                    status = WAIT_SHA1_FSS;
+                    status = WAIT_SHA1_FSS_INFO;
 
                 }
                 else

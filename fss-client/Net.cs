@@ -7,6 +7,7 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace fss_client
 {
@@ -68,6 +69,21 @@ namespace fss_client
 
                 byte[] receiveBytes = new byte[MAX_PATH_LEN];
                 int numBytes = sock.Receive(receiveBytes);
+
+                if (numBytes == 0)
+                {
+                    Log.logon("Server crashed");
+                    if (DialogResult.OK == 
+                        MessageBox.Show("Server Down, click OK to quit.", "Warning",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning,
+                            MessageBoxDefaultButton.Button1))
+                    {
+                        Application.Exit();
+                        Thread.CurrentThread.Abort();
+                    }
+
+                }
 
                 // TODO: Attention: Code problem:
                 Log.logon("Received " + Encoding.ASCII.GetString(receiveBytes, 0, numBytes));

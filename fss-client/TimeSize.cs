@@ -11,11 +11,7 @@ namespace fss_client
     {
         public static long entry_mtime(string fullpath)
         {
-            Log.logon("In entry_mtime, fullpath is --" + fullpath + "--");
-            byte[] temp = Encoding.UTF8.GetBytes(fullpath);
-            fullpath = Encoding.Default.GetString(temp);
-            Log.logon("come again: --" + fullpath + "--");
-            fullpath = Encoding.Unicode.GetString(temp);
+
             FileInfo fi = new FileInfo(fullpath);
             return UNIX_ticks(fi.LastWriteTime);
         }

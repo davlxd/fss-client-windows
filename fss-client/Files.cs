@@ -12,6 +12,13 @@ namespace fss_client
 
     class Files
     {
+
+        public static int PREFIX0_SENT = 0;
+        public static int PREFIX1_SENT = 1;
+        public static int PREFIX2_SENT = 2;
+        public static int PREFIX3_SENT = 3;
+
+
         private string global_root_path;
         private string fss_dir_path;
         private string finfo_fss_path;
@@ -27,15 +34,12 @@ namespace fss_client
         private int linenum_to_send;
         private long size_to_send;
 
-        private Sha1 sha1;
         private fss_client.Net net;
 
         private Ftw ftw;
 
         public Files(string path, fss_client.Net net)
         {
-            sha1 = new Sha1();
-
             this.net = net;
             if(path[path.Length-1] == '\\')
                 this.global_root_path =  path.Substring(0, path.Length-1);
@@ -82,33 +86,53 @@ namespace fss_client
 
         public void update_files()
         {
-            if (!Directory.Exists(this.fss_dir_path))
+            try
             {
-                DirectoryInfo di = Directory.CreateDirectory(Path.Combine(this.global_root_path, ".fss"));
-                di.Attributes = FileAttributes.Directory | FileAttributes.Hidden;
-            }
-            if (File.Exists(this.finfo_fss_path))
-                File.Delete(this.finfo_fss_path);
-
-            if (File.Exists(this.temp_sha1_fss_path))
-                File.Delete(this.temp_sha1_fss_path);
-                
-
-            Fn fn = new Fn(this.write_in); // Instantiate delagate, register function
-            ftw = new Ftw(fn, this.global_root_path);  // Instaiate traverse functio
-
-            if (!File.Exists(this.sha1_fss_path))
-                File.Move(this.temp_sha1_fss_path, this.sha1_fss_path);
-            else
-            {
-                if (sha1.sha1_file_via_fname(this.sha1_fss_path) ==
-                    sha1.sha1_file_via_fname(this.temp_sha1_fss_path))
-                    File.Delete(this.temp_sha1_fss_path);
-                else
+                if (!Directory.Exists(this.fss_dir_path))
                 {
-                    File.Delete(this.sha1_fss_path);
+                    DirectoryInfo di = Directory.CreateDirectory(Path.Combine(this.global_root_path, ".fss"));
+                    di.Attributes = FileAttributes.Directory | FileAttributes.Hidden;
+                }
+                if (File.Exists(this.finfo_fss_path))
+                    File.Delete(this.finfo_fss_path);
+
+                if (File.Exists(this.temp_sha1_fss_path))
+                    File.Delete(this.temp_sha1_fss_path);
+
+
+                Fn fn = new Fn(this.write_in); // Instantiate delagate, register function
+                ftw = new Ftw(fn, this.global_root_path);  // Instaiate traverse functio
+
+                // if dir is empty
+                if (!File.Exists(this.temp_sha1_fss_path))
+                {
+                    FileStream fs = new FileStream(this.temp_sha1_fss_path, FileMode.Create, FileAccess.Write);
+                    fs.Close();
+                    //File.Create(this.temp_sha1_fss_path);
+                }
+
+
+
+                if (!File.Exists(this.sha1_fss_path))
+                {
                     File.Move(this.temp_sha1_fss_path, this.sha1_fss_path);
                 }
+                else
+                {
+                    // if filesys not changed, we don't modify sha1.fss
+                    if (Sha1.sha1_file_via_fname(this.sha1_fss_path) ==
+                        Sha1.sha1_file_via_fname(this.temp_sha1_fss_path))
+                        File.Delete(this.temp_sha1_fss_path);
+                    else
+                    {
+                        File.Delete(this.sha1_fss_path);
+                        File.Move(this.temp_sha1_fss_path, this.sha1_fss_path);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Log.logon(e.ToString());
             }
             
         }
@@ -118,11 +142,11 @@ namespace fss_client
         {
             if (if_to_skip(fullpath))
                 return;
-            File.AppendAllText(this.finfo_fss_path, fullpath, Encoding.UTF8);
+            File.AppendAllText(this.finfo_fss_path, fullpath, Encoding.Default);
             File.AppendAllText(this.finfo_fss_path, "\n");
 
 
-            File.AppendAllText(this.temp_sha1_fss_path, sha1.sha1_file_via_fname_fss(global_root_path, fullpath));
+            File.AppendAllText(this.temp_sha1_fss_path, Sha1.sha1_file_via_fname_fss(global_root_path, fullpath));
             File.AppendAllText(this.temp_sha1_fss_path, "\n");
 
         }
@@ -171,82 +195,82 @@ namespace fss_client
         // return 3: no unique records in remote.sha1.fss, only in sha1.fss
         // return 4: no unique records in sha1.fss, only in remote.sha1.fss
         // return 0: both have unique records
+
+        public static int DIFF_BOTH_UNIQ = 0;
+        public static int DIFF_IDENTICAL = 2;
+        public static int DIFF_LOCAL_UNIQ = 3;
+        public static int DIFF_REMOTE_UNIQ = 4;
+
         public int generate_diffs()
         {
-            if (string.Compare(sha1.sha1_file_via_fname(this.remote_sha1_fss_path),
-                                sha1.sha1_file_via_fname(this.sha1_fss_path)) == 0)
-                return 2;
+            long size0 = 0;
+            long size1 = 0;
+            try
+            {
+                if (File.Exists(this.diff_remote_index_path))
+                    File.Delete(this.diff_remote_index_path);
+                if (File.Exists(this.diff_local_index_path))
+                    File.Delete(this.diff_local_index_path);
 
-            Diff.diff(this.remote_sha1_fss_path, this.sha1_fss_path, this.diff_remote_index_path,
-                this.diff_local_index_path, string.Empty);
+                if (string.Compare(Sha1.sha1_file_via_fname(this.remote_sha1_fss_path),
+                                    Sha1.sha1_file_via_fname(this.sha1_fss_path)) == 0)
+                    return DIFF_IDENTICAL;
 
-            FileInfo fi0 = new FileInfo(this.diff_remote_index_path);
-            FileInfo fi1 = new FileInfo(this.diff_local_index_path);
+                Diff.diff(this.remote_sha1_fss_path, this.sha1_fss_path, this.diff_remote_index_path,
+                    this.diff_local_index_path, string.Empty);
 
-            long size0 = fi0.Length;
-            long size1 = fi1.Length;
+                FileInfo fi0 = new FileInfo(this.diff_remote_index_path);
+                FileInfo fi1 = new FileInfo(this.diff_local_index_path);
+
+                size0 = fi0.Length;
+                size1 = fi1.Length;
+
+            }
+            catch (Exception e)
+            {
+                Log.logon(e.ToString());
+            }
 
             if (size0 == 0 && size1 == 0)
-                return 2;
+                return DIFF_IDENTICAL;
+
             if (size0 == 0)
-                return 3;
+                return DIFF_LOCAL_UNIQ;
+
             if (size1 == 0)
-                return 4;
+                 return DIFF_REMOTE_UNIQ;
 
-
-            return 0;
+            return DIFF_BOTH_UNIQ;
+            
                 
 
         }
 
 
-        // return 1  -> error
-        // return 0  -> sent prefix0
-        // return 2  -> sent prefix1
-        // return 3  -> sent prefix2
-
         public int send_entryinfo_or_reqsha1info(bool ifinit, string prefix0,
             string prefix1, string prefix2)
         {
-            int rv;
-
             if (ifinit)
                 this.diff_local_index = new FileStream(this.diff_local_index_path, FileMode.Open, FileAccess.Read);
-
-            string record = Diff.get_line(this.diff_local_index);
-            this.linenum_to_send = Convert.ToInt32(record);
-
-            rv = send_entryinfo_via_linenum(linenum_to_send, prefix0, prefix1);
-
-            if (rv == 2)
-                return 2;
-
-            if (rv == 0)
-                return 0;
 
             if (this.diff_local_index.Position == this.diff_local_index.Length)
             {
                 net.send_msg(prefix2);
                 this.diff_local_index.Close();
                 this.linenum_to_send = -1;
-                return 3;
+                return PREFIX2_SENT;
             }
 
-            return 0;
+            string record = Diff.get_line(this.diff_local_index);
+            this.linenum_to_send = Convert.ToInt32(record);
+
+            return send_entryinfo_via_linenum(linenum_to_send, prefix0, prefix1);
         }
 
         public int send_entryinfo_via_linenum(int linenum, string prefix0, string prefix1)
         {
-            int rv;
-
             string record = Diff.get_line_via_linenum(this.finfo_fss_path, linenum);
-
-            rv = send_entryinfo(record, prefix0, prefix1);
-
-            if (rv == 2)
-                return 2;
-
-            return 0;
+            return send_entryinfo(record, prefix0, prefix1);
 
         }
 
@@ -265,12 +289,12 @@ namespace fss_client
                 if (Directory.Exists(record))
                 {
                     msg += prefix1;
-                    rv = 2;
+                    rv = PREFIX1_SENT;
                 }
                 else
                 {
                     msg += prefix0;
-                    rv = 0;
+                    rv = PREFIX0_SENT;
                 }
 
                 msg += get_rela_path(record);
