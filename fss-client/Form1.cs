@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Xml;
 using System.Net;
+using System.Threading;
 
 namespace fss_client
 {
@@ -20,6 +21,8 @@ namespace fss_client
        
         private fss_client.Net net = null;
         private fss_client.Protocol protocol;
+
+        Thread t1 = null;
 
         
 
@@ -37,6 +40,7 @@ namespace fss_client
 
         private void restart()
         {
+
             string server = string.Empty;
             string path = string.Empty;
 
@@ -50,6 +54,7 @@ namespace fss_client
 
             protocol = null;
             protocol = new fss_client.Protocol(server, path, net);
+            protocol.InitializeMonitor();
 
             try
             {
@@ -63,8 +68,18 @@ namespace fss_client
                 return;
             }
 
-            
-            //protocol.init();
+
+            if (t1 != null)
+                t1.Abort();
+            t1 = null;
+            t1 = new Thread(ThreadMain);
+            t1.Start();
+        }
+
+        public void ThreadMain()
+        {
+            protocol.init();
+            protocol.divination();
 
         }
 

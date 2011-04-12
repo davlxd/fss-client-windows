@@ -1,154 +1,62 @@
-2011/4/5 2:35:14   9 Connected to 204.74.216.120
-2011/4/5 2:35:14   10 In status_WAIT_SHA1_FSS_INFO
-2011/4/5 2:35:14   10 Received line H.fss/sha1.fss
+2011/4/6 19:20:42   9 Connected to 204.74.216.120
+2011/4/6 19:20:42   10 In status_WAIT_SHA1_FSS_INFO
+2011/4/6 19:20:42   10 In receive_line()
+2011/4/6 19:20:43   Received H.fss/sha1.fss
 1301838169
 779
-2011/4/5 2:35:14   10 IN send_msg sending A
-2011/4/5 2:35:14   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:14   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:14   10 In receive_file of Files.cs
-2011/4/5 2:35:14   10 In receive_file()  of Net.cs
-2011/4/5 2:35:14   10 System.InvalidOperationException: EndReceive can only be called once for each asynchronous operation.
-   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult, SocketError& errorCode)
-   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 184
-2011/4/5 2:35:14   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:14   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:14   10 In receive_file of Files.cs
-2011/4/5 2:35:14   10 In receive_file()  of Net.cs
-2011/4/5 2:35:14   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
+2011/4/6 19:20:43   10 Received line H.fss/sha1.fss
+1301838169
+779
+2011/4/6 19:20:43   10 IN send_msg sending A
+2011/4/6 19:20:43   10 IN status_WAIT_SHA1_FSS
+2011/4/6 19:20:43   10 In recieve_sha1_fss of Files.cs
+2011/4/6 19:20:43   10 In receive_file of Files.cs
+2011/4/6 19:20:43   In receive_file() of Net.cs, path is D:\csrf\.fss\remote.sha1.fssand size is 779
+2011/4/6 19:20:43   written to file
+2011/4/6 19:20:43   10 In analyse_sha1()
+2011/4/6 19:20:43   mtime is: 1301838169
+2011/4/6 19:20:43   In entry_mtime, fullpath is --D:\csrf\.fss\sha1.fss--
+2011/4/6 19:20:43   come again: --D:\csrf\.fss\sha1.fss--
+2011/4/6 19:20:43   sha1_fss_mtime(): -11644444800
+2011/4/6 19:20:43   In entry_mtime, fullpath is --D:\csrf\.fss\sha1.fss--
+2011/4/6 19:20:43   come again: --D:\csrf\.fss\sha1.fss--
+2011/4/6 19:20:43   10 IN send_msg sending I1
+2011/4/6 19:20:43   10 In status_WAIT_ENTRY_INFO
+2011/4/6 19:20:43   10 In receive_line()
+2011/4/6 19:20:43   Received Jlab/test-inotify.c
+1301413444
+1273
+2011/4/6 19:20:43   10 IN send_msg sending B
+2011/4/6 19:20:43   10 In status_WAIT_FILE()
+2011/4/6 19:20:43   In reciev_common_file(), relapth --lab\test-inotify.c--
+2011/4/6 19:20:43   4 In Onchanged(), D:\csrf\lab
+2011/4/6 19:20:43   In entry_mtime, fullpath is --D:\csrf\.fss\sha1.fss--
+2011/4/6 19:20:43   come again: --D:\csrf\.fss\sha1.fss--
+2011/4/6 19:20:43   -11644444800
+2011/4/6 19:20:43   System.IO.IOException: The process cannot access the file 'D:\fss\fss-client\fss-client\bin\Debug\fss.log' because it is being used by another process.
    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
    at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:14   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:14   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:14   10 In receive_file of Files.cs
-2011/4/5 2:35:14   10 In receive_file()  of Net.cs
-2011/4/5 2:35:14   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:14   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:14   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:14   10 In receive_file of Files.cs
-2011/4/5 2:35:14   10 In receive_file()  of Net.cs
-2011/4/5 2:35:14   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:14   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:14   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:14   10 In receive_file of Files.cs
-2011/4/5 2:35:14   10 In receive_file()  of Net.cs
-2011/4/5 2:35:14   10 System.InvalidOperationException: EndReceive can only be called once for each asynchronous operation.
-   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult, SocketError& errorCode)
-   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 184
-2011/4/5 2:35:14   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:14   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:14   10 In receive_file of Files.cs
-2011/4/5 2:35:14   10 In receive_file()  of Net.cs
-2011/4/5 2:35:14   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:14   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:14   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:14   10 In receive_file of Files.cs
-2011/4/5 2:35:14   10 In receive_file()  of Net.cs
-2011/4/5 2:35:14   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:14   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:15   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:15   10 In receive_file of Files.cs
-2011/4/5 2:35:15   10 In receive_file()  of Net.cs
-2011/4/5 2:35:15   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:15   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:15   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:15   10 In receive_file of Files.cs
-2011/4/5 2:35:15   10 In receive_file()  of Net.cs
-2011/4/5 2:35:15   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:15   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:15   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:15   10 In receive_file of Files.cs
-2011/4/5 2:35:15   10 In receive_file()  of Net.cs
-2011/4/5 2:35:15   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:15   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:15   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:15   10 In receive_file of Files.cs
-2011/4/5 2:35:15   10 In receive_file()  of Net.cs
-2011/4/5 2:35:15   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:15   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:15   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:15   10 In receive_file of Files.cs
-2011/4/5 2:35:15   10 In receive_file()  of Net.cs
-2011/4/5 2:35:15   10 System.InvalidOperationException: EndReceive can only be called once for each asynchronous operation.
-   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult, SocketError& errorCode)
-   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 184
-2011/4/5 2:35:15   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:15   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:15   10 In receive_file of Files.cs
-2011/4/5 2:35:15   10 In receive_file()  of Net.cs
-2011/4/5 2:35:15   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:15   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:15   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:15   10 In receive_file of Files.cs
-2011/4/5 2:35:15   10 In receive_file()  of Net.cs
-2011/4/5 2:35:15   10 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
-2011/4/5 2:35:15   10 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:15   10 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:15   10 In receive_file of Files.cs
-2011/4/5 2:35:15   10 In receive_file()  of Net.cs
-2011/4/5 2:35:15   11 IN status_WAIT_SHA1_FSS
-2011/4/5 2:35:15   11 In recieve_sha1_fss of Files.cs
-2011/4/5 2:35:15   11 In receive_file of Files.cs
-2011/4/5 2:35:15   11 In receive_file()  of Net.cs
-2011/4/5 2:35:15   11 System.IO.IOException: The process cannot access the file 'D:\csrf\.fss\remote.sha1.fss' because it is being used by another process.
-   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   at System.IO.File.Open(String path, FileMode mode, FileAccess access)
-   at fss_client.Net.receive_file(String path, Int64& size, IAsyncResult ar) in D:\fss\fss-client\fss-client\Net.cs:line 182
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding)
+   at System.IO.File.InternalAppendAllText(String path, String contents, Encoding encoding)
+   at System.IO.File.AppendAllText(String path, String contents)
+   at fss_client.Log.logon(String msg) in D:\fss\fss-client\fss-client\Log.cs:line 14
+   at fss_client.Net.receive_file(String path, Int64 size) in D:\fss\fss-client\fss-client\Net.cs:line 85
+   at fss_client.Files.receive_common_file(String relapath, Int64 size) in D:\fss\fss-client\fss-client\Files.cs:line 69
+   at fss_client.Protocol.status_WAIT_FILE() in D:\fss\fss-client\fss-client\Protocol.cs:line 398
+2011/4/6 19:20:43   10 In status_WAIT_FILE()
+2011/4/6 19:20:43   In reciev_common_file(), relapth --lab\test-inotify.c--
+2011/4/6 19:20:43   In receive_file() of Net.cs, path is D:\csrf\lab\test-inotify.cand size is 1273
+2011/4/6 19:20:43   4 In Onchanged(), D:\csrf\lab\test-inotify.c
+2011/4/6 19:20:43   In entry_mtime, fullpath is --D:\csrf\.fss\sha1.fss--
+2011/4/6 19:20:43   come again: --D:\csrf\.fss\sha1.fss--
+2011/4/6 19:20:43   -11644444800
+2011/4/6 19:20:43   4 In Onchanged(), D:\csrf\lab
+2011/4/6 19:20:43   In entry_mtime, fullpath is --D:\csrf\.fss\sha1.fss--
+2011/4/6 19:20:43   come again: --D:\csrf\.fss\sha1.fss--
+2011/4/6 19:20:43   -11644444800
+2011/4/6 19:20:44   written to file
+2011/4/6 19:20:44   10 In download_sync()
+2011/4/6 19:20:44

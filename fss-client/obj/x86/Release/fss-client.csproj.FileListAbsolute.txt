@@ -3,3 +3,7 @@ D:\fss\fss-client\fss-client\obj\x86\Release\fss_client.Form_config.resources
 D:\fss\fss-client\fss-client\obj\x86\Release\fss_client.Properties.Resources.resources
 D:\fss\fss-client\fss-client\obj\x86\Release\GenerateResource.read.1.tlog
 D:\fss\fss-client\fss-client\obj\x86\Release\GenerateResource.write.1.tlog
+D:\fss\fss-client\fss-client\bin\Release\fss-client.exe
+D:\fss\fss-client\fss-client\bin\Release\fss-client.pdb
+D:\fss\fss-client\fss-client\obj\x86\Release\fss-client.exe
+D:\fss\fss-client\fss-client\obj\x86\Release\fss-client.pdb
