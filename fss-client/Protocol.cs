@@ -4,35 +4,37 @@ using System.Linq;
 using System.Text;
 
 using System.IO;
+using System.Threading;
 
 namespace fss_client
 {
     class Protocol
     {
-        private const string  CLI_REQ_SHA1_FSS = "A";
+        private const string  CLI_REQ_HASH_FSS = "A";
         private const string  CLI_REQ_FILE = "B";
         private const string  SER_REQ_FILE = "D";
         private const string  SER_REQ_DEL_IDX = "E";
         private const string  SER_RECEIVED = "F";
         private const string  DONE = "G";
-        private const string  SHA1_FSS_INFO = "H";
+        private const string  HASH_FSS_INFO = "H";
         private const string  LINE_NUM = "I";
         private const string  FILE_INFO = "J";
         private const string  DEL_IDX_INFO = "K";
         private const string  FIN = "L";
-        private const string  CLI_REQ_SHA1_FSS_INFO = "M";
+        private const string  CLI_REQ_HASH_FSS_INFO = "M";
         private const string  DIR_INFO = "N";
 
 
-        private const int WAIT_SHA1_FSS_INFO = 1;
-        private const int WAIT_SHA1_FSS = 3;
-        private const int WAIT_ENTRY_INFO = 5;
-        private const int WAIT_FILE = 7;
-        private const int WAIT_MSG_SER_REQ_FILE = 9;
-        private const int WAIT_MSG_SER_RECEIVED = 11;
-        private const int WAIT_MSG_SER_REQ_DEL_IDX = 13;
+        private const int WAIT_XXX = 1;
+        private const int WAIT_HASH_FSS_INFO = 3;
+        private const int WAIT_HASH_FSS = 5;
+        private const int WAIT_ENTRY_INFO = 7;
+        private const int WAIT_FILE = 9;
+        private const int WAIT_MSG_SER_REQ_FILE = 11;
+        private const int WAIT_MSG_SER_RECEIVED = 13;
+        private const int WAIT_MSG_SER_REQ_DEL_IDX = 15;
 
-        private int status;
+        volatile private int status;
         private string rela_name;
 
         //TODO: Attention: A portable problem here
@@ -85,10 +87,13 @@ namespace fss_client
         {
             int rv, rvv;
 
-            if (files.if_to_skip(e.FullPath))
+            if (files.if_to_skip_for_monitor(e.FullPath))
                 return;
 
-            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In Onchanged(), " + e.FullPath);
+            Log.logon(Thread.CurrentThread.GetHashCode().ToString() + " " +
+            e.FullPath + " " + e.ChangeType + " detected and passed.");
+
+
             if (LOCK)
                 return;
 
@@ -100,29 +105,28 @@ namespace fss_client
             if(rv == Files.DIFF_BOTH_UNIQ || rv == Files.DIFF_LOCAL_UNIQ)
             {
                 LOCK = true;
-                rvv = files.send_entryinfo_or_reqsha1info(true, FILE_INFO, DIR_INFO,
-                    CLI_REQ_SHA1_FSS_INFO);
+                rvv = files.send_entryinfo_or_reqhashinfo(true, FILE_INFO, DIR_INFO,
+                    CLI_REQ_HASH_FSS_INFO);
 
-                if (rvv == Files.PREFIX0_SENT)
-                    status = WAIT_MSG_SER_REQ_FILE;
+                //if (rvv == Files.PREFIX0_SENT)
+                //    status = WAIT_MSG_SER_REQ_FILE;
 
-                else if (rvv == Files.PREFIX1_SENT)
-                    status = WAIT_MSG_SER_RECEIVED;
+                //else if (rvv == Files.PREFIX1_SENT)
+                //    status = WAIT_MSG_SER_RECEIVED;
 
-                else if (rvv == Files.PREFIX2_SENT)
-                    status = WAIT_SHA1_FSS_INFO;
+                //else if (rvv == Files.PREFIX2_SENT)
+                //    status = WAIT_SHA1_FSS_INFO;
+
             }
             else if (rv == Files.DIFF_REMOTE_UNIQ)
             {
                 LOCK = true;
 
                 files.send_del_index_info(DEL_IDX_INFO);
-                status = WAIT_MSG_SER_REQ_DEL_IDX;
+                //status = WAIT_MSG_SER_REQ_DEL_IDX;
 
             }
 
-            //System.Windows.Forms.MessageBox.Show(@"FUCK " + "File: " + e.FullPath + " " + e.ChangeType,
-             //"Path Invalid", System.Windows.Forms.MessageBoxButtons.OK);
         }
 
 
@@ -130,7 +134,7 @@ namespace fss_client
         public void init()
         {
             LOCK = true;
-            status = WAIT_SHA1_FSS_INFO;
+            status = WAIT_HASH_FSS_INFO;
 
         }
 
@@ -142,13 +146,16 @@ namespace fss_client
 
                 switch (status)
                 {
-
-                    case WAIT_SHA1_FSS_INFO:
-                        status_WAIT_SHA1_FSS_INFO();
+                    case WAIT_XXX:
+                        status_WAIT_XXX();
                         break;
 
-                    case WAIT_SHA1_FSS:
-                        status_WAIT_SHA1_FSS();
+                    case WAIT_HASH_FSS_INFO:
+                        status_WAIT_HASH_FSS_INFO();
+                        break;
+
+                    case WAIT_HASH_FSS:
+                        status_WAIT_HASH_FSS();
                         break;
 
                     case WAIT_FILE:
@@ -178,42 +185,90 @@ namespace fss_client
         }
 
 
-        private void status_WAIT_SHA1_FSS_INFO()
+        private void status_WAIT_XXX()
+        {
+
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In status_XXX");
+            string msg = net.receive_line();
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " Received line " + msg);
+
+            LOCK = true;
+
+            if(msg.Substring(0, HASH_FSS_INFO.Length) == HASH_FSS_INFO)
+            {
+                wait_hash_fss_info(msg);
+            }
+            else if(msg.Substring(0, SER_REQ_FILE.Length) == SER_REQ_FILE)
+            {
+                wait_msg_ser_req_file(msg);
+            }
+            else if (msg.Substring(0, SER_RECEIVED.Length) == SER_RECEIVED)
+            {
+                wait_msg_ser_received(msg);
+            }
+            else if (msg.Substring(0, SER_REQ_DEL_IDX.Length) == SER_REQ_DEL_IDX)
+            {
+                wait_msg_ser_req_del_idx(msg);
+            }
+            else
+            {
+                Log.logon("Current status WAIT_HASH_FSS_INFO receive" + msg);
+                return;
+            }
+
+
+        }
+
+
+        private void status_WAIT_HASH_FSS_INFO()
+        {
+
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In status_WAIT_HASH_FSS_INFO");
+            string msg = net.receive_line();
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " Received line " + msg);
+
+            if (msg.Substring(0, HASH_FSS_INFO.Length) == HASH_FSS_INFO)
+            {
+                wait_hash_fss_info(msg);
+            }
+            else
+            {
+                Log.logon("Current status WAIT_HASH_FSS_INFO receive" + msg);
+                return;
+            }
+
+
+        }
+
+
+        private void wait_hash_fss_info(string msg)
         {
             try
             {
-                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In status_WAIT_SHA1_FSS_INFO");
-                string msg = net.receive_line();
-                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " Received line " + msg);
+                set_fileinfo(msg.Substring(HASH_FSS_INFO.Length));
+                net.send_msg(CLI_REQ_HASH_FSS);
 
-                if (msg.Substring(0, SHA1_FSS_INFO.Length) != SHA1_FSS_INFO)
-                {
-                    Log.logon("Current status WAIT_SHA1_FSS_INFO receive" + msg);
-                    return;
-                }
-
-                set_fileinfo(msg.Substring(SHA1_FSS_INFO.Length));
-                net.send_msg(CLI_REQ_SHA1_FSS);
-
-                status = WAIT_SHA1_FSS;
+                status = WAIT_HASH_FSS;
             }
             catch (Exception e)
             {
                 Log.logon(e.ToString());
             }
+            
 
         }
 
-        private void status_WAIT_SHA1_FSS()
+        private void status_WAIT_HASH_FSS()
         {
             try
             {
-                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " IN status_WAIT_SHA1_FSS");
+                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " IN status_WAIT_HASH_FSS");
 
-                files.receive_sha1_fss(req_sz);
+                files.receive_hash_fss(req_sz);
                 files.update_files();
 
-                analyse_sha1();
+                analyse_hash();
+                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " analyse_hash()-ed");
             }
             catch (Exception e)
             {
@@ -222,23 +277,23 @@ namespace fss_client
 
         }
 
-        private void analyse_sha1()
+        private void analyse_hash()
         {
             try
             {
-                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In analyse_sha1()");
+                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In analyse_hash()");
                 int rv, rvv;
 
                 rv = files.generate_diffs();
 
                 Log.logon("mtime is: " + mtime);
-                Log.logon("sha1_fss_mtime(): " + files.sha1_fss_mtime());
-                if (mtime <= files.sha1_fss_mtime())
+                Log.logon("hash_fss_mtime(): " + files.hash_fss_mtime());
+                if (mtime <= files.hash_fss_mtime())
                 {
                     if (rv == Files.DIFF_BOTH_UNIQ || rv == Files.DIFF_LOCAL_UNIQ)
                     {
-                        rvv = files.send_entryinfo_or_reqsha1info(
-                            true, FILE_INFO, DIR_INFO, CLI_REQ_SHA1_FSS_INFO);
+                        rvv = files.send_entryinfo_or_reqhashinfo(
+                            true, FILE_INFO, DIR_INFO, CLI_REQ_HASH_FSS_INFO);
 
                         if (rvv == Files.PREFIX0_SENT)
                             status = WAIT_MSG_SER_REQ_FILE;
@@ -247,7 +302,7 @@ namespace fss_client
                             status = WAIT_MSG_SER_RECEIVED;
 
                         else if (rvv == Files.PREFIX2_SENT)
-                            status = WAIT_SHA1_FSS_INFO;
+                            status = WAIT_HASH_FSS_INFO;
 
                     }
                     else if (rv == Files.DIFF_IDENTICAL)
@@ -261,7 +316,7 @@ namespace fss_client
                             net.send_msg(DONE);
                         }
 
-                        status = WAIT_SHA1_FSS_INFO;
+                        status = WAIT_XXX;
                         LOCK = false;
 
                     }
@@ -273,7 +328,7 @@ namespace fss_client
                     }
 
                 }
-                else // remote.sha1.fss is nower
+                else // remote.hash.fss is nower
                 {
                     if (rv == Files.DIFF_BOTH_UNIQ || rv == Files.DIFF_REMOTE_UNIQ)
                     {
@@ -285,8 +340,7 @@ namespace fss_client
                         net.send_msg(DONE);
 
                         LOCK = false;
-                        status = WAIT_SHA1_FSS_INFO;
-
+                        status = WAIT_XXX;
                     }
                     else if (rv == Files.DIFF_LOCAL_UNIQ)
                     {
@@ -296,7 +350,7 @@ namespace fss_client
                         net.send_msg(DONE);
 
                         LOCK = false;
-                        status = WAIT_SHA1_FSS_INFO;
+                        status = WAIT_XXX;
 
                     }
 
@@ -348,6 +402,8 @@ namespace fss_client
             }
 
         }
+
+
         private void status_WAIT_FILE()
         {
             try
@@ -375,9 +431,10 @@ namespace fss_client
 
                 rv = files.send_linenum_or_done(false, LINE_NUM, DONE);
 
-                if (rv == 0)
+                if (rv == Files.PREFIX0_SENT)
                     status = WAIT_ENTRY_INFO;
-                else if (rv == 2)
+
+                else if (rv == Files.PREFIX1_SENT)
                 {
                     files.update_files();
 
@@ -385,7 +442,7 @@ namespace fss_client
 
                     if (rvv == Files.DIFF_BOTH_UNIQ || rvv == Files.DIFF_REMOTE_UNIQ)
                     {
-                        rvvv = files.send_entryinfo_or_reqsha1info(true, FILE_INFO, DIR_INFO, CLI_REQ_SHA1_FSS_INFO);
+                        rvvv = files.send_entryinfo_or_reqhashinfo(true, FILE_INFO, DIR_INFO, CLI_REQ_HASH_FSS_INFO);
 
                         if (rvvv == Files.PREFIX0_SENT)
                             status = WAIT_MSG_SER_REQ_FILE;
@@ -394,7 +451,7 @@ namespace fss_client
                             status = WAIT_MSG_SER_RECEIVED;
 
                         else if (rvvv == Files.PREFIX2_SENT)
-                            status = WAIT_SHA1_FSS_INFO;
+                            status = WAIT_HASH_FSS_INFO;
                     }
                     else if (rvv == Files.DIFF_LOCAL_UNIQ || rvv == Files.DIFF_IDENTICAL)
                     {
@@ -404,7 +461,7 @@ namespace fss_client
                         }
 
                         LOCK = false;
-                        status = WAIT_SHA1_FSS_INFO;
+                        status = WAIT_XXX;
 
 
                     }
@@ -423,11 +480,14 @@ namespace fss_client
         private void status_WAIT_MSG_SER_REQ_FILE()
         {
             Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In status_WAIT_MSG_SER_REQ_FILE()");
+            string msg = net.receive_line();
+            wait_msg_ser_req_file(msg);
+        }
 
+        private void wait_msg_ser_req_file(string msg)
+        {
             try
             {
-                string msg = net.receive_line();
-
                 if (msg.Substring(0, SER_REQ_FILE.Length) == SER_REQ_FILE)
                 {
                     files.send_file_via_linenum();
@@ -444,17 +504,22 @@ namespace fss_client
             }
         }
 
+
         private void status_WAIT_MSG_SER_RECEIVED()
+        {
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In status_WAIT_MSG_SER_RECEVIED()");
+            string msg = net.receive_line();
+            wait_msg_ser_received(msg);
+        }
+
+        private void wait_msg_ser_received(string msg)
         {
             try
             {
-                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In status_WAIT_MSG_SER_RECEVIED()");
-                int rv = 0;
-                string msg = net.receive_line();
-
                 if (msg.Substring(0, SER_RECEIVED.Length) == SER_RECEIVED)
                 {
-                    rv = files.send_entryinfo_or_reqsha1info(false, FILE_INFO, DIR_INFO, CLI_REQ_SHA1_FSS_INFO);
+                    int rv = 0;
+                    rv = files.send_entryinfo_or_reqhashinfo(false, FILE_INFO, DIR_INFO, CLI_REQ_HASH_FSS_INFO);
 
                     if (rv == Files.PREFIX0_SENT)
                         status = WAIT_MSG_SER_REQ_FILE;
@@ -463,7 +528,7 @@ namespace fss_client
                         status = WAIT_MSG_SER_RECEIVED;
 
                     else if (rv == Files.PREFIX2_SENT)
-                        status = WAIT_SHA1_FSS_INFO;
+                        status = WAIT_HASH_FSS_INFO;
                 }
                 else
                 {
@@ -474,22 +539,26 @@ namespace fss_client
             {
                 Log.logon(e.ToString());
             }
+
         }
 
 
         private void status_WAIT_MSG_SER_REQ_DEL_IDX()
         {
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In status_WIAT_MSG_SER_REQ_DEL_IDX");
+            string msg = net.receive_line();
+            wait_msg_ser_req_del_idx(msg);
+        }
+
+        private void wait_msg_ser_req_del_idx(string msg)
+        {
             try
             {
-                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In status_WIAT_MSG_SER_REQ_DEL_IDX");
-
-                string msg = net.receive_line();
-
                 if (msg.Substring(0, SER_REQ_DEL_IDX.Length) == SER_REQ_DEL_IDX)
                 {
                     files.send_del_index();
 
-                    status = WAIT_SHA1_FSS_INFO;
+                    status = WAIT_HASH_FSS_INFO;
 
                 }
                 else
@@ -504,14 +573,16 @@ namespace fss_client
             }
         }
 
+
+
         public void set_fileinfo(string msg)
         {
             try
             {
                 string[] words = msg.Split('\n');
 
-                if (words[0] == ".fss/sha1.fss")
-                    this.rela_name = "remote.sha1.fss";
+                if (words[0] == ".fss/hash.fss")
+                    this.rela_name = "remote.hash.fss";
                 else
                     this.rela_name = words[0].Replace('/', '\\');
                 this.mtime = Convert.ToInt64(words[1]);

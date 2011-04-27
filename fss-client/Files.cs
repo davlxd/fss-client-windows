@@ -22,9 +22,9 @@ namespace fss_client
         private string global_root_path;
         private string fss_dir_path;
         private string finfo_fss_path;
-        private string sha1_fss_path;
-        private string temp_sha1_fss_path;
-        private string remote_sha1_fss_path;
+        private string hash_fss_path;
+        private string temp_hash_fss_path;
+        private string remote_hash_fss_path;
         private string diff_local_index_path;
         private string diff_remote_index_path;
         private string del_index_fss_path;
@@ -48,19 +48,19 @@ namespace fss_client
 
             this.fss_dir_path = Path.Combine(path, ".fss");
             this.finfo_fss_path = Path.Combine(this.fss_dir_path, "finfo.fss");
-            this.sha1_fss_path = Path.Combine(this.fss_dir_path, "sha1.fss");
-            this.remote_sha1_fss_path = Path.Combine(this.fss_dir_path, "remote.sha1.fss");
-            this.temp_sha1_fss_path = Path.Combine(this.fss_dir_path, "temp.sha1.fss");
+            this.hash_fss_path = Path.Combine(this.fss_dir_path, "hash.fss");
+            this.remote_hash_fss_path = Path.Combine(this.fss_dir_path, "remote.hash.fss");
+            this.temp_hash_fss_path = Path.Combine(this.fss_dir_path, "temp.hash.fss");
             this.diff_local_index_path = Path.Combine(this.fss_dir_path, "diff.local.index");
             this.diff_remote_index_path = Path.Combine(this.fss_dir_path, "diff.remote.index");
             this.del_index_fss_path = Path.Combine(this.fss_dir_path, "del.index.fss");
 
         }
 
-        public void receive_sha1_fss( long size)
+        public void receive_hash_fss( long size)
         {
-            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In recieve_sha1_fss of Files.cs");
-            this.receive_file(this.remote_sha1_fss_path, size);
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In recieve_hash_fss of Files.cs");
+            this.receive_file(this.remote_hash_fss_path, size);
         }
         public void receive_common_file(string relapath, long size)
         {
@@ -78,9 +78,9 @@ namespace fss_client
             net.receive_file(path, size);
         }
 
-        public long sha1_fss_mtime()
+        public long hash_fss_mtime()
         {
-            return TimeSize.entry_mtime(this.sha1_fss_path);
+            return TimeSize.entry_mtime(this.hash_fss_path);
         }
 
 
@@ -96,43 +96,43 @@ namespace fss_client
                 if (File.Exists(this.finfo_fss_path))
                     File.Delete(this.finfo_fss_path);
 
-                if (File.Exists(this.temp_sha1_fss_path))
-                    File.Delete(this.temp_sha1_fss_path);
+                if (File.Exists(this.temp_hash_fss_path))
+                    File.Delete(this.temp_hash_fss_path);
 
 
                 Fn fn = new Fn(this.write_in); // Instantiate delagate, register function
                 ftw = new Ftw(fn, this.global_root_path);  // Instaiate traverse functio
 
                 // if dir is empty
-                if (!File.Exists(this.temp_sha1_fss_path))
+                if (!File.Exists(this.temp_hash_fss_path))
                 {
-                    FileStream fs = new FileStream(this.temp_sha1_fss_path, FileMode.Create, FileAccess.Write);
+                    FileStream fs = new FileStream(this.temp_hash_fss_path, FileMode.Create, FileAccess.Write);
                     fs.Close();
-                    //File.Create(this.temp_sha1_fss_path);
+                    //File.Create(this.temp_hash_fss_path);
                 }
 
 
 
-                if (!File.Exists(this.sha1_fss_path))
+                if (!File.Exists(this.hash_fss_path))
                 {
-                    File.Move(this.temp_sha1_fss_path, this.sha1_fss_path);
+                    File.Move(this.temp_hash_fss_path, this.hash_fss_path);
                 }
                 else
                 {
-                    // if filesys not changed, we don't modify sha1.fss
-                    if (Sha1.sha1_file_via_fname(this.sha1_fss_path) ==
-                        Sha1.sha1_file_via_fname(this.temp_sha1_fss_path))
-                        File.Delete(this.temp_sha1_fss_path);
+                    // if filesys not changed, we don't modify hash.fss
+                    if (Sha1.sha1_file_via_fname(this.hash_fss_path) ==
+                        Sha1.sha1_file_via_fname(this.temp_hash_fss_path))
+                        File.Delete(this.temp_hash_fss_path);
                     else
                     {
-                        File.Delete(this.sha1_fss_path);
-                        File.Move(this.temp_sha1_fss_path, this.sha1_fss_path);
+                        File.Delete(this.hash_fss_path);
+                        File.Move(this.temp_hash_fss_path, this.hash_fss_path);
                     }
                 }
             }
             catch (Exception e)
             {
-                Log.logon(e.ToString());
+                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " " + e.ToString());
             }
             
         }
@@ -146,27 +146,31 @@ namespace fss_client
             File.AppendAllText(this.finfo_fss_path, "\n");
 
 
-            File.AppendAllText(this.temp_sha1_fss_path, Sha1.sha1_file_via_fname_fss(global_root_path, fullpath));
-            File.AppendAllText(this.temp_sha1_fss_path, "\n");
+            File.AppendAllText(this.temp_hash_fss_path, Sha1.sha1_file_via_fname_fss(global_root_path, fullpath));
+            File.AppendAllText(this.temp_hash_fss_path, "\n");
 
         }
 
-        public bool if_to_skip(string fullpath)
+        public bool if_to_skip_for_monitor(string fullpath)
         {
             if (this.global_root_path == fullpath)
-                return true;
-
-            if (!File.Exists(fullpath) && !Directory.Exists(fullpath))
-                return true;
-
-            FileAttributes attr = File.GetAttributes(fullpath);
-            if ((attr & FileAttributes.Hidden) == FileAttributes.Hidden)
                 return true;
 
             if (string.Compare(fullpath, 0, this.fss_dir_path, 0, this.fss_dir_path.Length) == 0)
                 return true;
 
+
             return false;
+        }
+
+        public bool if_to_skip(string fullpath)
+        {
+
+            if (!File.Exists(fullpath) && !Directory.Exists(fullpath))
+                return true;
+
+            return if_to_skip_for_monitor(fullpath);
+
         }
 
 
@@ -191,9 +195,9 @@ namespace fss_client
 
 
 
-        // return 2: remote.sha1.fss is identical to sha1.fss
-        // return 3: no unique records in remote.sha1.fss, only in sha1.fss
-        // return 4: no unique records in sha1.fss, only in remote.sha1.fss
+        // return 2: remote.hash.fss is identical to hash.fss
+        // return 3: no unique records in remote.hash.fss, only in hash.fss
+        // return 4: no unique records in sha1.fss, only in remote.hash.fss
         // return 0: both have unique records
 
         public static int DIFF_BOTH_UNIQ = 0;
@@ -212,11 +216,11 @@ namespace fss_client
                 if (File.Exists(this.diff_local_index_path))
                     File.Delete(this.diff_local_index_path);
 
-                if (string.Compare(Sha1.sha1_file_via_fname(this.remote_sha1_fss_path),
-                                    Sha1.sha1_file_via_fname(this.sha1_fss_path)) == 0)
+                if (string.Compare(Sha1.sha1_file_via_fname(this.remote_hash_fss_path),
+                                    Sha1.sha1_file_via_fname(this.hash_fss_path)) == 0)
                     return DIFF_IDENTICAL;
 
-                Diff.diff(this.remote_sha1_fss_path, this.sha1_fss_path, this.diff_remote_index_path,
+                Diff.diff(this.remote_hash_fss_path, this.hash_fss_path, this.diff_remote_index_path,
                     this.diff_local_index_path, string.Empty);
 
                 FileInfo fi0 = new FileInfo(this.diff_remote_index_path);
@@ -247,7 +251,7 @@ namespace fss_client
         }
 
 
-        public int send_entryinfo_or_reqsha1info(bool ifinit, string prefix0,
+        public int send_entryinfo_or_reqhashinfo(bool ifinit, string prefix0,
             string prefix1, string prefix2)
         {
             if (ifinit)
@@ -313,7 +317,7 @@ namespace fss_client
 
         public int send_linenum_or_done(bool ifinit, string prefix0, string prefix1)
         {
-            int rv = 0;
+            int rv = PREFIX0_SENT;
             string msg = string.Empty;
             
             try
@@ -329,6 +333,7 @@ namespace fss_client
                 {
                     net.send_msg(prefix1);
                     this.diff_remote_index.Close();
+                    rv = PREFIX1_SENT;
                 }
                 else
                 {
@@ -336,6 +341,7 @@ namespace fss_client
                     msg += prefix0;
                     msg += record;
                     net.send_msg(msg);
+                    rv = PREFIX0_SENT;
                 }
 
 
@@ -408,7 +414,11 @@ namespace fss_client
                     string record = Diff.get_line(fs);
                     int linenum_to_delete = Convert.ToInt32(record);
                     record = Diff.get_line_via_linenum(this.finfo_fss_path, linenum_to_delete);
-                    File.Delete(record);
+
+                    if (Directory.Exists(record))
+                        Directory.Delete(record, true);
+                    if (File.Exists(record))
+                        File.Delete(record);
                 }
 
             }
@@ -418,7 +428,6 @@ namespace fss_client
             }
 
         }
-
 
     }
 }

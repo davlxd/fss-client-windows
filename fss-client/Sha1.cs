@@ -44,7 +44,7 @@ namespace fss_client
                 if (s == "")
                     continue;
                 digest = provider.ComputeHash(
-                    System.Text.Encoding.Default.GetBytes(s));
+                    System.Text.Encoding.UTF8.GetBytes(s));
 
                 digest_str1 = BitConverter.ToString(digest).Replace("-", "");
 
@@ -74,5 +74,63 @@ namespace fss_client
             return BitConverter.ToString(digest).Replace("-", "");
 
         }
+
+
+
+
+        public static void compute_hash(string fullname, string rootpath, ref string sha1_digest, ref string hash_digest)
+        {
+            SHA1CryptoServiceProvider provider = new SHA1CryptoServiceProvider();
+            byte[] digest;
+            int flag = 0;
+            string content_digest, path_digest;
+
+            if (Directory.Exists(fullname))
+            {
+                flag = 1;
+                digest = provider.ComputeHash(System.Text.Encoding.Default.GetBytes(string.Empty));
+                content_digest = BitConverter.ToString(digest).Replace("-", "");
+
+            }
+            else
+            {
+                FileStream fs = new FileStream(fullname, FileMode.Open, FileAccess.Read, FileShare.None);
+                digest = provider.ComputeHash(fs);
+                fs.Close();
+                content_digest = BitConverter.ToString(digest).Replace("-", "");
+
+            }
+            if (sha1_digest != null)
+                sha1_digest = content_digest;
+
+            if (hash_digest == null)
+                return;
+
+
+            string relaname = fullname.Substring(rootpath.Length);
+            string[] words = relaname.Split('\\');
+
+
+            foreach (string s in words)
+            {
+                if (s == "")
+                    continue;
+                digest = provider.ComputeHash(System.Text.Encoding.UTF8.GetBytes(s));
+
+                path_digest = BitConverter.ToString(digest).Replace("-", "");
+
+                digest = provider.ComputeHash(
+                    System.Text.Encoding.Default.GetBytes(content_digest + path_digest));
+
+                content_digest = BitConverter.ToString(digest).Replace("-", "");
+            }
+
+            //return BitConverter.ToString(digest);
+            hash_digest = flag + content_digest;
+
+
+        }
+
+
     }
 }

@@ -28,7 +28,7 @@ namespace fss_client
         public static long UNIX_ticks(DateTime dt)
         {
             DateTime dt1 = dt.ToUniversalTime();
-            TimeSpan ts = new TimeSpan(dt.Ticks - (new DateTime(1970, 1, 1, 0, 0, 0)).Ticks);
+            TimeSpan ts = new TimeSpan(dt1.Ticks - (new DateTime(1970, 1, 1, 0, 0, 0)).Ticks);
             return (long)ts.TotalSeconds;
         }
     }

@@ -86,8 +86,12 @@ namespace fss_client
                 }
 
                 // TODO: Attention: Code problem:
-                Log.logon("Received " + Encoding.ASCII.GetString(receiveBytes, 0, numBytes));
-                return Encoding.ASCII.GetString(receiveBytes, 0, numBytes);
+                string strTemp;
+                strTemp = Encoding.UTF8.GetString(receiveBytes, 0, numBytes);
+                byte[] byteTemp = Encoding.Default.GetBytes(strTemp);
+
+                Log.logon("Received " + Encoding.Default.GetString(byteTemp, 0, byteTemp.Length));
+                return Encoding.Default.GetString(byteTemp, 0, byteTemp.Length);
             }
             catch (Exception e)
             {
@@ -224,7 +228,8 @@ namespace fss_client
         public void send_msg(string msg)
         {
             Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " IN send_msg sending " + msg);
-            byte[] sendBytes = Encoding.ASCII.GetBytes(msg);
+            //byte[] sendBytes = Encoding.ASCII.GetBytes(msg);
+            byte[] sendBytes = Encoding.UTF8.GetBytes(msg);
             sock.Send(sendBytes);
 
         }
