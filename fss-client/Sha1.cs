@@ -22,7 +22,7 @@ namespace fss_client
             if (Directory.Exists(fullname))
             {
                 digest = provider.ComputeHash(
-                    System.Text.Encoding.Default.GetBytes("IAMDIR"));
+                    System.Text.Encoding.Default.GetBytes(string.Empty));
             }
             else
             {
@@ -126,7 +126,7 @@ namespace fss_client
             }
 
             //return BitConverter.ToString(digest);
-            hash_digest = flag + content_digest;
+            hash_digest = content_digest;
 
 
         }

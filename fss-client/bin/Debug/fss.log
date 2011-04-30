@@ -914,3 +914,441 @@
 2011/4/27 17:54:25   12 analyse_hash()-ed
 2011/4/27 17:54:25   12 In status_XXX
 2011/4/27 17:54:25   12 In receive_line()
+2011/4/30 1:30:02   10 Connected to 204.74.216.120
+2011/4/30 1:30:02   12 In status_WAIT_HASH_FSS_INFO
+2011/4/30 1:30:02   12 In receive_line()
+2011/4/30 1:30:02   Received H.fss/hash.fss
+1304097702
+123
+2011/4/30 1:30:02   12 Received line H.fss/hash.fss
+1304097702
+123
+2011/4/30 1:30:02   12 IN send_msg sending A
+2011/4/30 1:30:02   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:30:02   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:30:02   12 In receive_file of Files.cs
+2011/4/30 1:30:02   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
+2011/4/30 1:30:03   written to file
+2011/4/30 1:30:03   12 In analyse_hash()
+2011/4/30 1:30:03   mtime is: 1304097702
+2011/4/30 1:30:03   hash_fss_mtime(): 1303898064
+2011/4/30 1:30:03   12 IN send_msg sending I1
+2011/4/30 1:30:03   12 analyse_hash()-ed
+2011/4/30 1:30:03   12 In status_WAIT_ENTRY_INFO
+2011/4/30 1:30:03   12 In receive_line()
+2011/4/30 1:30:03   Received Jtouch
+1304097723
+0
+2011/4/30 1:30:03   12 IN send_msg sending B
+2011/4/30 1:30:03   12 In status_WAIT_FILE()
+2011/4/30 1:30:03   In reciev_common_file(), relapth --touch--
+2011/4/30 1:30:03   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\touchand size is 0
+2011/4/30 1:30:03   12 In download_sync()
+2011/4/30 1:30:04   13 C:\Users\test\Desktop\FSS\touch Created detected and passed.
+2011/4/30 1:30:04   12 IN send_msg sending G
+2011/4/30 1:30:04   12 In status_XXX
+2011/4/30 1:30:04   12 In receive_line()
+2011/4/30 1:30:19   13 C:\Users\test\Desktop\FSS\touch Changed detected and passed.
+2011/4/30 1:30:19   updated and genearted
+2011/4/30 1:30:19    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\touch--
+2011/4/30 1:30:19   root is --C:\Users\test\Desktop\FSS-- 25
+2011/4/30 1:30:19   relapath is --\touch--
+2011/4/30 1:30:19   13 IN send_msg sending Jtouch
+1304098219
+30
+2011/4/30 1:30:19   13 C:\Users\test\Desktop\FSS\touch Changed detected and passed.
+2011/4/30 1:30:19   Received D
+2011/4/30 1:30:19   12 Received line D
+2011/4/30 1:30:20   In send_file, sending C:\Users\test\Desktop\FSS\touch 30
+2011/4/30 1:30:20   12 In status_WAIT_MSG_SER_RECEVIED()
+2011/4/30 1:30:20   12 In receive_line()
+2011/4/30 1:30:22   Received F
+2011/4/30 1:30:22   12 IN send_msg sending M
+2011/4/30 1:30:22   12 In status_WAIT_HASH_FSS_INFO
+2011/4/30 1:30:22   12 In receive_line()
+2011/4/30 1:30:22   Received H.fss/hash.fss
+1
+123
+2011/4/30 1:30:22   12 Received line H.fss/hash.fss
+1
+123
+2011/4/30 1:30:22   12 IN send_msg sending A
+2011/4/30 1:30:22   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:30:22   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:30:22   12 In receive_file of Files.cs
+2011/4/30 1:30:22   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
+2011/4/30 1:30:22   written to file
+2011/4/30 1:30:22   12 In analyse_hash()
+2011/4/30 1:30:22   mtime is: 1
+2011/4/30 1:30:22   hash_fss_mtime(): 1304098219
+2011/4/30 1:30:22   12 IN send_msg sending L
+2011/4/30 1:30:22   12 analyse_hash()-ed
+2011/4/30 1:30:22   12 In status_XXX
+2011/4/30 1:30:22   12 In receive_line()
+2011/4/30 1:30:40   Received H.fss/hash.fss
+1304098233
+123
+2011/4/30 1:30:40   12 Received line H.fss/hash.fss
+1304098233
+123
+2011/4/30 1:30:40   12 IN send_msg sending A
+2011/4/30 1:30:40   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:30:40   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:30:40   12 In receive_file of Files.cs
+2011/4/30 1:30:40   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
+2011/4/30 1:30:41   written to file
+2011/4/30 1:30:41   12 In analyse_hash()
+2011/4/30 1:30:41   mtime is: 1304098233
+2011/4/30 1:30:41   hash_fss_mtime(): 1304098219
+2011/4/30 1:30:41   12 IN send_msg sending I2
+2011/4/30 1:30:41   12 analyse_hash()-ed
+2011/4/30 1:30:41   12 In status_WAIT_ENTRY_INFO
+2011/4/30 1:30:41   12 In receive_line()
+2011/4/30 1:30:41   Received J新建文件夹/touch
+1304098232
+30
+2011/4/30 1:30:41   12 IN send_msg sending B
+2011/4/30 1:30:41   12 In status_WAIT_FILE()
+2011/4/30 1:30:41   In reciev_common_file(), relapth --新建文件夹\touch--
+2011/4/30 1:30:41   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\新建文件夹\touchand size is 30
+2011/4/30 1:30:41   13 C:\Users\test\Desktop\FSS\新建文件夹\touch Created detected and passed.
+2011/4/30 1:30:41   13 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
+2011/4/30 1:30:41   13 C:\Users\test\Desktop\FSS\新建文件夹\touch Changed detected and passed.
+2011/4/30 1:30:41   written to file
+2011/4/30 1:30:41   12 In download_sync()
+2011/4/30 1:30:41   12 IN send_msg sending G
+2011/4/30 1:30:41   13 C:\Users\test\Desktop\FSS\touch Deleted detected and passed.
+2011/4/30 1:30:41   12 In status_XXX
+2011/4/30 1:30:42   12 In receive_line()
+2011/4/30 1:30:42   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 217
+2011/4/30 1:30:42   updated and genearted
+2011/4/30 1:30:46   13 C:\Users\test\Desktop\FSS\新建文件夹\touch Deleted detected and passed.
+2011/4/30 1:30:46   updated and genearted
+2011/4/30 1:30:46    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文件夹\untitled folder\touch--
+2011/4/30 1:30:46   root is --C:\Users\test\Desktop\FSS-- 25
+2011/4/30 1:30:46   relapath is --\新建文件夹\untitled folder\touch--
+2011/4/30 1:30:46   13 IN send_msg sending J新建文件夹/untitled folder/touch
+1304098241
+30
+2011/4/30 1:30:46   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder\touch Created detected and passed.
+2011/4/30 1:30:46   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder Changed detected and passed.
+2011/4/30 1:30:46   13 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
+2011/4/30 1:32:28   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder\touch Deleted detected and passed.
+2011/4/30 1:32:28   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder Changed detected and passed.
+2011/4/30 1:32:58   13 C:\Users\test\Desktop\FSS\新建文件夹 Deleted detected and passed.
+2011/4/30 1:33:11   Server crashed
+2011/4/30 1:33:33   10 Connected to 204.74.216.120
+2011/4/30 1:33:33   12 In status_WAIT_HASH_FSS_INFO
+2011/4/30 1:33:33   12 In receive_line()
+2011/4/30 1:33:34   Received H.fss/hash.fss
+1304098397
+82
+2011/4/30 1:33:34   12 Received line H.fss/hash.fss
+1304098397
+82
+2011/4/30 1:33:34   12 IN send_msg sending A
+2011/4/30 1:33:34   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:33:34   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:33:34   12 In receive_file of Files.cs
+2011/4/30 1:33:34   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
+2011/4/30 1:33:34   written to file
+2011/4/30 1:33:34   12 In analyse_hash()
+2011/4/30 1:33:34   mtime is: 1304098397
+2011/4/30 1:33:34   hash_fss_mtime(): 1304098413
+2011/4/30 1:33:34    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
+2011/4/30 1:33:34   root is --C:\Users\test\Desktop\FSS-- 25
+2011/4/30 1:33:34   relapath is --\.fss\diff.remote.index--
+2011/4/30 1:33:34   12 IN send_msg sending K.fss/diff.remote.index
+1304098414
+4
+2011/4/30 1:33:34   12 analyse_hash()-ed
+2011/4/30 1:33:34   12 In status_WIAT_MSG_SER_REQ_DEL_IDX
+2011/4/30 1:33:34   12 In receive_line()
+2011/4/30 1:33:34   Received E
+2011/4/30 1:33:34   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 4
+2011/4/30 1:33:34   12 In status_WAIT_HASH_FSS_INFO
+2011/4/30 1:33:34   12 In receive_line()
+2011/4/30 1:33:34   Received H.fss/hash.fss
+1
+0
+2011/4/30 1:33:34   12 Received line H.fss/hash.fss
+1
+0
+2011/4/30 1:33:34   12 IN send_msg sending A
+2011/4/30 1:33:34   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:33:34   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:33:34   12 In receive_file of Files.cs
+2011/4/30 1:33:34   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 0
+2011/4/30 1:33:34   12 In analyse_hash()
+2011/4/30 1:33:34   mtime is: 1
+2011/4/30 1:33:34   hash_fss_mtime(): 1304098413
+2011/4/30 1:33:34   12 IN send_msg sending L
+2011/4/30 1:33:34   12 analyse_hash()-ed
+2011/4/30 1:33:34   12 In status_XXX
+2011/4/30 1:33:34   12 In receive_line()
+2011/4/30 1:33:39   13 C:\Users\test\Desktop\FSS\新建文本文档.txt Created detected and passed.
+2011/4/30 1:33:39   updated and genearted
+2011/4/30 1:33:39    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文本文档.txt--
+2011/4/30 1:33:39   root is --C:\Users\test\Desktop\FSS-- 25
+2011/4/30 1:33:39   relapath is --\新建文本文档.txt--
+2011/4/30 1:33:39   13 IN send_msg sending J新建文本文档.txt
+1304098419
+0
+2011/4/30 1:33:40   Received D
+2011/4/30 1:33:40   12 Received line D
+2011/4/30 1:33:40   In send_file, sending C:\Users\test\Desktop\FSS\新建文本文档.txt 0
+2011/4/30 1:33:40   12 In status_WAIT_MSG_SER_RECEVIED()
+2011/4/30 1:33:40   12 In receive_line()
+2011/4/30 1:33:40   Received F
+2011/4/30 1:33:40   12 IN send_msg sending M
+2011/4/30 1:33:40   12 In status_WAIT_HASH_FSS_INFO
+2011/4/30 1:33:40   12 In receive_line()
+2011/4/30 1:33:40   Received H.fss/hash.fss
+1
+41
+2011/4/30 1:33:40   12 Received line H.fss/hash.fss
+1
+41
+2011/4/30 1:33:40   12 IN send_msg sending A
+2011/4/30 1:33:40   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:33:40   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:33:40   12 In receive_file of Files.cs
+2011/4/30 1:33:40   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 41
+2011/4/30 1:33:40   written to file
+2011/4/30 1:33:40   12 In analyse_hash()
+2011/4/30 1:33:40   mtime is: 1
+2011/4/30 1:33:40   hash_fss_mtime(): 1304098419
+2011/4/30 1:33:40   12 IN send_msg sending L
+2011/4/30 1:33:40   12 analyse_hash()-ed
+2011/4/30 1:33:40   12 In status_XXX
+2011/4/30 1:33:40   12 In receive_line()
+2011/4/30 1:33:50   Received H.fss/hash.fss
+1304098433
+41
+2011/4/30 1:33:50   12 Received line H.fss/hash.fss
+1304098433
+41
+2011/4/30 1:33:50   12 IN send_msg sending A
+2011/4/30 1:33:50   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:33:50   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:33:50   12 In receive_file of Files.cs
+2011/4/30 1:33:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 41
+2011/4/30 1:33:50   written to file
+2011/4/30 1:33:50   12 In analyse_hash()
+2011/4/30 1:33:50   mtime is: 1304098433
+2011/4/30 1:33:50   hash_fss_mtime(): 1304098419
+2011/4/30 1:33:50   12 IN send_msg sending I1
+2011/4/30 1:33:50   12 analyse_hash()-ed
+2011/4/30 1:33:50   12 In status_WAIT_ENTRY_INFO
+2011/4/30 1:33:50   12 In receive_line()
+2011/4/30 1:33:50   Received J新建文本文档.txt
+1304098433
+35
+2011/4/30 1:33:50   12 IN send_msg sending B
+2011/4/30 1:33:50   12 In status_WAIT_FILE()
+2011/4/30 1:33:50   In reciev_common_file(), relapth --新建文本文档.txt--
+2011/4/30 1:33:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\新建文本文档.txtand size is 35
+2011/4/30 1:33:50   6 C:\Users\test\Desktop\FSS\新建文本文档.txt Changed detected and passed.
+2011/4/30 1:33:50   written to file
+2011/4/30 1:33:50   6 C:\Users\test\Desktop\FSS\新建文本文档.txt Changed detected and passed.
+2011/4/30 1:33:50   12 In download_sync()
+2011/4/30 1:33:50   12 IN send_msg sending G
+2011/4/30 1:33:50   12 In status_XXX
+2011/4/30 1:33:50   12 In receive_line()
+2011/4/30 1:34:01   Received H.fss/hash.fss
+1304098448
+82
+2011/4/30 1:34:01   12 Received line H.fss/hash.fss
+1304098448
+82
+2011/4/30 1:34:01   12 IN send_msg sending A
+2011/4/30 1:34:01   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:34:01   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:34:01   12 In receive_file of Files.cs
+2011/4/30 1:34:01   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
+2011/4/30 1:34:02   written to file
+2011/4/30 1:34:02   12 In analyse_hash()
+2011/4/30 1:34:02   mtime is: 1304098448
+2011/4/30 1:34:02   hash_fss_mtime(): 1304098430
+2011/4/30 1:34:02   12 IN send_msg sending I1
+2011/4/30 1:34:02   12 analyse_hash()-ed
+2011/4/30 1:34:02   12 In status_WAIT_ENTRY_INFO
+2011/4/30 1:34:02   12 In receive_line()
+2011/4/30 1:34:02   Received Nuntitled folder
+1304098448
+4096
+2011/4/30 1:34:02   12 In download_sync()
+2011/4/30 1:34:02   12 IN send_msg sending G
+2011/4/30 1:34:02   12 In status_XXX
+2011/4/30 1:34:02   12 In receive_line()
+2011/4/30 1:34:02   13 C:\Users\test\Desktop\FSS\untitled folder Created detected and passed.
+2011/4/30 1:34:02   updated and genearted
+2011/4/30 1:34:04   13 C:\Users\test\Desktop\FSS\新建文本文档.txt Deleted detected and passed.
+2011/4/30 1:34:04   updated and genearted
+2011/4/30 1:34:04    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt--
+2011/4/30 1:34:04   root is --C:\Users\test\Desktop\FSS-- 25
+2011/4/30 1:34:04   relapath is --\untitled folder\新建文本文档.txt--
+2011/4/30 1:34:04   13 IN send_msg sending Juntitled folder/新建文本文档.txt
+1304098430
+35
+2011/4/30 1:34:04   13 C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt Created detected and passed.
+2011/4/30 1:34:04   13 C:\Users\test\Desktop\FSS\untitled folder Changed detected and passed.
+2011/4/30 1:34:05   Received D
+2011/4/30 1:34:05   12 Received line D
+2011/4/30 1:34:05   In send_file, sending C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt 35
+2011/4/30 1:34:05   12 In status_WAIT_MSG_SER_RECEVIED()
+2011/4/30 1:34:05   12 In receive_line()
+2011/4/30 1:34:05   Received F
+2011/4/30 1:34:05   12 IN send_msg sending M
+2011/4/30 1:34:05   12 In status_WAIT_HASH_FSS_INFO
+2011/4/30 1:34:05   12 In receive_line()
+2011/4/30 1:34:05   Received H.fss/hash.fss
+1
+123
+2011/4/30 1:34:05   12 Received line H.fss/hash.fss
+1
+123
+2011/4/30 1:34:05   12 IN send_msg sending A
+2011/4/30 1:34:05   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:34:05   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:34:05   12 In receive_file of Files.cs
+2011/4/30 1:34:05   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
+2011/4/30 1:34:05   written to file
+2011/4/30 1:34:05   12 In analyse_hash()
+2011/4/30 1:34:05   mtime is: 1
+2011/4/30 1:34:05   hash_fss_mtime(): 1304098444
+2011/4/30 1:34:05    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
+2011/4/30 1:34:05   root is --C:\Users\test\Desktop\FSS-- 25
+2011/4/30 1:34:05   relapath is --\.fss\diff.remote.index--
+2011/4/30 1:34:05   12 IN send_msg sending K.fss/diff.remote.index
+1304098445
+2
+2011/4/30 1:34:05   12 analyse_hash()-ed
+2011/4/30 1:34:05   12 In status_WIAT_MSG_SER_REQ_DEL_IDX
+2011/4/30 1:34:05   12 In receive_line()
+2011/4/30 1:34:06   Received E
+2011/4/30 1:34:06   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 2
+2011/4/30 1:34:06   12 In status_WAIT_HASH_FSS_INFO
+2011/4/30 1:34:06   12 In receive_line()
+2011/4/30 1:34:06   Received H.fss/hash.fss
+1
+82
+2011/4/30 1:34:06   12 Received line H.fss/hash.fss
+1
+82
+2011/4/30 1:34:06   12 IN send_msg sending A
+2011/4/30 1:34:06   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:34:06   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:34:06   12 In receive_file of Files.cs
+2011/4/30 1:34:06   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
+2011/4/30 1:34:06   written to file
+2011/4/30 1:34:06   12 In analyse_hash()
+2011/4/30 1:34:06   mtime is: 1
+2011/4/30 1:34:06   hash_fss_mtime(): 1304098444
+2011/4/30 1:34:06   12 IN send_msg sending L
+2011/4/30 1:34:06   12 analyse_hash()-ed
+2011/4/30 1:34:06   12 In status_XXX
+2011/4/30 1:34:06   12 In receive_line()
+2011/4/30 1:34:15   13 C:\Users\test\Desktop\FSS\untitled folder\新建文件夹 Created detected and passed.
+2011/4/30 1:34:15   updated and genearted
+2011/4/30 1:34:15    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\untitled folder\新建文件夹--
+2011/4/30 1:34:15   root is --C:\Users\test\Desktop\FSS-- 25
+2011/4/30 1:34:15   relapath is --\untitled folder\新建文件夹--
+2011/4/30 1:34:15   13 IN send_msg sending Nuntitled folder/新建文件夹
+1304098455
+2046
+2011/4/30 1:34:15   13 C:\Users\test\Desktop\FSS\untitled folder Changed detected and passed.
+2011/4/30 1:34:15   Received F
+2011/4/30 1:34:15   12 Received line F
+2011/4/30 1:34:15   12 IN send_msg sending M
+2011/4/30 1:34:15   12 In status_WAIT_HASH_FSS_INFO
+2011/4/30 1:34:15   12 In receive_line()
+2011/4/30 1:34:16   Received H.fss/hash.fss
+1
+123
+2011/4/30 1:34:16   12 Received line H.fss/hash.fss
+1
+123
+2011/4/30 1:34:16   12 IN send_msg sending A
+2011/4/30 1:34:16   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:34:16   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:34:16   12 In receive_file of Files.cs
+2011/4/30 1:34:16   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
+2011/4/30 1:34:16   written to file
+2011/4/30 1:34:16   12 In analyse_hash()
+2011/4/30 1:34:16   mtime is: 1
+2011/4/30 1:34:16   hash_fss_mtime(): 1304098455
+2011/4/30 1:34:16   12 IN send_msg sending L
+2011/4/30 1:34:16   12 analyse_hash()-ed
+2011/4/30 1:34:16   12 In status_XXX
+2011/4/30 1:34:16   12 In receive_line()
+2011/4/30 1:34:22   13 C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt Deleted detected and passed.
+2011/4/30 1:34:23   updated and genearted
+2011/4/30 1:34:23    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\untitled folder\新建文件夹\新建文本文档.txt--
+2011/4/30 1:34:23   root is --C:\Users\test\Desktop\FSS-- 25
+2011/4/30 1:34:23   relapath is --\untitled folder\新建文件夹\新建文本文档.txt--
+2011/4/30 1:34:23   13 IN send_msg sending Juntitled folder/新建文件夹/新建文本文档.txt
+1304098430
+35
+2011/4/30 1:34:23   13 C:\Users\test\Desktop\FSS\untitled folder\新建文件夹\新建文本文档.txt Created detected and passed.
+2011/4/30 1:34:23   13 C:\Users\test\Desktop\FSS\untitled folder\新建文件夹 Changed detected and passed.
+2011/4/30 1:34:23   13 C:\Users\test\Desktop\FSS\untitled folder Changed detected and passed.
+2011/4/30 1:34:23   Received D
+2011/4/30 1:34:23   12 Received line D
+2011/4/30 1:34:23   In send_file, sending C:\Users\test\Desktop\FSS\untitled folder\新建文件夹\新建文本文档.txt 35
+2011/4/30 1:34:23   12 In status_WAIT_MSG_SER_RECEVIED()
+2011/4/30 1:34:23   12 In receive_line()
+2011/4/30 1:34:23   Received F
+2011/4/30 1:34:23   12 IN send_msg sending M
+2011/4/30 1:34:23   12 In status_WAIT_HASH_FSS_INFO
+2011/4/30 1:34:23   12 In receive_line()
+2011/4/30 1:34:24   Received H.fss/hash.fss
+1
+164
+2011/4/30 1:34:24   12 Received line H.fss/hash.fss
+1
+164
+2011/4/30 1:34:24   12 IN send_msg sending A
+2011/4/30 1:34:24   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:34:24   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:34:24   12 In receive_file of Files.cs
+2011/4/30 1:34:24   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 164
+2011/4/30 1:34:24   written to file
+2011/4/30 1:34:24   12 In analyse_hash()
+2011/4/30 1:34:24   mtime is: 1
+2011/4/30 1:34:24   hash_fss_mtime(): 1304098463
+2011/4/30 1:34:24    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
+2011/4/30 1:34:24   root is --C:\Users\test\Desktop\FSS-- 25
+2011/4/30 1:34:24   relapath is --\.fss\diff.remote.index--
+2011/4/30 1:34:24   12 IN send_msg sending K.fss/diff.remote.index
+1304098464
+2
+2011/4/30 1:34:24   12 analyse_hash()-ed
+2011/4/30 1:34:24   12 In status_WIAT_MSG_SER_REQ_DEL_IDX
+2011/4/30 1:34:24   12 In receive_line()
+2011/4/30 1:34:24   Received E
+2011/4/30 1:34:24   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 2
+2011/4/30 1:34:24   12 In status_WAIT_HASH_FSS_INFO
+2011/4/30 1:34:24   12 In receive_line()
+2011/4/30 1:34:25   Received H.fss/hash.fss
+1
+123
+2011/4/30 1:34:25   12 Received line H.fss/hash.fss
+1
+123
+2011/4/30 1:34:25   12 IN send_msg sending A
+2011/4/30 1:34:25   12 IN status_WAIT_HASH_FSS
+2011/4/30 1:34:25   12 In recieve_hash_fss of Files.cs
+2011/4/30 1:34:25   12 In receive_file of Files.cs
+2011/4/30 1:34:25   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
+2011/4/30 1:34:25   written to file
+2011/4/30 1:34:25   12 In analyse_hash()
+2011/4/30 1:34:25   mtime is: 1
+2011/4/30 1:34:25   hash_fss_mtime(): 1304098463
+2011/4/30 1:34:25   12 IN send_msg sending L
+2011/4/30 1:34:25   12 analyse_hash()-ed
+2011/4/30 1:34:25   12 In status_XXX
+2011/4/30 1:34:25   12 In receive_line()
