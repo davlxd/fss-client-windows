@@ -35,8 +35,9 @@ namespace fss_client
         private const int WAIT_MSG_SER_REQ_DEL_IDX = 15;
 
         volatile private int status;
-        private string rela_name;
 
+        private string sha1_str;
+        private string rela_name;
         //TODO: Attention: A portable problem here
         private long mtime;
         private long req_sz;
@@ -374,7 +375,7 @@ namespace fss_client
                 if (msg.Substring(0, DIR_INFO.Length) == DIR_INFO)
                 {
                     string[] words = msg.Substring(DIR_INFO.Length).Split('\n');
-                    files.create_dir(words[0]);
+                    files.create_dir(words[1]);
 
                     download_sync();
 
@@ -580,13 +581,16 @@ namespace fss_client
             try
             {
                 string[] words = msg.Split('\n');
+                this.sha1_str = words[0];
+                
 
-                if (words[0] == ".fss/hash.fss")
+                if (words[1] == ".fss/hash.fss")
                     this.rela_name = "remote.hash.fss";
                 else
-                    this.rela_name = words[0].Replace('/', '\\');
-                this.mtime = Convert.ToInt64(words[1]);
-                this.req_sz = Convert.ToInt64(words[2]);
+                    this.rela_name = words[1].Replace('/', '\\');
+
+                this.mtime = Convert.ToInt64(words[2]);
+                this.req_sz = Convert.ToInt64(words[3]);
             }
             catch (Exception e)
             {

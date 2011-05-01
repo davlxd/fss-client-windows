@@ -22,6 +22,7 @@ namespace fss_client
         private string global_root_path;
         private string fss_dir_path;
         private string finfo_fss_path;
+        private string sha1_fss_path;
         private string hash_fss_path;
         private string temp_hash_fss_path;
         private string remote_hash_fss_path;
@@ -48,6 +49,7 @@ namespace fss_client
 
             this.fss_dir_path = Path.Combine(path, ".fss");
             this.finfo_fss_path = Path.Combine(this.fss_dir_path, "finfo.fss");
+            this.sha1_fss_path = Path.Combine(this.fss_dir_path, "sha1.fss");
             this.hash_fss_path = Path.Combine(this.fss_dir_path, "hash.fss");
             this.remote_hash_fss_path = Path.Combine(this.fss_dir_path, "remote.hash.fss");
             this.temp_hash_fss_path = Path.Combine(this.fss_dir_path, "temp.hash.fss");
@@ -99,6 +101,9 @@ namespace fss_client
                 if (File.Exists(this.temp_hash_fss_path))
                     File.Delete(this.temp_hash_fss_path);
 
+                if (File.Exists(this.sha1_fss_path))
+                    File.Delete(this.sha1_fss_path);
+
 
                 Fn fn = new Fn(this.write_in); // Instantiate delagate, register function
                 ftw = new Ftw(fn, this.global_root_path);  // Instaiate traverse functio
@@ -140,13 +145,22 @@ namespace fss_client
 
         public void write_in(string fullpath)
         {
+            string sha1 = string.Empty;
+            string hash = string.Empty;
+
+            Sha1.compute_hash(fullpath, global_root_path, ref sha1, ref hash);
+
             if (if_to_skip(fullpath))
                 return;
+
+            File.AppendAllText(this.sha1_fss_path, sha1);
+            File.AppendAllText(this.sha1_fss_path, "\n");
+
             File.AppendAllText(this.finfo_fss_path, fullpath, Encoding.Default);
             File.AppendAllText(this.finfo_fss_path, "\n");
 
 
-            File.AppendAllText(this.temp_hash_fss_path, Sha1.sha1_file_via_fname_fss(global_root_path, fullpath));
+            File.AppendAllText(this.temp_hash_fss_path, hash);
             File.AppendAllText(this.temp_hash_fss_path, "\n");
 
         }
@@ -288,27 +302,33 @@ namespace fss_client
         public int send_entryinfo(string record, string prefix0, string prefix1)
         {
             int rv = 0;
+            string sha1 = string.Empty;
+            string hash = string.Empty;
 
-                string msg = string.Empty;
-                if (Directory.Exists(record))
-                {
-                    msg += prefix1;
-                    rv = PREFIX1_SENT;
-                }
-                else
-                {
-                    msg += prefix0;
-                    rv = PREFIX0_SENT;
-                }
+            string msg = string.Empty;
+            if (Directory.Exists(record))
+            {
+                msg += prefix1;
+                rv = PREFIX1_SENT;
+            }
+            else
+            {
+                msg += prefix0;
+                rv = PREFIX0_SENT;
+            }
 
-                msg += get_rela_path(record);
-                msg += '\n';
-                msg += TimeSize.entry_mtime(record);
-                msg += '\n';
-                this.size_to_send = TimeSize.entry_size(record);
-                msg += this.size_to_send;
+            Sha1.compute_hash(record, global_root_path, ref sha1, ref hash);
 
-                net.send_msg(msg);
+            msg += sha1;
+            msg += '\n';
+            msg += get_rela_path(record);
+            msg += '\n';
+            msg += TimeSize.entry_mtime(record);
+            msg += '\n';
+            this.size_to_send = TimeSize.entry_size(record);
+            msg += this.size_to_send;
+            
+            net.send_msg(msg);
 
 
             return rv;

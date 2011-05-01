@@ -1,1354 +1,708 @@
-﻿2011/4/27 14:54:07   10 Connected to 204.74.216.120
-2011/4/27 14:54:07   12 In status_WAIT_HASH_FSS_INFO
-2011/4/27 14:54:07   12 In receive_line()
-2011/4/27 14:54:07   Received H.fss/hash.fss
-1303827748
-41
-2011/4/27 14:54:07   12 Received line H.fss/hash.fss
-1303827748
-41
-2011/4/27 14:54:07   12 IN send_msg sending A
-2011/4/27 14:54:07   12 IN status_WAIT_HASH_FSS
-2011/4/27 14:54:07   12 In recieve_hash_fss of Files.cs
-2011/4/27 14:54:07   12 In receive_file of Files.cs
-2011/4/27 14:54:07   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 41
-2011/4/27 14:54:07   written to file
-2011/4/27 14:54:07   12 In analyse_hash()
-2011/4/27 14:54:07   mtime is: 1303827748
-2011/4/27 14:54:07   hash_fss_mtime(): 1303827739
-2011/4/27 14:54:07   12 IN send_msg sending I1
-2011/4/27 14:54:07   12 analyse_hash()-ed
-2011/4/27 14:54:07   12 In status_WAIT_ENTRY_INFO
-2011/4/27 14:54:07   12 In receive_line()
-2011/4/27 14:54:07   Received Jnew file
-1303827747
+2011/5/1 0:41:22   10 Connected to 204.74.216.120
+2011/5/1 0:41:22   12 In status_WAIT_HASH_FSS_INFO
+2011/5/1 0:41:22   12 In receive_line()
+2011/5/1 0:41:22   Received HDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+.fss/hash.fss
+1304181665
 0
-2011/4/27 14:54:07   12 IN send_msg sending B
-2011/4/27 14:54:07   12 In status_WAIT_FILE()
-2011/4/27 14:54:07   In reciev_common_file(), relapth --new file--
-2011/4/27 14:54:07   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\new fileand size is 0
-2011/4/27 14:54:08   12 In download_sync()
-2011/4/27 14:54:08   13 C:\Users\test\Desktop\FSS\new file Created detected and passed.
-2011/4/27 14:54:08   12 IN send_msg sending G
-2011/4/27 14:54:08   12 In status_XXX
-2011/4/27 14:54:08   12 In receive_line()
-2011/4/27 14:54:40   Received H.fss/hash.fss
-1303887278
+2011/5/1 0:41:22   12 Received line HDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+.fss/hash.fss
+1304181665
 0
-2011/4/27 14:54:40   12 Received line H.fss/hash.fss
-1303887278
-0
-2011/4/27 14:54:40   12 IN send_msg sending A
-2011/4/27 14:54:40   12 IN status_WAIT_HASH_FSS
-2011/4/27 14:54:40   12 In recieve_hash_fss of Files.cs
-2011/4/27 14:54:40   12 In receive_file of Files.cs
-2011/4/27 14:54:40   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 0
-2011/4/27 14:54:40   12 In analyse_hash()
-2011/4/27 14:54:40   mtime is: 1303887278
-2011/4/27 14:54:40   hash_fss_mtime(): 1303887248
-2011/4/27 14:54:40   12 IN send_msg sending G
-2011/4/27 14:54:40   13 C:\Users\test\Desktop\FSS\new file Deleted detected and passed.
-2011/4/27 14:54:40   12 analyse_hash()-ed
-2011/4/27 14:54:40   12 In status_XXX
-2011/4/27 14:54:40   12 In receive_line()
-2011/4/27 14:54:40   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
+2011/5/1 0:41:22   12 IN send_msg sending A
+2011/5/1 0:41:22   12 IN status_WAIT_HASH_FSS
+2011/5/1 0:41:22   12 In recieve_hash_fss of Files.cs
+2011/5/1 0:41:22   12 In receive_file of Files.cs
+2011/5/1 0:41:22   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 0
+2011/5/1 0:41:22   12 In analyse_hash()
+2011/5/1 0:41:22   mtime is: 1304181665
+2011/5/1 0:41:23   hash_fss_mtime(): 1304153657
+2011/5/1 0:41:23   11 C:\Users\test\Desktop\FSS\新建文件夹\new file Deleted detected and passed.
+2011/5/1 0:41:23   11 C:\Users\test\Desktop\FSS\新建文件夹 Deleted detected and passed.
+2011/5/1 0:41:23   12 System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
    在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   在 System.IO.File.Delete(String path)
-   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 217
-2011/4/27 14:54:40   updated and genearted
-2011/4/27 14:54:46   Received H.fss/hash.fss
-1303887285
-41
-2011/4/27 14:54:46   12 Received line H.fss/hash.fss
-1303887285
-41
-2011/4/27 14:54:46   12 IN send_msg sending A
-2011/4/27 14:54:46   12 IN status_WAIT_HASH_FSS
-2011/4/27 14:54:46   12 In recieve_hash_fss of Files.cs
-2011/4/27 14:54:46   12 In receive_file of Files.cs
-2011/4/27 14:54:46   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 41
-2011/4/27 14:54:47   written to file
-2011/4/27 14:54:47   12 In analyse_hash()
-2011/4/27 14:54:47   mtime is: 1303887285
-2011/4/27 14:54:47   hash_fss_mtime(): 1303887280
-2011/4/27 14:54:47   12 IN send_msg sending I1
-2011/4/27 14:54:47   12 analyse_hash()-ed
-2011/4/27 14:54:47   12 In status_WAIT_ENTRY_INFO
-2011/4/27 14:54:47   12 In receive_line()
-2011/4/27 14:54:47   Received Nuntitled folder
-1303887285
-4096
-2011/4/27 14:54:47   12 In download_sync()
-2011/4/27 14:54:47   13 C:\Users\test\Desktop\FSS\untitled folder Created detected and passed.
-2011/4/27 14:54:48   12 IN send_msg sending G
-2011/4/27 14:54:48   12 In status_XXX
-2011/4/27 14:54:48   12 In receive_line()
-2011/4/27 14:55:26   13 C:\Users\test\Desktop\FSS\新建文本文档.txt Created detected and passed.
-2011/4/27 14:55:26   updated and genearted
-2011/4/27 14:55:26    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文本文档.txt--
-2011/4/27 14:55:27   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/27 14:55:27   relapath is --\新建文本文档.txt--
-2011/4/27 14:55:27   13 IN send_msg sending J新建文本文档.txt
-1303887326
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 fss_client.Sha1.compute_hash(String fullname, String rootpath, String& sha1_digest, String& hash_digest) 位置 Z:\fss-client\fss-client\Sha1.cs:行号 97
+   在 fss_client.Files.write_in(String fullpath) 位置 Z:\fss-client\fss-client\Files.cs:行号 151
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 25
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 33
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 37
+   在 fss_client.Ftw..ctor(Fn fn, String rootpath) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 18
+   在 fss_client.Files.update_files() 位置 Z:\fss-client\fss-client\Files.cs:行号 109
+2011/5/1 0:41:23   12 IN send_msg sending G
+2011/5/1 0:41:23   12 analyse_hash()-ed
+2011/5/1 0:41:23   12 In status_XXX
+2011/5/1 0:41:23   12 In receive_line()
+2011/5/1 0:41:37   11 C:\Users\test\Desktop\FSS\新建文本文档.txt Created detected and passed.
+2011/5/1 0:41:37   updated and genearted
+2011/5/1 0:41:37    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文本文档.txt--
+2011/5/1 0:41:38   root is --C:\Users\test\Desktop\FSS-- 25
+2011/5/1 0:41:38   relapath is --\新建文本文档.txt--
+2011/5/1 0:41:38   11 IN send_msg sending JDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+新建文本文档.txt
+1304181697
 0
-2011/4/27 14:55:27   Received D
-2011/4/27 14:55:27   12 Received line D
-2011/4/27 14:55:27   In send_file, sending C:\Users\test\Desktop\FSS\新建文本文档.txt 0
-2011/4/27 14:55:27   12 In status_WAIT_MSG_SER_RECEVIED()
-2011/4/27 14:55:27   12 In receive_line()
-2011/4/27 14:55:27   Received F
-2011/4/27 14:55:27   12 IN send_msg sending M
-2011/4/27 14:55:27   12 In status_WAIT_HASH_FSS_INFO
-2011/4/27 14:55:27   12 In receive_line()
-2011/4/27 14:55:28   Received H.fss/hash.fss
+2011/5/1 0:41:38   Received D
+2011/5/1 0:41:38   12 Received line D
+2011/5/1 0:41:38   In send_file, sending C:\Users\test\Desktop\FSS\新建文本文档.txt 0
+2011/5/1 0:41:38   12 In status_WAIT_MSG_SER_RECEVIED()
+2011/5/1 0:41:38   12 In receive_line()
+2011/5/1 0:41:38   Received F
+2011/5/1 0:41:38   12 IN send_msg sending M
+2011/5/1 0:41:38   12 In status_WAIT_HASH_FSS_INFO
+2011/5/1 0:41:38   12 In receive_line()
+2011/5/1 0:41:39   Received HBB6C5B56852E22B9B2C6EC2E23D50387E2AD5084
+.fss/hash.fss
 1
-82
-2011/4/27 14:55:28   12 Received line H.fss/hash.fss
+41
+2011/5/1 0:41:39   12 Received line HBB6C5B56852E22B9B2C6EC2E23D50387E2AD5084
+.fss/hash.fss
 1
-82
-2011/4/27 14:55:28   12 IN send_msg sending A
-2011/4/27 14:55:28   12 IN status_WAIT_HASH_FSS
-2011/4/27 14:55:28   12 In recieve_hash_fss of Files.cs
-2011/4/27 14:55:28   12 In receive_file of Files.cs
-2011/4/27 14:55:28   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
-2011/4/27 14:55:28   written to file
-2011/4/27 14:55:28   12 In analyse_hash()
-2011/4/27 14:55:28   mtime is: 1
-2011/4/27 14:55:28   hash_fss_mtime(): 1303887326
-2011/4/27 14:55:28   12 IN send_msg sending L
-2011/4/27 14:55:28   12 analyse_hash()-ed
-2011/4/27 14:55:28   12 In status_XXX
-2011/4/27 14:55:28   12 In receive_line()
-2011/4/27 14:55:49   Received H.fss/hash.fss
-1303887347
-82
-2011/4/27 14:55:49   12 Received line H.fss/hash.fss
-1303887347
-82
-2011/4/27 14:55:49   12 IN send_msg sending A
-2011/4/27 14:55:49   12 IN status_WAIT_HASH_FSS
-2011/4/27 14:55:49   12 In recieve_hash_fss of Files.cs
-2011/4/27 14:55:49   12 In receive_file of Files.cs
-2011/4/27 14:55:49   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
-2011/4/27 14:55:49   written to file
-2011/4/27 14:55:49   12 In analyse_hash()
-2011/4/27 14:55:49   mtime is: 1303887347
-2011/4/27 14:55:49   hash_fss_mtime(): 1303887326
-2011/4/27 14:55:49   12 IN send_msg sending I2
-2011/4/27 14:55:49   12 analyse_hash()-ed
-2011/4/27 14:55:49   12 In status_WAIT_ENTRY_INFO
-2011/4/27 14:55:49   12 In receive_line()
-2011/4/27 14:55:49   Received J新建文本文档.txt
-1303887347
-9
-2011/4/27 14:55:49   12 IN send_msg sending B
-2011/4/27 14:55:49   12 In status_WAIT_FILE()
-2011/4/27 14:55:49   In reciev_common_file(), relapth --新建文本文档.txt--
-2011/4/27 14:55:49   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\新建文本文档.txtand size is 9
-2011/4/27 14:55:49   13 C:\Users\test\Desktop\FSS\新建文本文档.txt Changed detected and passed.
-2011/4/27 14:55:49   written to file
-2011/4/27 14:55:49   13 C:\Users\test\Desktop\FSS\新建文本文档.txt Changed detected and passed.
-2011/4/27 14:55:49   12 In download_sync()
-2011/4/27 14:55:49   12 IN send_msg sending G
-2011/4/27 14:55:49   12 In status_XXX
-2011/4/27 14:55:49   12 In receive_line()
-2011/4/27 14:55:57   13 C:\Users\test\Desktop\FSS\新建文本文档.txt Deleted detected and passed.
-2011/4/27 14:55:57   updated and genearted
-2011/4/27 14:55:58    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt--
-2011/4/27 14:55:58   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/27 14:55:58   relapath is --\untitled folder\新建文本文档.txt--
-2011/4/27 14:55:58   13 IN send_msg sending Juntitled folder/新建文本文档.txt
-1303887349
-9
-2011/4/27 14:55:58   13 C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt Created detected and passed.
-2011/4/27 14:55:58   13 C:\Users\test\Desktop\FSS\untitled folder Changed detected and passed.
-2011/4/27 14:55:58   Received D
-2011/4/27 14:55:58   12 Received line D
-2011/4/27 14:55:58   In send_file, sending C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt 9
-2011/4/27 14:55:58   12 In status_WAIT_MSG_SER_RECEVIED()
-2011/4/27 14:55:58   12 In receive_line()
-2011/4/27 14:55:58   Received F
-2011/4/27 14:55:58   12 IN send_msg sending M
-2011/4/27 14:55:58   12 In status_WAIT_HASH_FSS_INFO
-2011/4/27 14:55:58   12 In receive_line()
-2011/4/27 14:55:58   Received H.fss/hash.fss
-1
-123
-2011/4/27 14:55:58   12 Received line H.fss/hash.fss
-1
-123
-2011/4/27 14:55:58   12 IN send_msg sending A
-2011/4/27 14:55:58   12 IN status_WAIT_HASH_FSS
-2011/4/27 14:55:58   12 In recieve_hash_fss of Files.cs
-2011/4/27 14:55:58   12 In receive_file of Files.cs
-2011/4/27 14:55:58   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
-2011/4/27 14:55:59   written to file
-2011/4/27 14:55:59   12 In analyse_hash()
-2011/4/27 14:55:59   mtime is: 1
-2011/4/27 14:55:59   hash_fss_mtime(): 1303887357
-2011/4/27 14:55:59    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
-2011/4/27 14:55:59   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/27 14:55:59   relapath is --\.fss\diff.remote.index--
-2011/4/27 14:55:59   12 IN send_msg sending K.fss/diff.remote.index
-1303887359
-2
-2011/4/27 14:55:59   12 analyse_hash()-ed
-2011/4/27 14:55:59   12 In status_WIAT_MSG_SER_REQ_DEL_IDX
-2011/4/27 14:55:59   12 In receive_line()
-2011/4/27 14:55:59   Received E
-2011/4/27 14:55:59   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 2
-2011/4/27 14:55:59   12 In status_WAIT_HASH_FSS_INFO
-2011/4/27 14:55:59   12 In receive_line()
-2011/4/27 14:55:59   Received H.fss/hash.fss
-1
-82
-2011/4/27 14:55:59   12 Received line H.fss/hash.fss
-1
-82
-2011/4/27 14:55:59   12 IN send_msg sending A
-2011/4/27 14:55:59   12 IN status_WAIT_HASH_FSS
-2011/4/27 14:55:59   12 In recieve_hash_fss of Files.cs
-2011/4/27 14:55:59   12 In receive_file of Files.cs
-2011/4/27 14:55:59   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
-2011/4/27 14:55:59   written to file
-2011/4/27 14:55:59   12 In analyse_hash()
-2011/4/27 14:55:59   mtime is: 1
-2011/4/27 14:55:59   hash_fss_mtime(): 1303887357
-2011/4/27 14:55:59   12 IN send_msg sending L
-2011/4/27 14:55:59   12 analyse_hash()-ed
-2011/4/27 14:55:59   12 In status_XXX
-2011/4/27 14:55:59   12 In receive_line()
-2011/4/27 17:51:49   10 Connected to 204.74.216.120
-2011/4/27 17:51:50   12 In status_WAIT_HASH_FSS_INFO
-2011/4/27 17:51:50   12 In receive_line()
-2011/4/27 17:51:50   Received H.fss/hash.fss
-1303897868
-1353
-2011/4/27 17:51:50   12 Received line H.fss/hash.fss
-1303897868
-1353
-2011/4/27 17:51:50   12 IN send_msg sending A
-2011/4/27 17:51:50   12 IN status_WAIT_HASH_FSS
-2011/4/27 17:51:50   12 In recieve_hash_fss of Files.cs
-2011/4/27 17:51:50   12 In receive_file of Files.cs
-2011/4/27 17:51:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 1353
-2011/4/27 17:51:50   written to file
-2011/4/27 17:51:50   12 In analyse_hash()
-2011/4/27 17:51:50   mtime is: 1303897868
-2011/4/27 17:51:50   hash_fss_mtime(): 1303887357
-2011/4/27 17:51:50   12 IN send_msg sending I3
-2011/4/27 17:51:50   12 analyse_hash()-ed
-2011/4/27 17:51:50   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:51:50   12 In receive_line()
-2011/4/27 17:51:50   Received Jhttpd-2.3.11-beta/README
-1303891191
-5007
-2011/4/27 17:51:50   12 IN send_msg sending B
-2011/4/27 17:51:50   12 In status_WAIT_FILE()
-2011/4/27 17:51:50   In reciev_common_file(), relapth --httpd-2.3.11-beta\README--
-2011/4/27 17:51:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\READMEand size is 5007
-2011/4/27 17:51:50   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Created detected and passed.
-2011/4/27 17:51:50   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\README Created detected and passed.
-2011/4/27 17:51:50   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:51:51   written to file
-2011/4/27 17:51:51   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\README Changed detected and passed.
-2011/4/27 17:51:51   12 In download_sync()
-2011/4/27 17:51:51   12 IN send_msg sending I4
-2011/4/27 17:51:51   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:51:51   12 In receive_line()
-2011/4/27 17:51:51   Received Jhttpd-2.3.11-beta/httpd.spec
-1303897858
-12414
-2011/4/27 17:51:51   12 IN send_msg sending B
-2011/4/27 17:51:51   12 In status_WAIT_FILE()
-2011/4/27 17:51:51   In reciev_common_file(), relapth --httpd-2.3.11-beta\httpd.spec--
-2011/4/27 17:51:51   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\httpd.specand size is 12414
-2011/4/27 17:51:51   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\httpd.spec Created detected and passed.
-2011/4/27 17:51:51   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:51:52   written to file
-2011/4/27 17:51:52   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\httpd.spec Changed detected and passed.
-2011/4/27 17:51:52   12 In download_sync()
-2011/4/27 17:51:52   12 IN send_msg sending I5
-2011/4/27 17:51:52   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:51:52   12 In receive_line()
-2011/4/27 17:51:52   Received Jhttpd-2.3.11-beta/emacs-style
-1303891192
-403
-2011/4/27 17:51:52   12 IN send_msg sending B
-2011/4/27 17:51:52   12 In status_WAIT_FILE()
-2011/4/27 17:51:52   In reciev_common_file(), relapth --httpd-2.3.11-beta\emacs-style--
-2011/4/27 17:51:52   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\emacs-styleand size is 403
-2011/4/27 17:51:52   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\emacs-style Created detected and passed.
-2011/4/27 17:51:52   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:51:52   written to file
-2011/4/27 17:51:52   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\emacs-style Changed detected and passed.
-2011/4/27 17:51:52   12 In download_sync()
-2011/4/27 17:51:52   12 IN send_msg sending I6
-2011/4/27 17:51:52   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:51:52   12 In receive_line()
-2011/4/27 17:51:53   Received Jhttpd-2.3.11-beta/buildconf
-1303890968
-6791
-2011/4/27 17:51:53   12 IN send_msg sending B
-2011/4/27 17:51:53   12 In status_WAIT_FILE()
-2011/4/27 17:51:53   In reciev_common_file(), relapth --httpd-2.3.11-beta\buildconf--
-2011/4/27 17:51:53   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\buildconfand size is 6791
-2011/4/27 17:51:53   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\buildconf Created detected and passed.
-2011/4/27 17:51:53   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:51:53   written to file
-2011/4/27 17:51:53   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\buildconf Changed detected and passed.
-2011/4/27 17:51:53   12 In download_sync()
-2011/4/27 17:51:53   12 IN send_msg sending I7
-2011/4/27 17:51:53   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:51:53   12 In receive_line()
-2011/4/27 17:51:53   Received Jhttpd-2.3.11-beta/INSTALL
-1303897862
-5147
-2011/4/27 17:51:53   12 IN send_msg sending B
-2011/4/27 17:51:53   12 In status_WAIT_FILE()
-2011/4/27 17:51:53   In reciev_common_file(), relapth --httpd-2.3.11-beta\INSTALL--
-2011/4/27 17:51:53   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\INSTALLand size is 5147
-2011/4/27 17:51:53   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\INSTALL Created detected and passed.
-2011/4/27 17:51:53   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:51:54   written to file
-2011/4/27 17:51:54   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\INSTALL Changed detected and passed.
-2011/4/27 17:51:54   12 In download_sync()
-2011/4/27 17:51:54   12 IN send_msg sending I8
-2011/4/27 17:51:54   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:51:54   12 In receive_line()
-2011/4/27 17:51:54   Received Jhttpd-2.3.11-beta/Makefile.win
-1303891199
-43909
-2011/4/27 17:51:54   12 IN send_msg sending B
-2011/4/27 17:51:54   12 In status_WAIT_FILE()
-2011/4/27 17:51:54   In reciev_common_file(), relapth --httpd-2.3.11-beta\Makefile.win--
-2011/4/27 17:51:54   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\Makefile.winand size is 43909
-2011/4/27 17:51:54   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\Makefile.win Created detected and passed.
-2011/4/27 17:51:54   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:51:55   written to file
-2011/4/27 17:51:55   12 In download_sync()
-2011/4/27 17:51:55   12 IN send_msg sending I9
-2011/4/27 17:51:55   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:51:55   12 In receive_line()
-2011/4/27 17:51:55   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\Makefile.win Changed detected and passed.
-2011/4/27 17:51:55   Received Jhttpd-2.3.11-beta/configure
-1303887478
-863880
-2011/4/27 17:51:55   12 IN send_msg sending B
-2011/4/27 17:51:55   12 In status_WAIT_FILE()
-2011/4/27 17:51:55   In reciev_common_file(), relapth --httpd-2.3.11-beta\configure--
-2011/4/27 17:51:55   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\configureand size is 863880
-2011/4/27 17:51:55   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\configure Created detected and passed.
-2011/4/27 17:51:55   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:01   written to file
-2011/4/27 17:52:01   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\configure Changed detected and passed.
-2011/4/27 17:52:01   12 In download_sync()
-2011/4/27 17:52:01   12 IN send_msg sending I10
-2011/4/27 17:52:01   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:01   12 In receive_line()
-2011/4/27 17:52:01   Received Jhttpd-2.3.11-beta/NWGNUmakefile
-1303897861
-12226
-2011/4/27 17:52:01   12 IN send_msg sending B
-2011/4/27 17:52:01   12 In status_WAIT_FILE()
-2011/4/27 17:52:01   In reciev_common_file(), relapth --httpd-2.3.11-beta\NWGNUmakefile--
-2011/4/27 17:52:01   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\NWGNUmakefileand size is 12226
-2011/4/27 17:52:01   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\NWGNUmakefile Created detected and passed.
-2011/4/27 17:52:01   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:02   written to file
-2011/4/27 17:52:02   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\NWGNUmakefile Changed detected and passed.
-2011/4/27 17:52:02   12 In download_sync()
-2011/4/27 17:52:02   12 IN send_msg sending I11
-2011/4/27 17:52:02   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:02   12 In receive_line()
-2011/4/27 17:52:02   Received Jhttpd-2.3.11-beta/httpd.dsp
-1303897864
-4124
-2011/4/27 17:52:02   12 IN send_msg sending B
-2011/4/27 17:52:02   12 In status_WAIT_FILE()
-2011/4/27 17:52:02   In reciev_common_file(), relapth --httpd-2.3.11-beta\httpd.dsp--
-2011/4/27 17:52:02   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\httpd.dspand size is 4124
-2011/4/27 17:52:02   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\httpd.dsp Created detected and passed.
-2011/4/27 17:52:02   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:02   written to file
-2011/4/27 17:52:02   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\httpd.dsp Changed detected and passed.
-2011/4/27 17:52:02   12 In download_sync()
-2011/4/27 17:52:02   12 IN send_msg sending I12
-2011/4/27 17:52:03   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:03   12 In receive_line()
-2011/4/27 17:52:03   Received Jhttpd-2.3.11-beta/configure.in
-1303887422
-25534
-2011/4/27 17:52:03   12 IN send_msg sending B
-2011/4/27 17:52:03   12 In status_WAIT_FILE()
-2011/4/27 17:52:03   In reciev_common_file(), relapth --httpd-2.3.11-beta\configure.in--
-2011/4/27 17:52:03   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\configure.inand size is 25534
-2011/4/27 17:52:03   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\configure.in Created detected and passed.
-2011/4/27 17:52:03   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:03   written to file
-2011/4/27 17:52:03   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\configure.in Changed detected and passed.
-2011/4/27 17:52:03   12 In download_sync()
-2011/4/27 17:52:03   12 IN send_msg sending I13
-2011/4/27 17:52:03   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:03   12 In receive_line()
-2011/4/27 17:52:03   Received Jhttpd-2.3.11-beta/libhttpd.dsp
-1303897863
-20238
-2011/4/27 17:52:03   12 IN send_msg sending B
-2011/4/27 17:52:04   12 In status_WAIT_FILE()
-2011/4/27 17:52:04   In reciev_common_file(), relapth --httpd-2.3.11-beta\libhttpd.dsp--
-2011/4/27 17:52:04   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\libhttpd.dspand size is 20238
-2011/4/27 17:52:04   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\libhttpd.dsp Created detected and passed.
-2011/4/27 17:52:04   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:04   written to file
-2011/4/27 17:52:04   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\libhttpd.dsp Changed detected and passed.
-2011/4/27 17:52:04   12 In download_sync()
-2011/4/27 17:52:04   12 IN send_msg sending I14
-2011/4/27 17:52:04   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:04   12 In receive_line()
-2011/4/27 17:52:04   Received Jhttpd-2.3.11-beta/VERSIONING
-1303891196
-8183
-2011/4/27 17:52:04   12 IN send_msg sending B
-2011/4/27 17:52:04   12 In status_WAIT_FILE()
-2011/4/27 17:52:04   In reciev_common_file(), relapth --httpd-2.3.11-beta\VERSIONING--
-2011/4/27 17:52:04   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\VERSIONINGand size is 8183
-2011/4/27 17:52:04   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\VERSIONING Created detected and passed.
-2011/4/27 17:52:04   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:05   written to file
-2011/4/27 17:52:05   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\VERSIONING Changed detected and passed.
-2011/4/27 17:52:05   12 In download_sync()
-2011/4/27 17:52:05   12 IN send_msg sending I15
-2011/4/27 17:52:05   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:05   12 In receive_line()
-2011/4/27 17:52:05   Received Jhttpd-2.3.11-beta/apache_probes.d
-1303887463
-9907
-2011/4/27 17:52:05   12 IN send_msg sending B
-2011/4/27 17:52:05   12 In status_WAIT_FILE()
-2011/4/27 17:52:05   In reciev_common_file(), relapth --httpd-2.3.11-beta\apache_probes.d--
-2011/4/27 17:52:05   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\apache_probes.dand size is 9907
-2011/4/27 17:52:05   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\apache_probes.d Created detected and passed.
-2011/4/27 17:52:05   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:06   written to file
-2011/4/27 17:52:06   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\apache_probes.d Changed detected and passed.
-2011/4/27 17:52:06   12 In download_sync()
-2011/4/27 17:52:06   12 IN send_msg sending I16
-2011/4/27 17:52:06   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:06   12 In receive_line()
-2011/4/27 17:52:06   Received Jhttpd-2.3.11-beta/ABOUT_APACHE
-1303891042
-14882
-2011/4/27 17:52:06   12 IN send_msg sending B
-2011/4/27 17:52:06   12 In status_WAIT_FILE()
-2011/4/27 17:52:06   In reciev_common_file(), relapth --httpd-2.3.11-beta\ABOUT_APACHE--
-2011/4/27 17:52:06   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\ABOUT_APACHEand size is 14882
-2011/4/27 17:52:06   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\ABOUT_APACHE Created detected and passed.
-2011/4/27 17:52:06   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:07   written to file
-2011/4/27 17:52:07   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\ABOUT_APACHE Changed detected and passed.
-2011/4/27 17:52:07   12 In download_sync()
-2011/4/27 17:52:07   12 IN send_msg sending I17
-2011/4/27 17:52:07   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:07   12 In receive_line()
-2011/4/27 17:52:07   Received Jhttpd-2.3.11-beta/acinclude.m4
-1303891151
-23515
-2011/4/27 17:52:07   12 IN send_msg sending B
-2011/4/27 17:52:07   12 In status_WAIT_FILE()
-2011/4/27 17:52:07   In reciev_common_file(), relapth --httpd-2.3.11-beta\acinclude.m4--
-2011/4/27 17:52:07   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\acinclude.m4and size is 23515
-2011/4/27 17:52:07   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\acinclude.m4 Created detected and passed.
-2011/4/27 17:52:07   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:07   written to file
-2011/4/27 17:52:07   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\acinclude.m4 Changed detected and passed.
-2011/4/27 17:52:07   12 In download_sync()
-2011/4/27 17:52:07   12 IN send_msg sending I18
-2011/4/27 17:52:08   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:08   12 In receive_line()
-2011/4/27 17:52:08   Received Jhttpd-2.3.11-beta/Apache.dsw
-1303887421
-74095
-2011/4/27 17:52:08   12 IN send_msg sending B
-2011/4/27 17:52:08   12 In status_WAIT_FILE()
-2011/4/27 17:52:08   In reciev_common_file(), relapth --httpd-2.3.11-beta\Apache.dsw--
-2011/4/27 17:52:08   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\Apache.dswand size is 74095
-2011/4/27 17:52:08   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\Apache.dsw Created detected and passed.
-2011/4/27 17:52:08   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:10   written to file
-2011/4/27 17:52:10   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\Apache.dsw Changed detected and passed.
-2011/4/27 17:52:10   12 In download_sync()
-2011/4/27 17:52:10   12 IN send_msg sending I19
-2011/4/27 17:52:10   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:10   12 In receive_line()
-2011/4/27 17:52:10   Received Jhttpd-2.3.11-beta/InstallBin.dsp
-1303891199
-2909
-2011/4/27 17:52:10   12 IN send_msg sending B
-2011/4/27 17:52:10   12 In status_WAIT_FILE()
-2011/4/27 17:52:10   In reciev_common_file(), relapth --httpd-2.3.11-beta\InstallBin.dsp--
-2011/4/27 17:52:10   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\InstallBin.dspand size is 2909
-2011/4/27 17:52:10   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\InstallBin.dsp Created detected and passed.
-2011/4/27 17:52:10   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:10   written to file
-2011/4/27 17:52:10   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\InstallBin.dsp Changed detected and passed.
-2011/4/27 17:52:10   12 In download_sync()
-2011/4/27 17:52:10   12 IN send_msg sending I20
-2011/4/27 17:52:10   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:10   12 In receive_line()
-2011/4/27 17:52:10   Received Jhttpd-2.3.11-beta/config.layout
-1303887420
-10193
-2011/4/27 17:52:10   12 IN send_msg sending B
-2011/4/27 17:52:10   12 In status_WAIT_FILE()
-2011/4/27 17:52:11   In reciev_common_file(), relapth --httpd-2.3.11-beta\config.layout--
-2011/4/27 17:52:11   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\config.layoutand size is 10193
-2011/4/27 17:52:11   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\config.layout Created detected and passed.
-2011/4/27 17:52:11   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:12   written to file
-2011/4/27 17:52:12   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\config.layout Changed detected and passed.
-2011/4/27 17:52:12   12 In download_sync()
-2011/4/27 17:52:12   12 IN send_msg sending I21
-2011/4/27 17:52:12   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:12   12 In receive_line()
-2011/4/27 17:52:12   Received Jhttpd-2.3.11-beta/README.platforms
-1303891197
-5572
-2011/4/27 17:52:12   12 IN send_msg sending B
-2011/4/27 17:52:12   12 In status_WAIT_FILE()
-2011/4/27 17:52:12   In reciev_common_file(), relapth --httpd-2.3.11-beta\README.platforms--
-2011/4/27 17:52:12   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\README.platformsand size is 5572
-2011/4/27 17:52:12   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\README.platforms Created detected and passed.
-2011/4/27 17:52:12   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:13   written to file
-2011/4/27 17:52:13   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\README.platforms Changed detected and passed.
-2011/4/27 17:52:13   12 In download_sync()
-2011/4/27 17:52:13   12 IN send_msg sending I22
-2011/4/27 17:52:13   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:13   12 In receive_line()
-2011/4/27 17:52:13   Received Jhttpd-2.3.11-beta/config.nice
-1303897858
-58
-2011/4/27 17:52:13   12 IN send_msg sending B
-2011/4/27 17:52:13   12 In status_WAIT_FILE()
-2011/4/27 17:52:13   In reciev_common_file(), relapth --httpd-2.3.11-beta\config.nice--
-2011/4/27 17:52:13   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\config.niceand size is 58
-2011/4/27 17:52:13   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\config.nice Created detected and passed.
-2011/4/27 17:52:13   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:14   written to file
-2011/4/27 17:52:14   12 In download_sync()
-2011/4/27 17:52:14   12 IN send_msg sending I23
-2011/4/27 17:52:14   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:14   12 In receive_line()
-2011/4/27 17:52:14   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\config.nice Changed detected and passed.
-2011/4/27 17:52:14   Received Jhttpd-2.3.11-beta/NOTICE
-1303897863
-550
-2011/4/27 17:52:14   12 IN send_msg sending B
-2011/4/27 17:52:14   12 In status_WAIT_FILE()
-2011/4/27 17:52:14   In reciev_common_file(), relapth --httpd-2.3.11-beta\NOTICE--
-2011/4/27 17:52:14   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\NOTICEand size is 550
-2011/4/27 17:52:15   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\NOTICE Created detected and passed.
-2011/4/27 17:52:15   written to file
-2011/4/27 17:52:15   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:15   12 In download_sync()
-2011/4/27 17:52:15   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\NOTICE Changed detected and passed.
-2011/4/27 17:52:15   12 IN send_msg sending I24
-2011/4/27 17:52:15   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:15   12 In receive_line()
-2011/4/27 17:52:15   Received Jhttpd-2.3.11-beta/LAYOUT
-1303891197
-4142
-2011/4/27 17:52:15   12 IN send_msg sending B
-2011/4/27 17:52:15   12 In status_WAIT_FILE()
-2011/4/27 17:52:15   In reciev_common_file(), relapth --httpd-2.3.11-beta\LAYOUT--
-2011/4/27 17:52:15   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\LAYOUTand size is 4142
-2011/4/27 17:52:15   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\LAYOUT Created detected and passed.
-2011/4/27 17:52:15   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:16   written to file
-2011/4/27 17:52:16   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\LAYOUT Changed detected and passed.
-2011/4/27 17:52:16   12 In download_sync()
-2011/4/27 17:52:16   12 IN send_msg sending I25
-2011/4/27 17:52:16   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:16   12 In receive_line()
-2011/4/27 17:52:16   Received Jhttpd-2.3.11-beta/ROADMAP
-1303891191
-10184
-2011/4/27 17:52:16   12 IN send_msg sending B
-2011/4/27 17:52:16   12 In status_WAIT_FILE()
-2011/4/27 17:52:16   In reciev_common_file(), relapth --httpd-2.3.11-beta\ROADMAP--
-2011/4/27 17:52:16   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\ROADMAPand size is 10184
-2011/4/27 17:52:16   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\ROADMAP Created detected and passed.
-2011/4/27 17:52:16   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:17   written to file
-2011/4/27 17:52:17   12 In download_sync()
-2011/4/27 17:52:17   12 IN send_msg sending I26
-2011/4/27 17:52:17   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\ROADMAP Changed detected and passed.
-2011/4/27 17:52:17   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:17   12 In receive_line()
-2011/4/27 17:52:18   Received Jhttpd-2.3.11-beta/CHANGES
-1303887462
-77720
-2011/4/27 17:52:18   12 IN send_msg sending B
-2011/4/27 17:52:18   12 In status_WAIT_FILE()
-2011/4/27 17:52:18   In reciev_common_file(), relapth --httpd-2.3.11-beta\CHANGES--
-2011/4/27 17:52:18   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\CHANGESand size is 77720
-2011/4/27 17:52:18   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\CHANGES Created detected and passed.
-2011/4/27 17:52:18   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:22   written to file
-2011/4/27 17:52:22   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\CHANGES Changed detected and passed.
-2011/4/27 17:52:22   12 In download_sync()
-2011/4/27 17:52:22   12 IN send_msg sending I27
-2011/4/27 17:52:22   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:22   12 In receive_line()
-2011/4/27 17:52:22   Received Jhttpd-2.3.11-beta/ap.d
-1303887463
-2512
-2011/4/27 17:52:22   12 IN send_msg sending B
-2011/4/27 17:52:22   12 In status_WAIT_FILE()
-2011/4/27 17:52:22   In reciev_common_file(), relapth --httpd-2.3.11-beta\ap.d--
-2011/4/27 17:52:22   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\ap.dand size is 2512
-2011/4/27 17:52:22   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\ap.d Created detected and passed.
-2011/4/27 17:52:22   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:22   written to file
-2011/4/27 17:52:22   12 In download_sync()
-2011/4/27 17:52:22   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\ap.d Changed detected and passed.
-2011/4/27 17:52:22   12 IN send_msg sending I28
-2011/4/27 17:52:22   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:22   12 In receive_line()
-2011/4/27 17:52:23   Received Jhttpd-2.3.11-beta/BuildAll.dsp
-1303890926
-2644
-2011/4/27 17:52:23   12 IN send_msg sending B
-2011/4/27 17:52:23   12 In status_WAIT_FILE()
-2011/4/27 17:52:23   In reciev_common_file(), relapth --httpd-2.3.11-beta\BuildAll.dsp--
-2011/4/27 17:52:23   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\BuildAll.dspand size is 2644
-2011/4/27 17:52:23   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\BuildAll.dsp Created detected and passed.
-2011/4/27 17:52:23   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:23   written to file
-2011/4/27 17:52:23   12 In download_sync()
-2011/4/27 17:52:23   12 IN send_msg sending I29
-2011/4/27 17:52:23   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:23   12 In receive_line()
-2011/4/27 17:52:24   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\BuildAll.dsp Changed detected and passed.
-2011/4/27 17:52:24   Received Jhttpd-2.3.11-beta/config.log
-1303891194
-9087
-2011/4/27 17:52:24   12 IN send_msg sending B
-2011/4/27 17:52:24   12 In status_WAIT_FILE()
-2011/4/27 17:52:24   In reciev_common_file(), relapth --httpd-2.3.11-beta\config.log--
-2011/4/27 17:52:24   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\config.logand size is 9087
-2011/4/27 17:52:24   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\config.log Created detected and passed.
-2011/4/27 17:52:24   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:24   written to file
-2011/4/27 17:52:25   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\config.log Changed detected and passed.
-2011/4/27 17:52:25   12 In download_sync()
-2011/4/27 17:52:25   12 IN send_msg sending I30
-2011/4/27 17:52:25   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:25   12 In receive_line()
-2011/4/27 17:52:25   Received Jhttpd-2.3.11-beta/LICENSE
-1303891193
-25852
-2011/4/27 17:52:25   12 IN send_msg sending B
-2011/4/27 17:52:25   12 In status_WAIT_FILE()
-2011/4/27 17:52:25   In reciev_common_file(), relapth --httpd-2.3.11-beta\LICENSE--
-2011/4/27 17:52:25   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\LICENSEand size is 25852
-2011/4/27 17:52:25   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\LICENSE Created detected and passed.
-2011/4/27 17:52:25   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:26   written to file
-2011/4/27 17:52:26   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\LICENSE Changed detected and passed.
-2011/4/27 17:52:26   12 In download_sync()
-2011/4/27 17:52:26   12 IN send_msg sending I31
-2011/4/27 17:52:26   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:26   12 In receive_line()
-2011/4/27 17:52:27   Received Jhttpd-2.3.11-beta/Makefile.in
-1303897861
-8963
-2011/4/27 17:52:27   12 IN send_msg sending B
-2011/4/27 17:52:27   12 In status_WAIT_FILE()
-2011/4/27 17:52:27   In reciev_common_file(), relapth --httpd-2.3.11-beta\Makefile.in--
-2011/4/27 17:52:27   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\Makefile.inand size is 8963
-2011/4/27 17:52:27   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\Makefile.in Created detected and passed.
-2011/4/27 17:52:27   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:29   written to file
-2011/4/27 17:52:29   12 In download_sync()
-2011/4/27 17:52:29   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\Makefile.in Changed detected and passed.
-2011/4/27 17:52:29   12 IN send_msg sending I32
-2011/4/27 17:52:29   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:29   12 In receive_line()
-2011/4/27 17:52:29   Received Jhttpd-2.3.11-beta/BuildBin.dsp
-1303891017
-2726
-2011/4/27 17:52:29   12 IN send_msg sending B
-2011/4/27 17:52:29   12 In status_WAIT_FILE()
-2011/4/27 17:52:29   In reciev_common_file(), relapth --httpd-2.3.11-beta\BuildBin.dsp--
-2011/4/27 17:52:29   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\BuildBin.dspand size is 2726
-2011/4/27 17:52:29   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\BuildBin.dsp Created detected and passed.
-2011/4/27 17:52:29   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Changed detected and passed.
-2011/4/27 17:52:30   written to file
-2011/4/27 17:52:30   12 In download_sync()
-2011/4/27 17:52:30   12 IN send_msg sending I33
-2011/4/27 17:52:30   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:52:30   12 In receive_line()
-2011/4/27 17:52:30   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\BuildBin.dsp Changed detected and passed.
-2011/4/27 17:52:30   Received Nhttpd-2.3.11-beta
-1303897868
-4096
-2011/4/27 17:52:30   12 In download_sync()
-2011/4/27 17:52:30   12 IN send_msg sending G
-2011/4/27 17:52:30   12 In status_XXX
-2011/4/27 17:52:30   12 In receive_line()
-2011/4/27 17:53:39   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta\ap.d Deleted detected and passed.
-2011/4/27 17:53:39   updated and genearted
-2011/4/27 17:53:40    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
-2011/4/27 17:53:40   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/27 17:53:40   relapath is --\.fss\diff.remote.index--
-2011/4/27 17:53:40   13 IN send_msg sending K.fss/diff.remote.index
-1303898019
-3
-2011/4/27 17:53:40   Received E
-2011/4/27 17:53:40   12 Received line E
-2011/4/27 17:53:40   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 3
-2011/4/27 17:53:40   12 In status_WAIT_HASH_FSS_INFO
-2011/4/27 17:53:40   12 In receive_line()
-2011/4/27 17:53:41   Received H.fss/hash.fss
-1
-1312
-2011/4/27 17:53:41   12 Received line H.fss/hash.fss
-1
-1312
-2011/4/27 17:53:41   12 IN send_msg sending A
-2011/4/27 17:53:41   12 IN status_WAIT_HASH_FSS
-2011/4/27 17:53:41   12 In recieve_hash_fss of Files.cs
-2011/4/27 17:53:41   12 In receive_file of Files.cs
-2011/4/27 17:53:41   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 1312
-2011/4/27 17:53:41   written to file
-2011/4/27 17:53:41   12 In analyse_hash()
-2011/4/27 17:53:41   mtime is: 1
-2011/4/27 17:53:41   hash_fss_mtime(): 1303898021
-2011/4/27 17:53:41    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
-2011/4/27 17:53:41   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/27 17:53:41   relapath is --\.fss\diff.remote.index--
-2011/4/27 17:53:41   12 IN send_msg sending K.fss/diff.remote.index
-1303898021
-80
-2011/4/27 17:53:41   12 analyse_hash()-ed
-2011/4/27 17:53:41   12 In status_WIAT_MSG_SER_REQ_DEL_IDX
-2011/4/27 17:53:41   12 In receive_line()
-2011/4/27 17:53:41   Received E
-2011/4/27 17:53:41   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 80
-2011/4/27 17:53:41   12 In status_WAIT_HASH_FSS_INFO
-2011/4/27 17:53:41   12 In receive_line()
-2011/4/27 17:53:41   Received H.fss/hash.fss
-1
-123
-2011/4/27 17:53:41   12 Received line H.fss/hash.fss
-1
-123
-2011/4/27 17:53:41   12 IN send_msg sending A
-2011/4/27 17:53:41   12 IN status_WAIT_HASH_FSS
-2011/4/27 17:53:41   12 In recieve_hash_fss of Files.cs
-2011/4/27 17:53:42   12 In receive_file of Files.cs
-2011/4/27 17:53:42   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
-2011/4/27 17:53:42   written to file
-2011/4/27 17:53:42   12 In analyse_hash()
-2011/4/27 17:53:42   mtime is: 1
-2011/4/27 17:53:42   hash_fss_mtime(): 1303898021
-2011/4/27 17:53:42   12 IN send_msg sending L
-2011/4/27 17:53:42   12 analyse_hash()-ed
-2011/4/27 17:53:42   12 In status_XXX
-2011/4/27 17:53:42   12 In receive_line()
-2011/4/27 17:53:49   Received H.fss/hash.fss
-1303898027
-82
-2011/4/27 17:53:49   12 Received line H.fss/hash.fss
-1303898027
-82
-2011/4/27 17:53:49   12 IN send_msg sending A
-2011/4/27 17:53:49   12 IN status_WAIT_HASH_FSS
-2011/4/27 17:53:49   12 In recieve_hash_fss of Files.cs
-2011/4/27 17:53:49   12 In receive_file of Files.cs
-2011/4/27 17:53:49   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
-2011/4/27 17:53:49   written to file
-2011/4/27 17:53:49   12 In analyse_hash()
-2011/4/27 17:53:49   mtime is: 1303898027
-2011/4/27 17:53:49   hash_fss_mtime(): 1303898021
-2011/4/27 17:53:49   12 IN send_msg sending G
-2011/4/27 17:53:49   13 C:\Users\test\Desktop\FSS\httpd-2.3.11-beta Deleted detected and passed.
-2011/4/27 17:53:49   12 analyse_hash()-ed
-2011/4/27 17:53:49   12 In status_XXX
-2011/4/27 17:53:49   12 In receive_line()
-2011/4/27 17:53:49   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
+41
+2011/5/1 0:41:39   12 IN send_msg sending A
+2011/5/1 0:41:39   12 IN status_WAIT_HASH_FSS
+2011/5/1 0:41:39   12 In recieve_hash_fss of Files.cs
+2011/5/1 0:41:39   12 In receive_file of Files.cs
+2011/5/1 0:41:39   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 41
+2011/5/1 0:41:39   written to file
+2011/5/1 0:41:39   12 In analyse_hash()
+2011/5/1 0:41:39   mtime is: 1
+2011/5/1 0:41:39   hash_fss_mtime(): 1304181697
+2011/5/1 0:41:39   12 IN send_msg sending L
+2011/5/1 0:41:39   12 analyse_hash()-ed
+2011/5/1 0:41:39   12 In status_XXX
+2011/5/1 0:41:39   12 In receive_line()
+2011/5/1 0:42:31   Received HEF52E540CF8979F8ACF7D1964BEEB283D5182F1B
+.fss/hash.fss
+1304181743
+41
+2011/5/1 0:42:31   12 Received line HEF52E540CF8979F8ACF7D1964BEEB283D5182F1B
+.fss/hash.fss
+1304181743
+41
+2011/5/1 0:42:31   12 IN send_msg sending A
+2011/5/1 0:42:31   12 IN status_WAIT_HASH_FSS
+2011/5/1 0:42:31   12 In recieve_hash_fss of Files.cs
+2011/5/1 0:42:31   12 In receive_file of Files.cs
+2011/5/1 0:42:31   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 41
+2011/5/1 0:42:31   written to file
+2011/5/1 0:42:31   12 In analyse_hash()
+2011/5/1 0:42:31   mtime is: 1304181743
+2011/5/1 0:42:31   hash_fss_mtime(): 1304181697
+2011/5/1 0:42:31   12 IN send_msg sending I1
+2011/5/1 0:42:31   12 analyse_hash()-ed
+2011/5/1 0:42:31   12 In status_WAIT_ENTRY_INFO
+2011/5/1 0:42:31   12 In receive_line()
+2011/5/1 0:42:32   Received J90D7FB7121B3629FFD7F929AA3F2F6DCB4991867
+新建文本文档.txt
+1304181743
+43
+2011/5/1 0:42:32   12 IN send_msg sending B
+2011/5/1 0:42:32   12 In status_WAIT_FILE()
+2011/5/1 0:42:32   In reciev_common_file(), relapth --新建文本文档.txt--
+2011/5/1 0:42:32   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\新建文本文档.txtand size is 43
+2011/5/1 0:42:32   3 C:\Users\test\Desktop\FSS\新建文本文档.txt Changed detected and passed.
+2011/5/1 0:42:32   written to file
+2011/5/1 0:42:32   3 C:\Users\test\Desktop\FSS\新建文本文档.txt Changed detected and passed.
+2011/5/1 0:42:32   12 In download_sync()
+2011/5/1 0:42:32   12 IN send_msg sending G
+2011/5/1 0:42:32   12 In status_XXX
+2011/5/1 0:42:32   12 In receive_line()
+2011/5/1 0:42:51   Server crashed
+2011/5/1 0:47:44   3 C:\Users\test\Desktop\FSS\新建文本文档.txt Deleted detected and passed.
+2011/5/1 0:47:45   3 System.IO.DirectoryNotFoundException: 未能找到路径“C:\Users\test\Desktop\FSS\.fss\remote.hash.fss”的一部分。
    在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   在 System.IO.File.Delete(String path)
-   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 217
-2011/4/27 17:53:49   updated and genearted
-2011/4/27 17:54:05   13 C:\Users\test\Desktop\FSS\新建文件夹 Created detected and passed.
-2011/4/27 17:54:05   updated and genearted
-2011/4/27 17:54:05    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文件夹--
-2011/4/27 17:54:05   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/27 17:54:05   relapath is --\新建文件夹--
-2011/4/27 17:54:05   13 IN send_msg sending N新建文件夹
-1303898045
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 fss_client.Sha1.compute_hash(String fullname, String rootpath, String& sha1_digest, String& hash_digest) 位置 Z:\fss-client\fss-client\Sha1.cs:行号 97
+   在 fss_client.Files.write_in(String fullpath) 位置 Z:\fss-client\fss-client\Files.cs:行号 151
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 25
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 33
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 37
+   在 fss_client.Ftw..ctor(Fn fn, String rootpath) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 18
+   在 fss_client.Files.update_files() 位置 Z:\fss-client\fss-client\Files.cs:行号 109
+2011/5/1 0:47:45   System.IO.DirectoryNotFoundException: 未能找到路径“C:\Users\test\Desktop\FSS\.fss\remote.hash.fss”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   在 fss_client.Sha1.sha1_file_via_fname(String fullname) 位置 Z:\fss-client\fss-client\Sha1.cs:行号 70
+   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 233
+2011/5/1 0:47:45   updated and genearted
+2011/5/1 0:48:24   9 Connected to 204.74.216.120
+2011/5/1 0:48:24   11 In status_WAIT_HASH_FSS_INFO
+2011/5/1 0:48:24   11 In receive_line()
+2011/5/1 0:48:24   Received HDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+.fss/hash.fss
+1304182074
+0
+2011/5/1 0:48:24   11 Received line HDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+.fss/hash.fss
+1304182074
+0
+2011/5/1 0:48:24   11 IN send_msg sending A
+2011/5/1 0:48:24   11 IN status_WAIT_HASH_FSS
+2011/5/1 0:48:24   11 In recieve_hash_fss of Files.cs
+2011/5/1 0:48:25   11 In receive_file of Files.cs
+2011/5/1 0:48:25   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 0
+2011/5/1 0:48:25   11 In analyse_hash()
+2011/5/1 0:48:25   mtime is: 1304182074
+2011/5/1 0:48:25   hash_fss_mtime(): 1304182104
+2011/5/1 0:48:25   11 IN send_msg sending G
+2011/5/1 0:48:25   11 analyse_hash()-ed
+2011/5/1 0:48:25   11 In status_XXX
+2011/5/1 0:48:25   11 In receive_line()
+2011/5/1 0:48:44   Received HF78B4B1E6A96EE0A517A1397E8F8D20A03982776
+.fss/hash.fss
+1304182123
+41
+2011/5/1 0:48:44   11 Received line HF78B4B1E6A96EE0A517A1397E8F8D20A03982776
+.fss/hash.fss
+1304182123
+41
+2011/5/1 0:48:44   11 IN send_msg sending A
+2011/5/1 0:48:44   11 IN status_WAIT_HASH_FSS
+2011/5/1 0:48:44   11 In recieve_hash_fss of Files.cs
+2011/5/1 0:48:44   11 In receive_file of Files.cs
+2011/5/1 0:48:44   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 41
+2011/5/1 0:48:44   written to file
+2011/5/1 0:48:44   11 In analyse_hash()
+2011/5/1 0:48:44   mtime is: 1304182123
+2011/5/1 0:48:44   hash_fss_mtime(): 1304182104
+2011/5/1 0:48:44   11 IN send_msg sending I1
+2011/5/1 0:48:44   11 analyse_hash()-ed
+2011/5/1 0:48:44   11 In status_WAIT_ENTRY_INFO
+2011/5/1 0:48:44   11 In receive_line()
+2011/5/1 0:48:44   Received JDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+new file
+1304182122
+0
+2011/5/1 0:48:44   11 IN send_msg sending B
+2011/5/1 0:48:44   11 In status_WAIT_FILE()
+2011/5/1 0:48:44   In reciev_common_file(), relapth --new file--
+2011/5/1 0:48:44   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\new fileand size is 0
+2011/5/1 0:48:44   11 In download_sync()
+2011/5/1 0:48:44   10 C:\Users\test\Desktop\FSS\new file Created detected and passed.
+2011/5/1 0:48:44   11 IN send_msg sending G
+2011/5/1 0:48:44   11 In status_XXX
+2011/5/1 0:48:44   11 In receive_line()
+2011/5/1 0:49:49   10 C:\Users\test\Desktop\FSS\新建文件夹 Created detected and passed.
+2011/5/1 0:49:49   updated and genearted
+2011/5/1 0:49:49    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文件夹--
+2011/5/1 0:49:49   root is --C:\Users\test\Desktop\FSS-- 25
+2011/5/1 0:49:49   relapath is --\新建文件夹--
+2011/5/1 0:49:49   10 IN send_msg sending NDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+新建文件夹
+1304182189
 2046
-2011/4/27 17:54:06   Received F
-2011/4/27 17:54:06   12 Received line F
-2011/4/27 17:54:06   12 IN send_msg sending M
-2011/4/27 17:54:06   12 In status_WAIT_HASH_FSS_INFO
-2011/4/27 17:54:06   12 In receive_line()
-2011/4/27 17:54:06   Received H.fss/hash.fss
-1
-123
-2011/4/27 17:54:06   12 Received line H.fss/hash.fss
-1
-123
-2011/4/27 17:54:06   12 IN send_msg sending A
-2011/4/27 17:54:06   12 IN status_WAIT_HASH_FSS
-2011/4/27 17:54:06   12 In recieve_hash_fss of Files.cs
-2011/4/27 17:54:06   12 In receive_file of Files.cs
-2011/4/27 17:54:06   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
-2011/4/27 17:54:06   written to file
-2011/4/27 17:54:06   12 In analyse_hash()
-2011/4/27 17:54:06   mtime is: 1
-2011/4/27 17:54:06   hash_fss_mtime(): 1303898045
-2011/4/27 17:54:06   12 IN send_msg sending L
-2011/4/27 17:54:06   12 analyse_hash()-ed
-2011/4/27 17:54:06   12 In status_XXX
-2011/4/27 17:54:06   12 In receive_line()
-2011/4/27 17:54:17   Received H.fss/hash.fss
-1303898056
-123
-2011/4/27 17:54:17   12 Received line H.fss/hash.fss
-1303898056
-123
-2011/4/27 17:54:17   12 IN send_msg sending A
-2011/4/27 17:54:17   12 IN status_WAIT_HASH_FSS
-2011/4/27 17:54:17   12 In recieve_hash_fss of Files.cs
-2011/4/27 17:54:17   12 In receive_file of Files.cs
-2011/4/27 17:54:17   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
-2011/4/27 17:54:17   written to file
-2011/4/27 17:54:18   12 In analyse_hash()
-2011/4/27 17:54:18   mtime is: 1303898056
-2011/4/27 17:54:18   hash_fss_mtime(): 1303898045
-2011/4/27 17:54:18   12 IN send_msg sending I1
-2011/4/27 17:54:18   12 analyse_hash()-ed
-2011/4/27 17:54:18   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:54:18   12 In receive_line()
-2011/4/27 17:54:18   Received J新建文件夹/untitled folder/新建文本文档.txt
-1303898055
-9
-2011/4/27 17:54:18   12 IN send_msg sending B
-2011/4/27 17:54:18   12 In status_WAIT_FILE()
-2011/4/27 17:54:18   In reciev_common_file(), relapth --新建文件夹\untitled folder\新建文本文档.txt--
-2011/4/27 17:54:18   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\新建文件夹\untitled folder\新建文本文档.txtand size is 9
-2011/4/27 17:54:18   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder Created detected and passed.
-2011/4/27 17:54:18   13 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
-2011/4/27 17:54:18   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder\新建文本文档.txt Created detected and passed.
-2011/4/27 17:54:18   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder Changed detected and passed.
-2011/4/27 17:54:18   written to file
-2011/4/27 17:54:18   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder\新建文本文档.txt Changed detected and passed.
-2011/4/27 17:54:18   12 In download_sync()
-2011/4/27 17:54:18   12 IN send_msg sending I2
-2011/4/27 17:54:18   12 In status_WAIT_ENTRY_INFO
-2011/4/27 17:54:18   12 In receive_line()
-2011/4/27 17:54:18   Received N新建文件夹/untitled folder
-1303898053
-4096
-2011/4/27 17:54:18   12 In download_sync()
-2011/4/27 17:54:18   12 IN send_msg sending G
-2011/4/27 17:54:18   12 In status_XXX
-2011/4/27 17:54:18   13 C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt Deleted detected and passed.
-2011/4/27 17:54:18   12 In receive_line()
-2011/4/27 17:54:18   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
-   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   在 System.IO.File.Delete(String path)
-   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 217
-2011/4/27 17:54:19   updated and genearted
-2011/4/27 17:54:19   13 C:\Users\test\Desktop\FSS\untitled folder Changed detected and passed.
-2011/4/27 17:54:19   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
-   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   在 System.IO.File.Delete(String path)
-   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 217
-2011/4/27 17:54:19   updated and genearted
-2011/4/27 17:54:19   13 C:\Users\test\Desktop\FSS\untitled folder Deleted detected and passed.
-2011/4/27 17:54:19   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
-   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   在 System.IO.File.Delete(String path)
-   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 217
-2011/4/27 17:54:19   updated and genearted
-2011/4/27 17:54:24   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder\新建文本文档.txt Deleted detected and passed.
-2011/4/27 17:54:24   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
-   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   在 System.IO.File.Delete(String path)
-   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 217
-2011/4/27 17:54:24   updated and genearted
-2011/4/27 17:54:24   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder Changed detected and passed.
-2011/4/27 17:54:24   updated and genearted
-2011/4/27 17:54:24    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
-2011/4/27 17:54:24   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/27 17:54:24   relapath is --\.fss\diff.remote.index--
-2011/4/27 17:54:24   13 IN send_msg sending K.fss/diff.remote.index
-1303898064
-2
-2011/4/27 17:54:25   Received E
-2011/4/27 17:54:25   12 Received line E
-2011/4/27 17:54:25   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 2
-2011/4/27 17:54:25   12 In status_WAIT_HASH_FSS_INFO
-2011/4/27 17:54:25   12 In receive_line()
-2011/4/27 17:54:25   Received H.fss/hash.fss
+2011/5/1 0:49:50   Received F
+2011/5/1 0:49:50   11 Received line F
+2011/5/1 0:49:50   11 IN send_msg sending M
+2011/5/1 0:49:50   11 In status_WAIT_HASH_FSS_INFO
+2011/5/1 0:49:50   11 In receive_line()
+2011/5/1 0:49:50   Received H9CD4379A3FA2D9F59F461270C3AC412D909BF8D8
+.fss/hash.fss
 1
 82
-2011/4/27 17:54:25   12 Received line H.fss/hash.fss
+2011/5/1 0:49:50   11 Received line H9CD4379A3FA2D9F59F461270C3AC412D909BF8D8
+.fss/hash.fss
 1
 82
-2011/4/27 17:54:25   12 IN send_msg sending A
-2011/4/27 17:54:25   12 IN status_WAIT_HASH_FSS
-2011/4/27 17:54:25   12 In recieve_hash_fss of Files.cs
-2011/4/27 17:54:25   12 In receive_file of Files.cs
-2011/4/27 17:54:25   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
-2011/4/27 17:54:25   written to file
-2011/4/27 17:54:25   12 In analyse_hash()
-2011/4/27 17:54:25   mtime is: 1
-2011/4/27 17:54:25   hash_fss_mtime(): 1303898064
-2011/4/27 17:54:25   12 IN send_msg sending L
-2011/4/27 17:54:25   12 analyse_hash()-ed
-2011/4/27 17:54:25   12 In status_XXX
-2011/4/27 17:54:25   12 In receive_line()
-2011/4/30 1:30:02   10 Connected to 204.74.216.120
-2011/4/30 1:30:02   12 In status_WAIT_HASH_FSS_INFO
-2011/4/30 1:30:02   12 In receive_line()
-2011/4/30 1:30:02   Received H.fss/hash.fss
-1304097702
-123
-2011/4/30 1:30:02   12 Received line H.fss/hash.fss
-1304097702
-123
-2011/4/30 1:30:02   12 IN send_msg sending A
-2011/4/30 1:30:02   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:30:02   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:30:02   12 In receive_file of Files.cs
-2011/4/30 1:30:02   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
-2011/4/30 1:30:03   written to file
-2011/4/30 1:30:03   12 In analyse_hash()
-2011/4/30 1:30:03   mtime is: 1304097702
-2011/4/30 1:30:03   hash_fss_mtime(): 1303898064
-2011/4/30 1:30:03   12 IN send_msg sending I1
-2011/4/30 1:30:03   12 analyse_hash()-ed
-2011/4/30 1:30:03   12 In status_WAIT_ENTRY_INFO
-2011/4/30 1:30:03   12 In receive_line()
-2011/4/30 1:30:03   Received Jtouch
-1304097723
+2011/5/1 0:49:50   11 IN send_msg sending A
+2011/5/1 0:49:50   11 IN status_WAIT_HASH_FSS
+2011/5/1 0:49:50   11 In recieve_hash_fss of Files.cs
+2011/5/1 0:49:50   11 In receive_file of Files.cs
+2011/5/1 0:49:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
+2011/5/1 0:49:50   written to file
+2011/5/1 0:49:50   11 In analyse_hash()
+2011/5/1 0:49:50   mtime is: 1
+2011/5/1 0:49:50   hash_fss_mtime(): 1304182189
+2011/5/1 0:49:50   11 IN send_msg sending L
+2011/5/1 0:49:50   11 analyse_hash()-ed
+2011/5/1 0:49:50   11 In status_XXX
+2011/5/1 0:49:50   11 In receive_line()
+2011/5/1 0:50:33   Received H75F41B42560605140B4697AFB6132B5AA3B71DFF
+.fss/hash.fss
+1304182231
+82
+2011/5/1 0:50:33   11 Received line H75F41B42560605140B4697AFB6132B5AA3B71DFF
+.fss/hash.fss
+1304182231
+82
+2011/5/1 0:50:33   11 IN send_msg sending A
+2011/5/1 0:50:33   11 IN status_WAIT_HASH_FSS
+2011/5/1 0:50:33   11 In recieve_hash_fss of Files.cs
+2011/5/1 0:50:33   11 In receive_file of Files.cs
+2011/5/1 0:50:33   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
+2011/5/1 0:50:33   written to file
+2011/5/1 0:50:33   11 In analyse_hash()
+2011/5/1 0:50:33   mtime is: 1304182231
+2011/5/1 0:50:33   hash_fss_mtime(): 1304182189
+2011/5/1 0:50:33   11 IN send_msg sending I1
+2011/5/1 0:50:33   11 analyse_hash()-ed
+2011/5/1 0:50:33   11 In status_WAIT_ENTRY_INFO
+2011/5/1 0:50:33   11 In receive_line()
+2011/5/1 0:50:33   Received JDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+新建文件夹/new file
+1304182230
 0
-2011/4/30 1:30:03   12 IN send_msg sending B
-2011/4/30 1:30:03   12 In status_WAIT_FILE()
-2011/4/30 1:30:03   In reciev_common_file(), relapth --touch--
-2011/4/30 1:30:03   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\touchand size is 0
-2011/4/30 1:30:03   12 In download_sync()
-2011/4/30 1:30:04   13 C:\Users\test\Desktop\FSS\touch Created detected and passed.
-2011/4/30 1:30:04   12 IN send_msg sending G
-2011/4/30 1:30:04   12 In status_XXX
-2011/4/30 1:30:04   12 In receive_line()
-2011/4/30 1:30:19   13 C:\Users\test\Desktop\FSS\touch Changed detected and passed.
-2011/4/30 1:30:19   updated and genearted
-2011/4/30 1:30:19    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\touch--
-2011/4/30 1:30:19   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/30 1:30:19   relapath is --\touch--
-2011/4/30 1:30:19   13 IN send_msg sending Jtouch
-1304098219
-30
-2011/4/30 1:30:19   13 C:\Users\test\Desktop\FSS\touch Changed detected and passed.
-2011/4/30 1:30:19   Received D
-2011/4/30 1:30:19   12 Received line D
-2011/4/30 1:30:20   In send_file, sending C:\Users\test\Desktop\FSS\touch 30
-2011/4/30 1:30:20   12 In status_WAIT_MSG_SER_RECEVIED()
-2011/4/30 1:30:20   12 In receive_line()
-2011/4/30 1:30:22   Received F
-2011/4/30 1:30:22   12 IN send_msg sending M
-2011/4/30 1:30:22   12 In status_WAIT_HASH_FSS_INFO
-2011/4/30 1:30:22   12 In receive_line()
-2011/4/30 1:30:22   Received H.fss/hash.fss
-1
-123
-2011/4/30 1:30:22   12 Received line H.fss/hash.fss
-1
-123
-2011/4/30 1:30:22   12 IN send_msg sending A
-2011/4/30 1:30:22   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:30:22   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:30:22   12 In receive_file of Files.cs
-2011/4/30 1:30:22   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
-2011/4/30 1:30:22   written to file
-2011/4/30 1:30:22   12 In analyse_hash()
-2011/4/30 1:30:22   mtime is: 1
-2011/4/30 1:30:22   hash_fss_mtime(): 1304098219
-2011/4/30 1:30:22   12 IN send_msg sending L
-2011/4/30 1:30:22   12 analyse_hash()-ed
-2011/4/30 1:30:22   12 In status_XXX
-2011/4/30 1:30:22   12 In receive_line()
-2011/4/30 1:30:40   Received H.fss/hash.fss
-1304098233
-123
-2011/4/30 1:30:40   12 Received line H.fss/hash.fss
-1304098233
-123
-2011/4/30 1:30:40   12 IN send_msg sending A
-2011/4/30 1:30:40   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:30:40   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:30:40   12 In receive_file of Files.cs
-2011/4/30 1:30:40   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
-2011/4/30 1:30:41   written to file
-2011/4/30 1:30:41   12 In analyse_hash()
-2011/4/30 1:30:41   mtime is: 1304098233
-2011/4/30 1:30:41   hash_fss_mtime(): 1304098219
-2011/4/30 1:30:41   12 IN send_msg sending I2
-2011/4/30 1:30:41   12 analyse_hash()-ed
-2011/4/30 1:30:41   12 In status_WAIT_ENTRY_INFO
-2011/4/30 1:30:41   12 In receive_line()
-2011/4/30 1:30:41   Received J新建文件夹/touch
-1304098232
-30
-2011/4/30 1:30:41   12 IN send_msg sending B
-2011/4/30 1:30:41   12 In status_WAIT_FILE()
-2011/4/30 1:30:41   In reciev_common_file(), relapth --新建文件夹\touch--
-2011/4/30 1:30:41   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\新建文件夹\touchand size is 30
-2011/4/30 1:30:41   13 C:\Users\test\Desktop\FSS\新建文件夹\touch Created detected and passed.
-2011/4/30 1:30:41   13 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
-2011/4/30 1:30:41   13 C:\Users\test\Desktop\FSS\新建文件夹\touch Changed detected and passed.
-2011/4/30 1:30:41   written to file
-2011/4/30 1:30:41   12 In download_sync()
-2011/4/30 1:30:41   12 IN send_msg sending G
-2011/4/30 1:30:41   13 C:\Users\test\Desktop\FSS\touch Deleted detected and passed.
-2011/4/30 1:30:41   12 In status_XXX
-2011/4/30 1:30:42   12 In receive_line()
-2011/4/30 1:30:42   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
+2011/5/1 0:50:33   11 IN send_msg sending B
+2011/5/1 0:50:33   11 In status_WAIT_FILE()
+2011/5/1 0:50:33   In reciev_common_file(), relapth --新建文件夹\new file--
+2011/5/1 0:50:33   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\新建文件夹\new fileand size is 0
+2011/5/1 0:50:33   11 In download_sync()
+2011/5/1 0:50:33   10 C:\Users\test\Desktop\FSS\新建文件夹\new file Created detected and passed.
+2011/5/1 0:50:33   11 IN send_msg sending G
+2011/5/1 0:50:33   10 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
+2011/5/1 0:50:33   11 In status_XXX
+2011/5/1 0:50:33   11 In receive_line()
+2011/5/1 0:50:34   10 System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 fss_client.Sha1.compute_hash(String fullname, String rootpath, String& sha1_digest, String& hash_digest) 位置 Z:\fss-client\fss-client\Sha1.cs:行号 97
+   在 fss_client.Files.write_in(String fullpath) 位置 Z:\fss-client\fss-client\Files.cs:行号 151
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 25
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 33
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 37
+   在 fss_client.Ftw..ctor(Fn fn, String rootpath) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 18
+   在 fss_client.Files.update_files() 位置 Z:\fss-client\fss-client\Files.cs:行号 109
+2011/5/1 0:50:34   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
    在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
    在 System.IO.File.Delete(String path)
-   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 217
-2011/4/30 1:30:42   updated and genearted
-2011/4/30 1:30:46   13 C:\Users\test\Desktop\FSS\新建文件夹\touch Deleted detected and passed.
-2011/4/30 1:30:46   updated and genearted
-2011/4/30 1:30:46    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文件夹\untitled folder\touch--
-2011/4/30 1:30:46   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/30 1:30:46   relapath is --\新建文件夹\untitled folder\touch--
-2011/4/30 1:30:46   13 IN send_msg sending J新建文件夹/untitled folder/touch
-1304098241
-30
-2011/4/30 1:30:46   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder\touch Created detected and passed.
-2011/4/30 1:30:46   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder Changed detected and passed.
-2011/4/30 1:30:46   13 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
-2011/4/30 1:32:28   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder\touch Deleted detected and passed.
-2011/4/30 1:32:28   13 C:\Users\test\Desktop\FSS\新建文件夹\untitled folder Changed detected and passed.
-2011/4/30 1:32:58   13 C:\Users\test\Desktop\FSS\新建文件夹 Deleted detected and passed.
-2011/4/30 1:33:11   Server crashed
-2011/4/30 1:33:33   10 Connected to 204.74.216.120
-2011/4/30 1:33:33   12 In status_WAIT_HASH_FSS_INFO
-2011/4/30 1:33:33   12 In receive_line()
-2011/4/30 1:33:34   Received H.fss/hash.fss
-1304098397
-82
-2011/4/30 1:33:34   12 Received line H.fss/hash.fss
-1304098397
-82
-2011/4/30 1:33:34   12 IN send_msg sending A
-2011/4/30 1:33:34   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:33:34   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:33:34   12 In receive_file of Files.cs
-2011/4/30 1:33:34   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
-2011/4/30 1:33:34   written to file
-2011/4/30 1:33:34   12 In analyse_hash()
-2011/4/30 1:33:34   mtime is: 1304098397
-2011/4/30 1:33:34   hash_fss_mtime(): 1304098413
-2011/4/30 1:33:34    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
-2011/4/30 1:33:34   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/30 1:33:34   relapath is --\.fss\diff.remote.index--
-2011/4/30 1:33:34   12 IN send_msg sending K.fss/diff.remote.index
-1304098414
+   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 231
+2011/5/1 0:50:34   updated and genearted
+2011/5/1 0:50:34   10 C:\Users\test\Desktop\FSS\new file Deleted detected and passed.
+2011/5/1 0:50:34   10 System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 fss_client.Sha1.compute_hash(String fullname, String rootpath, String& sha1_digest, String& hash_digest) 位置 Z:\fss-client\fss-client\Sha1.cs:行号 97
+   在 fss_client.Files.write_in(String fullpath) 位置 Z:\fss-client\fss-client\Files.cs:行号 151
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 25
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 33
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 37
+   在 fss_client.Ftw..ctor(Fn fn, String rootpath) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 18
+   在 fss_client.Files.update_files() 位置 Z:\fss-client\fss-client\Files.cs:行号 109
+2011/5/1 0:50:34   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 231
+2011/5/1 0:50:35   updated and genearted
+2011/5/1 0:50:42   10 C:\Users\test\Desktop\FSS\新建文件夹\new file Changed detected and passed.
+2011/5/1 0:50:42   updated and genearted
+2011/5/1 0:50:42    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文件夹\new file--
+2011/5/1 0:50:42   root is --C:\Users\test\Desktop\FSS-- 25
+2011/5/1 0:50:42   relapath is --\新建文件夹\new file--
+2011/5/1 0:50:42   10 IN send_msg sending JA94A8FE5CCB19BA61C4C0873D391E987982FBBD3
+新建文件夹/new file
+1304182242
 4
-2011/4/30 1:33:34   12 analyse_hash()-ed
-2011/4/30 1:33:34   12 In status_WIAT_MSG_SER_REQ_DEL_IDX
-2011/4/30 1:33:34   12 In receive_line()
-2011/4/30 1:33:34   Received E
-2011/4/30 1:33:34   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 4
-2011/4/30 1:33:34   12 In status_WAIT_HASH_FSS_INFO
-2011/4/30 1:33:34   12 In receive_line()
-2011/4/30 1:33:34   Received H.fss/hash.fss
+2011/5/1 0:50:42   10 C:\Users\test\Desktop\FSS\新建文件夹\new file Changed detected and passed.
+2011/5/1 0:50:43   Received D
+2011/5/1 0:50:43   11 Received line D
+2011/5/1 0:50:43   In send_file, sending C:\Users\test\Desktop\FSS\新建文件夹\new file 4
+2011/5/1 0:50:43   11 In status_WAIT_MSG_SER_RECEVIED()
+2011/5/1 0:50:43   11 In receive_line()
+2011/5/1 0:50:43   Received F
+2011/5/1 0:50:43   11 IN send_msg sending M
+2011/5/1 0:50:43   11 In status_WAIT_HASH_FSS_INFO
+2011/5/1 0:50:43   11 In receive_line()
+2011/5/1 0:50:43   Received H90088BB6918785DD20688973B3B6BAA51200B0D7
+.fss/hash.fss
 1
-0
-2011/4/30 1:33:34   12 Received line H.fss/hash.fss
-1
-0
-2011/4/30 1:33:34   12 IN send_msg sending A
-2011/4/30 1:33:34   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:33:34   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:33:34   12 In receive_file of Files.cs
-2011/4/30 1:33:34   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 0
-2011/4/30 1:33:34   12 In analyse_hash()
-2011/4/30 1:33:34   mtime is: 1
-2011/4/30 1:33:34   hash_fss_mtime(): 1304098413
-2011/4/30 1:33:34   12 IN send_msg sending L
-2011/4/30 1:33:34   12 analyse_hash()-ed
-2011/4/30 1:33:34   12 In status_XXX
-2011/4/30 1:33:34   12 In receive_line()
-2011/4/30 1:33:39   13 C:\Users\test\Desktop\FSS\新建文本文档.txt Created detected and passed.
-2011/4/30 1:33:39   updated and genearted
-2011/4/30 1:33:39    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文本文档.txt--
-2011/4/30 1:33:39   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/30 1:33:39   relapath is --\新建文本文档.txt--
-2011/4/30 1:33:39   13 IN send_msg sending J新建文本文档.txt
-1304098419
-0
-2011/4/30 1:33:40   Received D
-2011/4/30 1:33:40   12 Received line D
-2011/4/30 1:33:40   In send_file, sending C:\Users\test\Desktop\FSS\新建文本文档.txt 0
-2011/4/30 1:33:40   12 In status_WAIT_MSG_SER_RECEVIED()
-2011/4/30 1:33:40   12 In receive_line()
-2011/4/30 1:33:40   Received F
-2011/4/30 1:33:40   12 IN send_msg sending M
-2011/4/30 1:33:40   12 In status_WAIT_HASH_FSS_INFO
-2011/4/30 1:33:40   12 In receive_line()
-2011/4/30 1:33:40   Received H.fss/hash.fss
-1
-41
-2011/4/30 1:33:40   12 Received line H.fss/hash.fss
-1
-41
-2011/4/30 1:33:40   12 IN send_msg sending A
-2011/4/30 1:33:40   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:33:40   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:33:40   12 In receive_file of Files.cs
-2011/4/30 1:33:40   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 41
-2011/4/30 1:33:40   written to file
-2011/4/30 1:33:40   12 In analyse_hash()
-2011/4/30 1:33:40   mtime is: 1
-2011/4/30 1:33:40   hash_fss_mtime(): 1304098419
-2011/4/30 1:33:40   12 IN send_msg sending L
-2011/4/30 1:33:40   12 analyse_hash()-ed
-2011/4/30 1:33:40   12 In status_XXX
-2011/4/30 1:33:40   12 In receive_line()
-2011/4/30 1:33:50   Received H.fss/hash.fss
-1304098433
-41
-2011/4/30 1:33:50   12 Received line H.fss/hash.fss
-1304098433
-41
-2011/4/30 1:33:50   12 IN send_msg sending A
-2011/4/30 1:33:50   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:33:50   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:33:50   12 In receive_file of Files.cs
-2011/4/30 1:33:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 41
-2011/4/30 1:33:50   written to file
-2011/4/30 1:33:50   12 In analyse_hash()
-2011/4/30 1:33:50   mtime is: 1304098433
-2011/4/30 1:33:50   hash_fss_mtime(): 1304098419
-2011/4/30 1:33:50   12 IN send_msg sending I1
-2011/4/30 1:33:50   12 analyse_hash()-ed
-2011/4/30 1:33:50   12 In status_WAIT_ENTRY_INFO
-2011/4/30 1:33:50   12 In receive_line()
-2011/4/30 1:33:50   Received J新建文本文档.txt
-1304098433
-35
-2011/4/30 1:33:50   12 IN send_msg sending B
-2011/4/30 1:33:50   12 In status_WAIT_FILE()
-2011/4/30 1:33:50   In reciev_common_file(), relapth --新建文本文档.txt--
-2011/4/30 1:33:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\新建文本文档.txtand size is 35
-2011/4/30 1:33:50   6 C:\Users\test\Desktop\FSS\新建文本文档.txt Changed detected and passed.
-2011/4/30 1:33:50   written to file
-2011/4/30 1:33:50   6 C:\Users\test\Desktop\FSS\新建文本文档.txt Changed detected and passed.
-2011/4/30 1:33:50   12 In download_sync()
-2011/4/30 1:33:50   12 IN send_msg sending G
-2011/4/30 1:33:50   12 In status_XXX
-2011/4/30 1:33:50   12 In receive_line()
-2011/4/30 1:34:01   Received H.fss/hash.fss
-1304098448
 82
-2011/4/30 1:34:01   12 Received line H.fss/hash.fss
-1304098448
+2011/5/1 0:50:43   11 Received line H90088BB6918785DD20688973B3B6BAA51200B0D7
+.fss/hash.fss
+1
 82
-2011/4/30 1:34:01   12 IN send_msg sending A
-2011/4/30 1:34:01   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:34:01   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:34:01   12 In receive_file of Files.cs
-2011/4/30 1:34:01   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
-2011/4/30 1:34:02   written to file
-2011/4/30 1:34:02   12 In analyse_hash()
-2011/4/30 1:34:02   mtime is: 1304098448
-2011/4/30 1:34:02   hash_fss_mtime(): 1304098430
-2011/4/30 1:34:02   12 IN send_msg sending I1
-2011/4/30 1:34:02   12 analyse_hash()-ed
-2011/4/30 1:34:02   12 In status_WAIT_ENTRY_INFO
-2011/4/30 1:34:02   12 In receive_line()
-2011/4/30 1:34:02   Received Nuntitled folder
-1304098448
-4096
-2011/4/30 1:34:02   12 In download_sync()
-2011/4/30 1:34:02   12 IN send_msg sending G
-2011/4/30 1:34:02   12 In status_XXX
-2011/4/30 1:34:02   12 In receive_line()
-2011/4/30 1:34:02   13 C:\Users\test\Desktop\FSS\untitled folder Created detected and passed.
-2011/4/30 1:34:02   updated and genearted
-2011/4/30 1:34:04   13 C:\Users\test\Desktop\FSS\新建文本文档.txt Deleted detected and passed.
-2011/4/30 1:34:04   updated and genearted
-2011/4/30 1:34:04    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt--
-2011/4/30 1:34:04   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/30 1:34:04   relapath is --\untitled folder\新建文本文档.txt--
-2011/4/30 1:34:04   13 IN send_msg sending Juntitled folder/新建文本文档.txt
-1304098430
-35
-2011/4/30 1:34:04   13 C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt Created detected and passed.
-2011/4/30 1:34:04   13 C:\Users\test\Desktop\FSS\untitled folder Changed detected and passed.
-2011/4/30 1:34:05   Received D
-2011/4/30 1:34:05   12 Received line D
-2011/4/30 1:34:05   In send_file, sending C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt 35
-2011/4/30 1:34:05   12 In status_WAIT_MSG_SER_RECEVIED()
-2011/4/30 1:34:05   12 In receive_line()
-2011/4/30 1:34:05   Received F
-2011/4/30 1:34:05   12 IN send_msg sending M
-2011/4/30 1:34:05   12 In status_WAIT_HASH_FSS_INFO
-2011/4/30 1:34:05   12 In receive_line()
-2011/4/30 1:34:05   Received H.fss/hash.fss
+2011/5/1 0:50:43   11 IN send_msg sending A
+2011/5/1 0:50:43   11 IN status_WAIT_HASH_FSS
+2011/5/1 0:50:43   11 In recieve_hash_fss of Files.cs
+2011/5/1 0:50:43   11 In receive_file of Files.cs
+2011/5/1 0:50:43   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
+2011/5/1 0:50:44   written to file
+2011/5/1 0:50:44   11 In analyse_hash()
+2011/5/1 0:50:44   mtime is: 1
+2011/5/1 0:50:44   hash_fss_mtime(): 1304182242
+2011/5/1 0:50:44   11 IN send_msg sending L
+2011/5/1 0:50:44   11 analyse_hash()-ed
+2011/5/1 0:50:44   11 In status_XXX
+2011/5/1 0:50:44   11 In receive_line()
+2011/5/1 0:50:55   10 C:\Users\test\Desktop\FSS\新建文件夹\新建文本文档.txt Created detected and passed.
+2011/5/1 0:50:55   updated and genearted
+2011/5/1 0:50:55    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文件夹\新建文本文档.txt--
+2011/5/1 0:50:55   root is --C:\Users\test\Desktop\FSS-- 25
+2011/5/1 0:50:55   relapath is --\新建文件夹\新建文本文档.txt--
+2011/5/1 0:50:55   10 IN send_msg sending JDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+新建文件夹/新建文本文档.txt
+1304182255
+0
+2011/5/1 0:50:55   10 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
+2011/5/1 0:50:56   Received D
+2011/5/1 0:50:56   11 Received line D
+2011/5/1 0:50:56   In send_file, sending C:\Users\test\Desktop\FSS\新建文件夹\新建文本文档.txt 0
+2011/5/1 0:50:56   11 In status_WAIT_MSG_SER_RECEVIED()
+2011/5/1 0:50:56   11 In receive_line()
+2011/5/1 0:50:56   Received F
+2011/5/1 0:50:56   11 IN send_msg sending M
+2011/5/1 0:50:56   11 In status_WAIT_HASH_FSS_INFO
+2011/5/1 0:50:56   11 In receive_line()
+2011/5/1 0:50:56   Received H2BE5E62D67E050C2E64C8B468F6B5F339D57AA10
+.fss/hash.fss
 1
 123
-2011/4/30 1:34:05   12 Received line H.fss/hash.fss
+2011/5/1 0:50:56   11 Received line H2BE5E62D67E050C2E64C8B468F6B5F339D57AA10
+.fss/hash.fss
 1
 123
-2011/4/30 1:34:05   12 IN send_msg sending A
-2011/4/30 1:34:05   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:34:05   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:34:05   12 In receive_file of Files.cs
-2011/4/30 1:34:05   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
-2011/4/30 1:34:05   written to file
-2011/4/30 1:34:05   12 In analyse_hash()
-2011/4/30 1:34:05   mtime is: 1
-2011/4/30 1:34:05   hash_fss_mtime(): 1304098444
-2011/4/30 1:34:05    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
-2011/4/30 1:34:05   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/30 1:34:05   relapath is --\.fss\diff.remote.index--
-2011/4/30 1:34:05   12 IN send_msg sending K.fss/diff.remote.index
-1304098445
-2
-2011/4/30 1:34:05   12 analyse_hash()-ed
-2011/4/30 1:34:05   12 In status_WIAT_MSG_SER_REQ_DEL_IDX
-2011/4/30 1:34:05   12 In receive_line()
-2011/4/30 1:34:06   Received E
-2011/4/30 1:34:06   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 2
-2011/4/30 1:34:06   12 In status_WAIT_HASH_FSS_INFO
-2011/4/30 1:34:06   12 In receive_line()
-2011/4/30 1:34:06   Received H.fss/hash.fss
-1
-82
-2011/4/30 1:34:06   12 Received line H.fss/hash.fss
-1
-82
-2011/4/30 1:34:06   12 IN send_msg sending A
-2011/4/30 1:34:06   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:34:06   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:34:06   12 In receive_file of Files.cs
-2011/4/30 1:34:06   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 82
-2011/4/30 1:34:06   written to file
-2011/4/30 1:34:06   12 In analyse_hash()
-2011/4/30 1:34:06   mtime is: 1
-2011/4/30 1:34:06   hash_fss_mtime(): 1304098444
-2011/4/30 1:34:06   12 IN send_msg sending L
-2011/4/30 1:34:06   12 analyse_hash()-ed
-2011/4/30 1:34:06   12 In status_XXX
-2011/4/30 1:34:06   12 In receive_line()
-2011/4/30 1:34:15   13 C:\Users\test\Desktop\FSS\untitled folder\新建文件夹 Created detected and passed.
-2011/4/30 1:34:15   updated and genearted
-2011/4/30 1:34:15    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\untitled folder\新建文件夹--
-2011/4/30 1:34:15   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/30 1:34:15   relapath is --\untitled folder\新建文件夹--
-2011/4/30 1:34:15   13 IN send_msg sending Nuntitled folder/新建文件夹
-1304098455
+2011/5/1 0:50:56   11 IN send_msg sending A
+2011/5/1 0:50:56   11 IN status_WAIT_HASH_FSS
+2011/5/1 0:50:56   11 In recieve_hash_fss of Files.cs
+2011/5/1 0:50:56   11 In receive_file of Files.cs
+2011/5/1 0:50:56   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
+2011/5/1 0:50:56   written to file
+2011/5/1 0:50:56   11 In analyse_hash()
+2011/5/1 0:50:57   mtime is: 1
+2011/5/1 0:50:57   hash_fss_mtime(): 1304182255
+2011/5/1 0:50:57   11 IN send_msg sending L
+2011/5/1 0:50:57   11 analyse_hash()-ed
+2011/5/1 0:50:57   11 In status_XXX
+2011/5/1 0:50:57   11 In receive_line()
+2011/5/1 0:51:11   Received HF43229CB00392E4B92DBF81A5E6F9B80D3BE9869
+.fss/hash.fss
+1304182269
+123
+2011/5/1 0:51:11   11 Received line HF43229CB00392E4B92DBF81A5E6F9B80D3BE9869
+.fss/hash.fss
+1304182269
+123
+2011/5/1 0:51:11   11 IN send_msg sending A
+2011/5/1 0:51:11   11 IN status_WAIT_HASH_FSS
+2011/5/1 0:51:11   11 In recieve_hash_fss of Files.cs
+2011/5/1 0:51:11   11 In receive_file of Files.cs
+2011/5/1 0:51:11   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
+2011/5/1 0:51:11   written to file
+2011/5/1 0:51:11   11 In analyse_hash()
+2011/5/1 0:51:11   mtime is: 1304182269
+2011/5/1 0:51:11   hash_fss_mtime(): 1304182255
+2011/5/1 0:51:11   11 IN send_msg sending I1
+2011/5/1 0:51:11   11 analyse_hash()-ed
+2011/5/1 0:51:11   11 In status_WAIT_ENTRY_INFO
+2011/5/1 0:51:11   11 In receive_line()
+2011/5/1 0:51:11   Received J390AD9CE6931FD6723A3F6D902386674838F310D
+新建文件夹/新建文本文档.txt
+1304182269
+40
+2011/5/1 0:51:11   11 IN send_msg sending B
+2011/5/1 0:51:11   11 In status_WAIT_FILE()
+2011/5/1 0:51:11   In reciev_common_file(), relapth --新建文件夹\新建文本文档.txt--
+2011/5/1 0:51:11   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\新建文件夹\新建文本文档.txtand size is 40
+2011/5/1 0:51:11   10 C:\Users\test\Desktop\FSS\新建文件夹\新建文本文档.txt Changed detected and passed.
+2011/5/1 0:51:12   written to file
+2011/5/1 0:51:12   10 C:\Users\test\Desktop\FSS\新建文件夹\新建文本文档.txt Changed detected and passed.
+2011/5/1 0:51:12   11 In download_sync()
+2011/5/1 0:51:12   11 IN send_msg sending G
+2011/5/1 0:51:12   11 In status_XXX
+2011/5/1 0:51:12   11 In receive_line()
+2011/5/1 0:51:19   10 C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹 Created detected and passed.
+2011/5/1 0:51:19   updated and genearted
+2011/5/1 0:51:19    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹--
+2011/5/1 0:51:19   root is --C:\Users\test\Desktop\FSS-- 25
+2011/5/1 0:51:19   relapath is --\新建文件夹\新建文件夹--
+2011/5/1 0:51:19   10 IN send_msg sending NDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+新建文件夹/新建文件夹
+1304182278
 2046
-2011/4/30 1:34:15   13 C:\Users\test\Desktop\FSS\untitled folder Changed detected and passed.
-2011/4/30 1:34:15   Received F
-2011/4/30 1:34:15   12 Received line F
-2011/4/30 1:34:15   12 IN send_msg sending M
-2011/4/30 1:34:15   12 In status_WAIT_HASH_FSS_INFO
-2011/4/30 1:34:15   12 In receive_line()
-2011/4/30 1:34:16   Received H.fss/hash.fss
-1
-123
-2011/4/30 1:34:16   12 Received line H.fss/hash.fss
-1
-123
-2011/4/30 1:34:16   12 IN send_msg sending A
-2011/4/30 1:34:16   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:34:16   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:34:16   12 In receive_file of Files.cs
-2011/4/30 1:34:16   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
-2011/4/30 1:34:16   written to file
-2011/4/30 1:34:16   12 In analyse_hash()
-2011/4/30 1:34:16   mtime is: 1
-2011/4/30 1:34:16   hash_fss_mtime(): 1304098455
-2011/4/30 1:34:16   12 IN send_msg sending L
-2011/4/30 1:34:16   12 analyse_hash()-ed
-2011/4/30 1:34:16   12 In status_XXX
-2011/4/30 1:34:16   12 In receive_line()
-2011/4/30 1:34:22   13 C:\Users\test\Desktop\FSS\untitled folder\新建文本文档.txt Deleted detected and passed.
-2011/4/30 1:34:23   updated and genearted
-2011/4/30 1:34:23    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\untitled folder\新建文件夹\新建文本文档.txt--
-2011/4/30 1:34:23   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/30 1:34:23   relapath is --\untitled folder\新建文件夹\新建文本文档.txt--
-2011/4/30 1:34:23   13 IN send_msg sending Juntitled folder/新建文件夹/新建文本文档.txt
-1304098430
-35
-2011/4/30 1:34:23   13 C:\Users\test\Desktop\FSS\untitled folder\新建文件夹\新建文本文档.txt Created detected and passed.
-2011/4/30 1:34:23   13 C:\Users\test\Desktop\FSS\untitled folder\新建文件夹 Changed detected and passed.
-2011/4/30 1:34:23   13 C:\Users\test\Desktop\FSS\untitled folder Changed detected and passed.
-2011/4/30 1:34:23   Received D
-2011/4/30 1:34:23   12 Received line D
-2011/4/30 1:34:23   In send_file, sending C:\Users\test\Desktop\FSS\untitled folder\新建文件夹\新建文本文档.txt 35
-2011/4/30 1:34:23   12 In status_WAIT_MSG_SER_RECEVIED()
-2011/4/30 1:34:23   12 In receive_line()
-2011/4/30 1:34:23   Received F
-2011/4/30 1:34:23   12 IN send_msg sending M
-2011/4/30 1:34:23   12 In status_WAIT_HASH_FSS_INFO
-2011/4/30 1:34:23   12 In receive_line()
-2011/4/30 1:34:24   Received H.fss/hash.fss
+2011/5/1 0:51:19   10 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
+2011/5/1 0:51:19   Received F
+2011/5/1 0:51:19   11 Received line F
+2011/5/1 0:51:19   11 IN send_msg sending M
+2011/5/1 0:51:19   11 In status_WAIT_HASH_FSS_INFO
+2011/5/1 0:51:19   11 In receive_line()
+2011/5/1 0:51:19   Received HD3526C8F55877C72E4C05B048BD591885F9DF323
+.fss/hash.fss
 1
 164
-2011/4/30 1:34:24   12 Received line H.fss/hash.fss
+2011/5/1 0:51:19   11 Received line HD3526C8F55877C72E4C05B048BD591885F9DF323
+.fss/hash.fss
 1
 164
-2011/4/30 1:34:24   12 IN send_msg sending A
-2011/4/30 1:34:24   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:34:24   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:34:24   12 In receive_file of Files.cs
-2011/4/30 1:34:24   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 164
-2011/4/30 1:34:24   written to file
-2011/4/30 1:34:24   12 In analyse_hash()
-2011/4/30 1:34:24   mtime is: 1
-2011/4/30 1:34:24   hash_fss_mtime(): 1304098463
-2011/4/30 1:34:24    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
-2011/4/30 1:34:24   root is --C:\Users\test\Desktop\FSS-- 25
-2011/4/30 1:34:24   relapath is --\.fss\diff.remote.index--
-2011/4/30 1:34:24   12 IN send_msg sending K.fss/diff.remote.index
-1304098464
-2
-2011/4/30 1:34:24   12 analyse_hash()-ed
-2011/4/30 1:34:24   12 In status_WIAT_MSG_SER_REQ_DEL_IDX
-2011/4/30 1:34:24   12 In receive_line()
-2011/4/30 1:34:24   Received E
-2011/4/30 1:34:24   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 2
-2011/4/30 1:34:24   12 In status_WAIT_HASH_FSS_INFO
-2011/4/30 1:34:24   12 In receive_line()
-2011/4/30 1:34:25   Received H.fss/hash.fss
+2011/5/1 0:51:19   11 IN send_msg sending A
+2011/5/1 0:51:19   11 IN status_WAIT_HASH_FSS
+2011/5/1 0:51:19   11 In recieve_hash_fss of Files.cs
+2011/5/1 0:51:19   11 In receive_file of Files.cs
+2011/5/1 0:51:19   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 164
+2011/5/1 0:51:20   written to file
+2011/5/1 0:51:20   11 In analyse_hash()
+2011/5/1 0:51:20   mtime is: 1
+2011/5/1 0:51:20   hash_fss_mtime(): 1304182279
+2011/5/1 0:51:20   11 IN send_msg sending L
+2011/5/1 0:51:20   11 analyse_hash()-ed
+2011/5/1 0:51:20   11 In status_XXX
+2011/5/1 0:51:20   11 In receive_line()
+2011/5/1 1:01:03   Server crashed
+2011/5/1 1:02:50   10 Connected to 204.74.216.120
+2011/5/1 1:02:50   12 In status_WAIT_HASH_FSS_INFO
+2011/5/1 1:02:50   12 In receive_line()
+2011/5/1 1:02:50   Received HD3526C8F55877C72E4C05B048BD591885F9DF323
+.fss/hash.fss
+1304182279
+164
+2011/5/1 1:02:50   12 Received line HD3526C8F55877C72E4C05B048BD591885F9DF323
+.fss/hash.fss
+1304182279
+164
+2011/5/1 1:02:50   12 IN send_msg sending A
+2011/5/1 1:02:50   12 IN status_WAIT_HASH_FSS
+2011/5/1 1:02:50   12 In recieve_hash_fss of Files.cs
+2011/5/1 1:02:50   12 In receive_file of Files.cs
+2011/5/1 1:02:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 164
+2011/5/1 1:02:52   written to file
+2011/5/1 1:02:52   12 In analyse_hash()
+2011/5/1 1:02:52   mtime is: 1304182279
+2011/5/1 1:02:52   hash_fss_mtime(): 1304182279
+2011/5/1 1:02:52   12 IN send_msg sending G
+2011/5/1 1:02:52   12 analyse_hash()-ed
+2011/5/1 1:02:52   12 In status_XXX
+2011/5/1 1:02:52   12 In receive_line()
+2011/5/1 1:51:12   10 Connected to 204.74.216.120
+2011/5/1 1:51:12   12 In status_WAIT_HASH_FSS_INFO
+2011/5/1 1:51:12   12 In receive_line()
+2011/5/1 1:51:13   Received HD3526C8F55877C72E4C05B048BD591885F9DF323
+.fss/hash.fss
+1304182279
+164
+2011/5/1 1:51:13   12 Received line HD3526C8F55877C72E4C05B048BD591885F9DF323
+.fss/hash.fss
+1304182279
+164
+2011/5/1 1:51:13   12 IN send_msg sending A
+2011/5/1 1:51:13   12 IN status_WAIT_HASH_FSS
+2011/5/1 1:51:13   12 In recieve_hash_fss of Files.cs
+2011/5/1 1:51:13   12 In receive_file of Files.cs
+2011/5/1 1:51:13   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 164
+2011/5/1 1:51:13   written to file
+2011/5/1 1:51:13   12 In analyse_hash()
+2011/5/1 1:51:13   mtime is: 1304182279
+2011/5/1 1:51:13   hash_fss_mtime(): 1304182279
+2011/5/1 1:51:13   12 IN send_msg sending G
+2011/5/1 1:51:13   12 analyse_hash()-ed
+2011/5/1 1:51:13   12 In status_XXX
+2011/5/1 1:51:13   12 In receive_line()
+2011/5/1 1:51:33   13 C:\Users\test\Desktop\FSS\新建文件夹\new file Deleted detected and passed.
+2011/5/1 1:51:33   updated and genearted
+2011/5/1 1:51:33    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹\new file--
+2011/5/1 1:51:33   root is --C:\Users\test\Desktop\FSS-- 25
+2011/5/1 1:51:34   relapath is --\新建文件夹\新建文件夹\new file--
+2011/5/1 1:51:34   13 IN send_msg sending JA94A8FE5CCB19BA61C4C0873D391E987982FBBD3
+新建文件夹/新建文件夹/new file
+1304182242
+4
+2011/5/1 1:51:34   13 C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹\new file Created detected and passed.
+2011/5/1 1:51:34   13 C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹 Changed detected and passed.
+2011/5/1 1:51:34   13 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
+2011/5/1 1:51:34   13 C:\Users\test\Desktop\FSS\新建文件夹\新建文本文档.txt Deleted detected and passed.
+2011/5/1 1:51:34   13 C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹\新建文本文档.txt Created detected and passed.
+2011/5/1 1:51:34   13 C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹 Changed detected and passed.
+2011/5/1 1:51:34   13 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
+2011/5/1 1:51:34   Received D
+2011/5/1 1:51:34   12 Received line D
+2011/5/1 1:51:34   In send_file, sending C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹\new file 4
+2011/5/1 1:51:34   12 In status_WAIT_MSG_SER_RECEVIED()
+2011/5/1 1:51:34   12 In receive_line()
+2011/5/1 1:51:34   Received F
+2011/5/1 1:51:34    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹\新建文本文档.txt--
+2011/5/1 1:51:34   root is --C:\Users\test\Desktop\FSS-- 25
+2011/5/1 1:51:34   relapath is --\新建文件夹\新建文件夹\新建文本文档.txt--
+2011/5/1 1:51:34   12 IN send_msg sending J390AD9CE6931FD6723A3F6D902386674838F310D
+新建文件夹/新建文件夹/新建文本文档.txt
+1304182272
+40
+2011/5/1 1:51:34   12 In status_WAIT_MSG_SER_REQ_FILE()
+2011/5/1 1:51:34   12 In receive_line()
+2011/5/1 1:51:35   Received D
+2011/5/1 1:51:35   In send_file, sending C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹\新建文本文档.txt 40
+2011/5/1 1:51:35   12 In status_WAIT_MSG_SER_RECEVIED()
+2011/5/1 1:51:35   12 In receive_line()
+2011/5/1 1:51:35   Received F
+2011/5/1 1:51:35   12 IN send_msg sending M
+2011/5/1 1:51:35   12 In status_WAIT_HASH_FSS_INFO
+2011/5/1 1:51:35   12 In receive_line()
+2011/5/1 1:51:35   Received H38177005D89A80B9D5926B389F1EAE0CB760758D
+.fss/hash.fss
 1
-123
-2011/4/30 1:34:25   12 Received line H.fss/hash.fss
+246
+2011/5/1 1:51:35   12 Received line H38177005D89A80B9D5926B389F1EAE0CB760758D
+.fss/hash.fss
 1
-123
-2011/4/30 1:34:25   12 IN send_msg sending A
-2011/4/30 1:34:25   12 IN status_WAIT_HASH_FSS
-2011/4/30 1:34:25   12 In recieve_hash_fss of Files.cs
-2011/4/30 1:34:25   12 In receive_file of Files.cs
-2011/4/30 1:34:25   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 123
-2011/4/30 1:34:25   written to file
-2011/4/30 1:34:25   12 In analyse_hash()
-2011/4/30 1:34:25   mtime is: 1
-2011/4/30 1:34:25   hash_fss_mtime(): 1304098463
-2011/4/30 1:34:25   12 IN send_msg sending L
-2011/4/30 1:34:25   12 analyse_hash()-ed
-2011/4/30 1:34:25   12 In status_XXX
-2011/4/30 1:34:25   12 In receive_line()
+246
+2011/5/1 1:51:35   12 IN send_msg sending A
+2011/5/1 1:51:35   12 IN status_WAIT_HASH_FSS
+2011/5/1 1:51:35   12 In recieve_hash_fss of Files.cs
+2011/5/1 1:51:35   12 In receive_file of Files.cs
+2011/5/1 1:51:35   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 246
+2011/5/1 1:51:36   written to file
+2011/5/1 1:51:36   12 In analyse_hash()
+2011/5/1 1:51:36   mtime is: 1
+2011/5/1 1:51:36   hash_fss_mtime(): 1304185893
+2011/5/1 1:51:36    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
+2011/5/1 1:51:36   root is --C:\Users\test\Desktop\FSS-- 25
+2011/5/1 1:51:36   relapath is --\.fss\diff.remote.index--
+2011/5/1 1:51:36   12 IN send_msg sending K83F5A5C359F3DC8317519240E32F1F51F68BC051
+.fss/diff.remote.index
+1304185896
+4
+2011/5/1 1:51:36   12 analyse_hash()-ed
+2011/5/1 1:51:36   12 In status_WIAT_MSG_SER_REQ_DEL_IDX
+2011/5/1 1:51:36   12 In receive_line()
+2011/5/1 1:51:36   Received E
+2011/5/1 1:51:36   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 4
+2011/5/1 1:51:36   12 In status_WAIT_HASH_FSS_INFO
+2011/5/1 1:51:36   12 In receive_line()
+2011/5/1 1:51:37   Received H5ECC318575875E5C8DBA49FD997334EA227D14A0
+.fss/hash.fss
+1
+164
+2011/5/1 1:51:37   12 Received line H5ECC318575875E5C8DBA49FD997334EA227D14A0
+.fss/hash.fss
+1
+164
+2011/5/1 1:51:37   12 IN send_msg sending A
+2011/5/1 1:51:37   12 IN status_WAIT_HASH_FSS
+2011/5/1 1:51:37   12 In recieve_hash_fss of Files.cs
+2011/5/1 1:51:37   12 In receive_file of Files.cs
+2011/5/1 1:51:37   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 164
+2011/5/1 1:51:37   written to file
+2011/5/1 1:51:37   12 In analyse_hash()
+2011/5/1 1:51:37   mtime is: 1
+2011/5/1 1:51:37   hash_fss_mtime(): 1304185893
+2011/5/1 1:51:37   12 IN send_msg sending L
+2011/5/1 1:51:37   12 analyse_hash()-ed
+2011/5/1 1:51:37   12 In status_XXX
+2011/5/1 1:51:37   12 In receive_line()
+2011/5/1 1:51:47   Received HDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+.fss/hash.fss
+1304185906
+0
+2011/5/1 1:51:47   12 Received line HDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+.fss/hash.fss
+1304185906
+0
+2011/5/1 1:51:47   12 IN send_msg sending A
+2011/5/1 1:51:47   12 IN status_WAIT_HASH_FSS
+2011/5/1 1:51:47   12 In recieve_hash_fss of Files.cs
+2011/5/1 1:51:47   12 In receive_file of Files.cs
+2011/5/1 1:51:47   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 0
+2011/5/1 1:51:47   12 In analyse_hash()
+2011/5/1 1:51:47   mtime is: 1304185906
+2011/5/1 1:51:47   hash_fss_mtime(): 1304185893
+2011/5/1 1:51:47   13 C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹\new file Deleted detected and passed.
+2011/5/1 1:51:47   13 C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹\新建文本文档.txt Deleted detected and passed.
+2011/5/1 1:51:47   13 C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹 Changed detected and passed.
+2011/5/1 1:51:47   13 C:\Users\test\Desktop\FSS\新建文件夹\新建文件夹 Deleted detected and passed.
+2011/5/1 1:51:47   13 C:\Users\test\Desktop\FSS\新建文件夹 Changed detected and passed.
+2011/5/1 1:51:47   13 C:\Users\test\Desktop\FSS\新建文件夹 Deleted detected and passed.
+2011/5/1 1:51:47   12 System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 fss_client.Sha1.compute_hash(String fullname, String rootpath, String& sha1_digest, String& hash_digest) 位置 Z:\fss-client\fss-client\Sha1.cs:行号 97
+   在 fss_client.Files.write_in(String fullpath) 位置 Z:\fss-client\fss-client\Files.cs:行号 151
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 25
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 33
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 37
+   在 fss_client.Ftw..ctor(Fn fn, String rootpath) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 18
+   在 fss_client.Files.update_files() 位置 Z:\fss-client\fss-client\Files.cs:行号 109
+2011/5/1 1:51:47   12 IN send_msg sending G
+2011/5/1 1:51:47   12 analyse_hash()-ed
+2011/5/1 1:51:47   12 In status_XXX
+2011/5/1 1:51:47   12 In receive_line()
+2011/5/1 1:51:53   13 C:\Users\test\Desktop\FSS\新建日记本文档.jnt Created detected and passed.
+2011/5/1 1:51:53   13 System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\新建日记本文档.jnt”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 fss_client.Sha1.compute_hash(String fullname, String rootpath, String& sha1_digest, String& hash_digest) 位置 Z:\fss-client\fss-client\Sha1.cs:行号 97
+   在 fss_client.Files.write_in(String fullpath) 位置 Z:\fss-client\fss-client\Files.cs:行号 151
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 25
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 33
+   在 fss_client.Ftw..ctor(Fn fn, String rootpath) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 18
+   在 fss_client.Files.update_files() 位置 Z:\fss-client\fss-client\Files.cs:行号 109
+2011/5/1 1:51:54   System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 fss_client.Files.generate_diffs() 位置 Z:\fss-client\fss-client\Files.cs:行号 231
+2011/5/1 1:51:54   updated and genearted
+2011/5/1 1:51:54   13 C:\Users\test\Desktop\FSS\新建日记本文档.jnt Changed detected and passed.
+2011/5/1 1:51:54   updated and genearted
+2011/5/1 1:51:54    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\新建日记本文档.jnt--
+2011/5/1 1:51:54   root is --C:\Users\test\Desktop\FSS-- 25
+2011/5/1 1:51:54   relapath is --\新建日记本文档.jnt--
+2011/5/1 1:51:54   13 IN send_msg sending J06F7E7764B86FBAB9638F2986B8A0424361152A4
+新建日记本文档.jnt
+1304185913
+4544
+2011/5/1 1:51:54   13 C:\Users\test\Desktop\FSS\新建日记本文档.jnt Changed detected and passed.
+2011/5/1 1:51:54   Received D
+2011/5/1 1:51:54   12 Received line D
+2011/5/1 1:51:54   In send_file, sending C:\Users\test\Desktop\FSS\新建日记本文档.jnt 4544
+2011/5/1 1:51:54   12 In status_WAIT_MSG_SER_RECEVIED()
+2011/5/1 1:51:54   12 In receive_line()
+2011/5/1 1:51:55   Received F
+2011/5/1 1:51:55   12 IN send_msg sending M
+2011/5/1 1:51:55   12 In status_WAIT_HASH_FSS_INFO
+2011/5/1 1:51:55   12 In receive_line()
+2011/5/1 1:51:55   Received H8C99DC849EE8BA132131AC2A2AC4D0C75AEF1A2E
+.fss/hash.fss
+1
+41
+2011/5/1 1:51:56   12 Received line H8C99DC849EE8BA132131AC2A2AC4D0C75AEF1A2E
+.fss/hash.fss
+1
+41
+2011/5/1 1:51:56   12 IN send_msg sending A
+2011/5/1 1:51:56   12 IN status_WAIT_HASH_FSS
+2011/5/1 1:51:56   12 In recieve_hash_fss of Files.cs
+2011/5/1 1:51:56   12 In receive_file of Files.cs
+2011/5/1 1:51:56   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 41
+2011/5/1 1:51:56   written to file
+2011/5/1 1:51:56   12 In analyse_hash()
+2011/5/1 1:51:56   mtime is: 1
+2011/5/1 1:51:56   hash_fss_mtime(): 1304185914
+2011/5/1 1:51:56   12 IN send_msg sending L
+2011/5/1 1:51:56   12 analyse_hash()-ed
+2011/5/1 1:51:56   12 In status_XXX
+2011/5/1 1:51:56   12 In receive_line()
+2011/5/1 1:52:02   Received HDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+.fss/hash.fss
+1304185921
+0
+2011/5/1 1:52:02   12 Received line HDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+.fss/hash.fss
+1304185921
+0
+2011/5/1 1:52:02   12 IN send_msg sending A
+2011/5/1 1:52:02   12 IN status_WAIT_HASH_FSS
+2011/5/1 1:52:02   12 In recieve_hash_fss of Files.cs
+2011/5/1 1:52:02   12 In receive_file of Files.cs
+2011/5/1 1:52:02   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 0
+2011/5/1 1:52:03   12 In analyse_hash()
+2011/5/1 1:52:03   mtime is: 1304185921
+2011/5/1 1:52:03   hash_fss_mtime(): 1304185914
+2011/5/1 1:52:03   13 C:\Users\test\Desktop\FSS\新建日记本文档.jnt Deleted detected and passed.
+2011/5/1 1:52:03   12 System.IO.IOException: 文件“C:\Users\test\Desktop\FSS\.fss\diff.local.index”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 fss_client.Sha1.compute_hash(String fullname, String rootpath, String& sha1_digest, String& hash_digest) 位置 Z:\fss-client\fss-client\Sha1.cs:行号 97
+   在 fss_client.Files.write_in(String fullpath) 位置 Z:\fss-client\fss-client\Files.cs:行号 151
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 25
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 33
+   在 fss_client.Ftw.traverse(String filename) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 37
+   在 fss_client.Ftw..ctor(Fn fn, String rootpath) 位置 Z:\fss-client\fss-client\Ftw.cs:行号 18
+   在 fss_client.Files.update_files() 位置 Z:\fss-client\fss-client\Files.cs:行号 109
+2011/5/1 1:52:03   12 IN send_msg sending G
+2011/5/1 1:52:03   12 analyse_hash()-ed
+2011/5/1 1:52:03   12 In status_XXX
+2011/5/1 1:52:03   12 In receive_line()

@@ -248,7 +248,7 @@ namespace fss_client
             }
             else
             {
-                if (t1.IsAlive)
+                if (t1 != null && t1.IsAlive)
                     t1.Abort();
                 Application.Exit();
             }
@@ -297,7 +297,7 @@ namespace fss_client
                 this.disappear();
             else
             {
-                if (t1.IsAlive)
+                if (t1!=null  && t1.IsAlive)
                     t1.Abort();
                 Application.Exit();
             }
