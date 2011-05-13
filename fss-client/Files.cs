@@ -13,10 +13,11 @@ namespace fss_client
     class Files
     {
 
-        public static int PREFIX0_SENT = 0;
-        public static int PREFIX1_SENT = 1;
-        public static int PREFIX2_SENT = 2;
-        public static int PREFIX3_SENT = 3;
+        public static int PREFIX0_SENT = 1 << 1;
+        public static int PREFIX1_SENT = 1 << 2;
+        public static int PREFIX2_SENT = 1 << 3;
+        public static int PREFIX3_SENT = 1 << 4;
+        public static int SIZE0_SENT = 1 << 5;
 
 
         private string global_root_path;
@@ -145,13 +146,13 @@ namespace fss_client
 
         public void write_in(string fullpath)
         {
+            if (if_to_skip(fullpath))
+                return;
+
             string sha1 = string.Empty;
             string hash = string.Empty;
 
             Sha1.compute_hash(fullpath, global_root_path, ref sha1, ref hash);
-
-            if (if_to_skip(fullpath))
-                return;
 
             File.AppendAllText(this.sha1_fss_path, sha1);
             File.AppendAllText(this.sha1_fss_path, "\n");
@@ -225,14 +226,14 @@ namespace fss_client
             long size1 = 0;
             try
             {
-                if (File.Exists(this.diff_remote_index_path))
-                    File.Delete(this.diff_remote_index_path);
-                if (File.Exists(this.diff_local_index_path))
-                    File.Delete(this.diff_local_index_path);
+                //if (File.Exists(this.diff_remote_index_path))
+                //    File.Delete(this.diff_remote_index_path);
+                //if (File.Exists(this.diff_local_index_path))
+                //    File.Delete(this.diff_local_index_path);
 
-                if (string.Compare(Sha1.sha1_file_via_fname(this.remote_hash_fss_path),
-                                    Sha1.sha1_file_via_fname(this.hash_fss_path)) == 0)
-                    return DIFF_IDENTICAL;
+                //if (string.Compare(Sha1.sha1_file_via_fname(this.remote_hash_fss_path),
+                //                    Sha1.sha1_file_via_fname(this.hash_fss_path)) == 0)
+                //    return DIFF_IDENTICAL;
 
                 Diff.diff(this.remote_hash_fss_path, this.hash_fss_path, this.diff_remote_index_path,
                     this.diff_local_index_path, string.Empty);
@@ -265,9 +266,11 @@ namespace fss_client
         }
 
 
-        public int send_entryinfo_or_reqhashinfo(bool ifinit, string prefix0,
-            string prefix1, string prefix2)
+        public void send_entryinfo_or_reqhashinfo(bool ifinit, string prefix0,
+            string prefix1, string prefix2, ref int flag)
         {
+            flag = 0;
+
             if (ifinit)
                 this.diff_local_index = new FileStream(this.diff_local_index_path, FileMode.Open, FileAccess.Read);
 
@@ -276,32 +279,33 @@ namespace fss_client
                 net.send_msg(prefix2);
                 this.diff_local_index.Close();
                 this.linenum_to_send = -1;
-                return PREFIX2_SENT;
+                flag |= PREFIX2_SENT;
+                return;
             }
 
             string record = Diff.get_line(this.diff_local_index);
             this.linenum_to_send = Convert.ToInt32(record);
 
-            return send_entryinfo_via_linenum(linenum_to_send, prefix0, prefix1);
+            send_entryinfo_via_linenum(linenum_to_send, prefix0, prefix1, ref flag);
         }
 
-        public int send_entryinfo_via_linenum(int linenum, string prefix0, string prefix1)
+        public void send_entryinfo_via_linenum(int linenum, string prefix0, string prefix1, ref int flag)
         {
             string record = Diff.get_line_via_linenum(this.finfo_fss_path, linenum);
-            return send_entryinfo(record, prefix0, prefix1);
+            send_entryinfo(record, prefix0, prefix1, ref flag);
 
         }
 
 
-        public void send_del_index_info(string prefix)
+        public void send_del_index_info(string prefix, ref int flag)
         {
 
-            send_entryinfo(this.diff_remote_index_path, prefix, string.Empty);
+            send_entryinfo(this.diff_remote_index_path, prefix, string.Empty, ref flag);
         }
 
-        public int send_entryinfo(string record, string prefix0, string prefix1)
+        public void send_entryinfo(string record, string prefix0, string prefix1, ref int flag)
         {
-            int rv = 0;
+            flag = 0;
             string sha1 = string.Empty;
             string hash = string.Empty;
 
@@ -309,12 +313,12 @@ namespace fss_client
             if (Directory.Exists(record))
             {
                 msg += prefix1;
-                rv = PREFIX1_SENT;
+                flag |= PREFIX1_SENT;
             }
             else
             {
                 msg += prefix0;
-                rv = PREFIX0_SENT;
+                flag |= PREFIX0_SENT;
             }
 
             Sha1.compute_hash(record, global_root_path, ref sha1, ref hash);
@@ -326,18 +330,18 @@ namespace fss_client
             msg += TimeSize.entry_mtime(record);
             msg += '\n';
             this.size_to_send = TimeSize.entry_size(record);
+            if (this.size_to_send == 0)
+                flag |= SIZE0_SENT;
             msg += this.size_to_send;
             
             net.send_msg(msg);
 
 
-            return rv;
-
         }
 
-        public int send_linenum_or_done(bool ifinit, string prefix0, string prefix1)
+        public void send_linenum_or_done(bool ifinit, string prefix0, string prefix1, ref int flag)
         {
-            int rv = PREFIX0_SENT;
+            flag = 0;
             string msg = string.Empty;
             
             try
@@ -353,7 +357,7 @@ namespace fss_client
                 {
                     net.send_msg(prefix1);
                     this.diff_remote_index.Close();
-                    rv = PREFIX1_SENT;
+                    flag |= PREFIX1_SENT;
                 }
                 else
                 {
@@ -361,7 +365,7 @@ namespace fss_client
                     msg += prefix0;
                     msg += record;
                     net.send_msg(msg);
-                    rv = PREFIX0_SENT;
+                    flag |= PREFIX0_SENT;
                 }
 
 
@@ -371,7 +375,6 @@ namespace fss_client
                 Log.logon(e.ToString());
             }
 
-            return rv;
 
         }
 
