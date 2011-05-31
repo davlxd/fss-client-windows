@@ -82,12 +82,10 @@ namespace fss_client
         {
             SHA1CryptoServiceProvider provider = new SHA1CryptoServiceProvider();
             byte[] digest;
-            int flag = 0;
             string content_digest, path_digest;
 
             if (Directory.Exists(fullname))
             {
-                flag = 1;
                 digest = provider.ComputeHash(System.Text.Encoding.Default.GetBytes(string.Empty));
                 content_digest = BitConverter.ToString(digest).Replace("-", "");
 

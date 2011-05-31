@@ -20,30 +20,29 @@ namespace fss_client
         public const int MAX_BUF_LEN = 4096;
 
         private Socket sock;
-        private IPAddress[] addrs;
+        private IPAddress addr;
 
         public Net(string server)
         {
-            IPHostEntry iphost = Dns.GetHostEntry(server);
-            addrs = iphost.AddressList;
-
-
-            //TODO:Attention: only connect first addr
-            sock = new Socket(addrs[0].AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-
-            //IPEndPoint remoteEP = new IPEndPoint(addrs[0], port);
-            //sock.BeginConnect(remoteEP, new AsyncCallback(ConnectCallBack), sock);
-            //connectDone.WaitOne();
-
-            //Receive(sock);
+            if (!IPAddress.TryParse(server, out addr))
+            {
+                IPAddress[] addrs;
+                IPHostEntry iphost = Dns.GetHostEntry(server);
+                addrs = iphost.AddressList;
+                if (addrs.Length == 0)
+                    throw new Exception();
+                else
+                    addr = addrs[0];
+            }
+            sock = new Socket(addr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
         }
         public void connect()
         {
-            IPEndPoint remoteEP = new IPEndPoint(addrs[0], port);
+            IPEndPoint remoteEP = new IPEndPoint(addr, port);
             try
             {
                 sock.Connect(remoteEP);
-                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " Connected to " + addrs[0].ToString());
+                Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " Connected to " + addr.ToString());
 
             }
             catch (Exception e)

@@ -48,11 +48,11 @@
   <ItemGroup>
     <Compile Include="Diff.cs" />
     <Compile Include="Files.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_config.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_config.Designer.cs">
+      <DependentUpon>Form_config.cs</DependentUpon>
     </Compile>
     <Compile Include="Ftw.cs" />
     <Compile Include="Log.cs" />
@@ -62,8 +62,8 @@
     <Compile Include="Protocol.cs" />
     <Compile Include="Sha1.cs" />
     <Compile Include="TimeSize.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form_config.resx">
+      <DependentUpon>Form_config.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
