@@ -735,3 +735,13 @@ fuck/fss/fss-client/README
    在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
    在 System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
    在 fss_client.Net.connect() 位置 Z:\fss-client\fss-client\Net.cs:行号 44
+2011/6/2 23:09:42   9System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 204.74.216.120:3375
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   在 fss_client.Net.connect() 位置 Z:\fss-client\fss-client\Net.cs:行号 44
+2011/6/2 23:09:49   9System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 204.74.216.120:3375
+   在 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   在 fss_client.Net.connect() 位置 Z:\fss-client\fss-client\Net.cs:行号 44
+2011/6/2 23:12:23   9 Connected to 204.74.216.120
+2011/6/2 23:12:23   7 In status_WAIT_HASH_FSS_INFO

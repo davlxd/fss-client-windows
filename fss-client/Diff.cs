@@ -31,8 +31,8 @@ namespace fss_client
                 else
                     f_out_2 = null;
 
-                int f_in_0_ln = get_line_num(f_in_0);
-                int f_in_1_ln = get_line_num(f_in_1);
+                long f_in_0_ln = get_line_num(f_in_0);
+                long f_in_1_ln = get_line_num(f_in_1);
 
                 bool[] flag = new bool[f_in_1_ln];
                 for (int i = 0; i < f_in_1_ln; i++)
@@ -94,11 +94,11 @@ namespace fss_client
 
         }
 
-        private static int get_line_num(FileStream fs)
+        private static long get_line_num(FileStream fs)
         {
             long pos = fs.Position;
             int c;
-            int num = 0;
+            long num = 0;
 
             for (int i = 0; i < fs.Length; i++)
             {
@@ -135,7 +135,7 @@ namespace fss_client
 
         }
 
-        public static string get_line_via_linenum(string fullpath, int linenum)
+        public static string get_line_via_linenum(string fullpath, long linenum)
         {
             if (linenum <= 0)
                 return string.Empty;
@@ -155,7 +155,7 @@ namespace fss_client
             return string.Empty;
         }
 
-        public static string get_line_via_linenum(FileStream fs, int linenum)
+        public static string get_line_via_linenum(FileStream fs, long linenum)
         {
             if (fs.Position == fs.Length || linenum > fs.Length)
                 return string.Empty;
@@ -190,6 +190,40 @@ namespace fss_client
                     return get_line(fs);
 
             }
+
+        }
+
+        public static long search_line(string fullpath, string target)
+        {
+            long rv = -1, i = 0, total_linenum = 0;
+            FileStream fs = null;
+            try
+            {
+                fs = new FileStream(fullpath, FileMode.Open, FileAccess.Read);
+                total_linenum = get_line_num(fs);
+
+                for (i = 1; i <= total_linenum; i++)
+                {
+                    if (get_line_via_linenum(fs, i) == target)
+                    {
+                        rv = i;
+                        break;
+                    }
+                }
+
+                if (i == (total_linenum + 1))
+                    rv = -1;
+
+            }
+            catch (Exception e)
+            {
+                Log.logon("@ Diff.cs, search_line, maybe invoked by reused_file" + e.ToString());
+
+            }
+
+            if (fs != null)
+                fs.Close();
+            return rv;                
 
         }
 

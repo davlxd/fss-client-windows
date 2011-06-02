@@ -339,6 +339,31 @@ namespace fss_client
 
         }
 
+        public bool reuse_file(string sha1_str, string rela_fname)
+        {
+            string target_file_path = Path.Combine(this.global_root_path, rela_fname);
+            string source_file_path = string.Empty;
+            long source_file_linenum = Diff.search_line(this.sha1_fss_path, sha1_str);
+
+            if (source_file_linenum > 0)
+            {
+                source_file_path = Diff.get_line_via_linenum(this.finfo_fss_path, source_file_linenum);
+                try
+                {
+                    File.Copy(source_file_path, target_file_path, true);
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    Log.logon("@reuse_file, " + e.ToString());
+                }
+            }
+
+            return false;
+
+        }
+
+
         public void send_linenum_or_done(bool ifinit, string prefix0, string prefix1, ref int flag)
         {
             flag = 0;

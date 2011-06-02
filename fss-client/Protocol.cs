@@ -23,6 +23,7 @@ namespace fss_client
         private const string  FIN = "L";
         private const string  CLI_REQ_HASH_FSS_INFO = "M";
         private const string  DIR_INFO = "N";
+        private const string  CHKSUM_INFO = "O";
 
 
         private const int WAIT_XXX = 1;
@@ -33,6 +34,7 @@ namespace fss_client
         private const int WAIT_MSG_SER_REQ_FILE = 11;
         private const int WAIT_MSG_SER_RECEIVED = 13;
         private const int WAIT_MSG_SER_REQ_DEL_IDX = 15;
+        private const int ENTRY_INFO_SENT = 17;
 
         volatile private int status;
 
@@ -107,6 +109,8 @@ namespace fss_client
                 LOCK = true;
                 files.send_entryinfo_or_reqhashinfo(true, FILE_INFO, DIR_INFO,
                     CLI_REQ_HASH_FSS_INFO, ref flag0 );
+                // it is useless to to change status here, 
+                // because main thread has been blocked and wait incoming datagram
 
                 //if (rvv == Files.PREFIX0_SENT)
                 //    status = WAIT_MSG_SER_REQ_FILE;
@@ -178,6 +182,11 @@ namespace fss_client
                         status_WAIT_MSG_SER_REQ_DEL_IDX();
                         break;
 
+                    case ENTRY_INFO_SENT:
+                        status_ENTRY_INFO_SENT();
+                        break;
+
+
                 } // end switch()
 
             }// end while(true)
@@ -219,7 +228,6 @@ namespace fss_client
 
         }
 
-
         private void status_WAIT_HASH_FSS_INFO()
         {
 
@@ -239,7 +247,6 @@ namespace fss_client
 
 
         }
-
 
         private void wait_hash_fss_info(string msg)
         {
@@ -309,14 +316,21 @@ namespace fss_client
 
                         Log.logon(">>>> flag0=" + flag0);
 
-                        if (((flag0 & Files.PREFIX1_SENT) != 0) || ((flag0 & Files.SIZE0_SENT) != 0))
-                            status = WAIT_MSG_SER_RECEIVED;
-
-                        else if ((flag0 &  Files.PREFIX0_SENT) != 0)
-                            status = WAIT_MSG_SER_REQ_FILE;
+                        if (((flag0 & Files.PREFIX0_SENT) != 0) || ((flag0 & Files.PREFIX1_SENT) != 0))
+                            status = ENTRY_INFO_SENT;
 
                         else if ((flag0 & Files.PREFIX2_SENT) != 0)
                             status = WAIT_HASH_FSS_INFO;
+
+                        //// Following is content-unreusable edition
+                        //if (((flag0 & Files.PREFIX1_SENT) != 0) || ((flag0 & Files.SIZE0_SENT) != 0))
+                        //    status = WAIT_MSG_SER_RECEIVED;
+
+                        //else if ((flag0 &  Files.PREFIX0_SENT) != 0)
+                        //    status = WAIT_MSG_SER_REQ_FILE;
+
+                        //else if ((flag0 & Files.PREFIX2_SENT) != 0)
+                        //    status = WAIT_HASH_FSS_INFO;
 
                     }
                     else if (rv == Files.DIFF_IDENTICAL)
@@ -344,7 +358,6 @@ namespace fss_client
                             status = WAIT_HASH_FSS_INFO;
                         else 
                             status = WAIT_MSG_SER_REQ_DEL_IDX;
-
                     }
 
                 }
@@ -469,14 +482,18 @@ namespace fss_client
 
                         Log.logon(">>>> flag0=" + flag0);
 
-                        if ( ((flag0 & Files.PREFIX1_SENT) != 0) || ((flag0 & Files.SIZE0_SENT) !=0 ) )
-                            status = WAIT_MSG_SER_RECEIVED;
+                        if (((flag0 & Files.PREFIX0_SENT) != 0) || ((flag0 & Files.PREFIX1_SENT) != 0))
+                            status = ENTRY_INFO_SENT;
 
-                        else if ((flag0 & Files.PREFIX0_SENT) != 0)
-                            status = WAIT_MSG_SER_REQ_FILE;
-
-                        else if ( (flag0 & Files.PREFIX2_SENT) != 0)
+                        else if ((flag0 & Files.PREFIX2_SENT) != 0)
                             status = WAIT_HASH_FSS_INFO;
+
+                        //if ( ((flag0 & Files.PREFIX1_SENT) != 0) || ((flag0 & Files.SIZE0_SENT) !=0 ) )
+                        //    status = WAIT_MSG_SER_RECEIVED;
+                        //else if ((flag0 & Files.PREFIX0_SENT) != 0)
+                        //    status = WAIT_MSG_SER_REQ_FILE;
+                        //else if ( (flag0 & Files.PREFIX2_SENT) != 0)
+                        //    status = WAIT_HASH_FSS_INFO;
                     }
                     else if (rvv == Files.DIFF_LOCAL_UNIQ || rvv == Files.DIFF_IDENTICAL)
                     {
@@ -549,14 +566,18 @@ namespace fss_client
 
                     Log.logon(">>>> flag0=" + flag0);
 
-                    if (((flag0 & Files.PREFIX1_SENT) !=0 ) || ((flag0 & Files.SIZE0_SENT) != 0))
-                        status = WAIT_MSG_SER_RECEIVED;
-
-                    else if ((flag0 & Files.PREFIX0_SENT) != 0)
-                        status = WAIT_MSG_SER_REQ_FILE;
+                    if (((flag0 & Files.PREFIX0_SENT) != 0) || ((flag0 & Files.PREFIX1_SENT) != 0))
+                        status = ENTRY_INFO_SENT;
 
                     else if ((flag0 & Files.PREFIX2_SENT) != 0)
                         status = WAIT_HASH_FSS_INFO;
+
+                    //if (((flag0 & Files.PREFIX1_SENT) !=0 ) || ((flag0 & Files.SIZE0_SENT) != 0))
+                    //    status = WAIT_MSG_SER_RECEIVED;
+                    //else if ((flag0 & Files.PREFIX0_SENT) != 0)
+                    //    status = WAIT_MSG_SER_REQ_FILE;
+                    //else if ((flag0 & Files.PREFIX2_SENT) != 0)
+                    //    status = WAIT_HASH_FSS_INFO;
                 }
                 else
                 {
@@ -570,13 +591,53 @@ namespace fss_client
 
         }
 
-
         private void status_WAIT_MSG_SER_REQ_DEL_IDX()
-        {
+        { 
             Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In status_WIAT_MSG_SER_REQ_DEL_IDX");
             string msg = net.receive_line();
             wait_msg_ser_req_del_idx(msg);
         }
+
+        private void status_ENTRY_INFO_SENT()
+        {
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In status_ENTRY_INFO_SENT");
+            string msg = net.receive_line();
+            entry_info_sent(msg);
+        }
+
+        private void entry_info_sent(string msg)
+        {
+            int flag = 0;
+            try
+            {
+                if (msg.Substring(0, SER_REQ_FILE.Length) == SER_REQ_FILE)
+                {
+                    files.send_file_via_linenum();
+                    status = WAIT_MSG_SER_RECEIVED;
+                }
+                else if (msg.Substring(0, SER_RECEIVED.Length) == SER_RECEIVED)
+                {
+                    files.send_entryinfo_or_reqhashinfo(false, FILE_INFO, DIR_INFO, CLI_REQ_HASH_FSS_INFO, ref flag);
+
+                    if (((flag & Files.PREFIX0_SENT) != 0) || ((flag & Files.PREFIX1_SENT) != 0))
+                        status = ENTRY_INFO_SENT;
+
+                    else if ((flag & Files.PREFIX2_SENT) != 0)
+                        status = WAIT_HASH_FSS_INFO;
+                }
+                else
+                {
+                    Log.logon("Current status WAIT_MSG_SER_REQ_DEL_IDX, receive unkonw msg: " + msg);
+                }
+            }
+            catch (Exception e)
+            {
+                Log.logon("@ entry_info_sent(), " + e.ToString());
+            }
+
+
+        }
+
 
         private void wait_msg_ser_req_del_idx(string msg)
         {
@@ -585,14 +646,11 @@ namespace fss_client
                 if (msg.Substring(0, SER_REQ_DEL_IDX.Length) == SER_REQ_DEL_IDX)
                 {
                     files.send_del_index();
-
                     status = WAIT_HASH_FSS_INFO;
-
                 }
                 else
                 {
                     Log.logon("Current status WAIT_MSG_SER_REQ_DEL_IDX, receive unkonw msg: " + msg);
-
                 }
             }
             catch (Exception e)
@@ -600,8 +658,6 @@ namespace fss_client
                 Log.logon(e.ToString());
             }
         }
-
-
 
         public void set_fileinfo(string msg)
         {
