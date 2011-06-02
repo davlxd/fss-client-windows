@@ -51,13 +51,14 @@ namespace fss_client
             net = null;
             
             protocol = null;
-            protocol = new fss_client.Protocol(server, path, net);
-            protocol.InitializeMonitor();
 
             try
             {
                 net = new Net(server);
                 net.connect();
+
+                protocol = new fss_client.Protocol(server, path, net);
+                protocol.InitializeMonitor();
             }
             catch (Exception)
             {
@@ -85,9 +86,6 @@ namespace fss_client
             protocol.divination();
 
         }
-
-        
-
 
         private bool LoadConfig()
         {

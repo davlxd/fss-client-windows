@@ -420,8 +420,15 @@ namespace fss_client
                         status_WAIT_FILE();
                     else
                     {
-                        net.send_msg(CLI_REQ_FILE);
-                        status = WAIT_FILE;
+                        if (files.reuse_file(this.sha1_str, this.rela_name))
+                        {
+                            download_sync();
+                        }
+                        else
+                        {
+                            net.send_msg(CLI_REQ_FILE);
+                            status = WAIT_FILE;
+                        }
                     }
                 }
                 else
@@ -556,6 +563,7 @@ namespace fss_client
 
         private void wait_msg_ser_received(string msg)
         {
+            Log.logon(System.Threading.Thread.CurrentThread.GetHashCode().ToString() + " In wait_msg_ser_received()");
             int flag0 = 0;
             try
             {

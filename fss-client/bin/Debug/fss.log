@@ -745,3 +745,2011 @@ fuck/fss/fss-client/README
    在 fss_client.Net.connect() 位置 Z:\fss-client\fss-client\Net.cs:行号 44
 2011/6/2 23:12:23   9 Connected to 204.74.216.120
 2011/6/2 23:12:23   7 In status_WAIT_HASH_FSS_INFO
+2011/6/2 23:22:14   10 Connected to 204.74.216.120
+2011/6/2 23:22:15   12 In status_WAIT_HASH_FSS_INFO
+2011/6/2 23:26:29   9 Connected to 204.74.216.120
+2011/6/2 23:26:30   11 In status_WAIT_HASH_FSS_INFO
+2011/6/2 23:26:30   11 In receive_line()
+2011/6/2 23:26:30   Received H14E300FD3ECEFF4790EAEA7F7542CDD4B27240C2
+.fss/hash.fss
+1306619017
+2952
+2011/6/2 23:26:30   11 Received line H14E300FD3ECEFF4790EAEA7F7542CDD4B27240C2
+.fss/hash.fss
+1306619017
+2952
+2011/6/2 23:26:30   11 IN send_msg sending A
+2011/6/2 23:26:30   11 IN status_WAIT_HASH_FSS
+2011/6/2 23:26:30   11 In recieve_hash_fss of Files.cs
+2011/6/2 23:26:30   11 In receive_file of Files.cs
+2011/6/2 23:26:30   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 2952
+2011/6/2 23:26:30   written to file
+2011/6/2 23:26:30   11 In analyse_hash()
+2011/6/2 23:26:30   mtime is: 1306619017
+2011/6/2 23:26:30   hash_fss_mtime(): 1306314990
+2011/6/2 23:26:30   11 IN send_msg sending I1
+2011/6/2 23:26:30   11 analyse_hash()-ed
+2011/6/2 23:26:30   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:30   11 In receive_line()
+2011/6/2 23:26:31   Received JE4A4CA05A3B069B9EF3E24481275CE853C8127BF
+fuck.c
+1306618560
+57
+2011/6/2 23:26:31   11 IN send_msg sending B
+2011/6/2 23:26:31   11 In status_WAIT_FILE()
+2011/6/2 23:26:31   In reciev_common_file(), relapth --fuck.c--
+2011/6/2 23:26:31   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.cand size is 57
+2011/6/2 23:26:31   written to file
+2011/6/2 23:26:31   11 In download_sync()
+2011/6/2 23:26:31   11 IN send_msg sending I2
+2011/6/2 23:26:31   >>>> flag1=2
+2011/6/2 23:26:31   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:31   11 In receive_line()
+2011/6/2 23:26:31   Received JDC55170AF106C0C5267196A7199D102C51D1C179
+fuck.fuck/fss/fss-server/wrap-sha1.c
+1306619010
+9052
+2011/6/2 23:26:31   11 IN send_msg sending B
+2011/6/2 23:26:31   11 In status_WAIT_FILE()
+2011/6/2 23:26:31   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\wrap-sha1.c--
+2011/6/2 23:26:31   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\wrap-sha1.cand size is 9052
+2011/6/2 23:26:33   written to file
+2011/6/2 23:26:33   11 In download_sync()
+2011/6/2 23:26:33   11 IN send_msg sending I3
+2011/6/2 23:26:33   >>>> flag1=2
+2011/6/2 23:26:33   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:33   11 In receive_line()
+2011/6/2 23:26:40   Received J077A26366DFB8E1A7F228FD705180C89FB9EFC35
+fuck.fuck/fss/fss-server/build
+1306619014
+157
+2011/6/2 23:26:40   11 IN send_msg sending B
+2011/6/2 23:26:40   11 In status_WAIT_FILE()
+2011/6/2 23:26:40   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\build--
+2011/6/2 23:26:40   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\buildand size is 157
+2011/6/2 23:26:40   written to file
+2011/6/2 23:26:40   11 In download_sync()
+2011/6/2 23:26:40   11 IN send_msg sending I4
+2011/6/2 23:26:40   >>>> flag1=2
+2011/6/2 23:26:40   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:40   11 In receive_line()
+2011/6/2 23:26:41   Received JAB3E98BDAA20B05AAA93F697463826B09EEED3A3
+fuck.fuck/fss/fss-server/sock.c
+1306619013
+1797
+2011/6/2 23:26:41   11 IN send_msg sending B
+2011/6/2 23:26:41   11 In status_WAIT_FILE()
+2011/6/2 23:26:41   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\sock.c--
+2011/6/2 23:26:41   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\sock.cand size is 1797
+2011/6/2 23:26:41   written to file
+2011/6/2 23:26:41   11 In download_sync()
+2011/6/2 23:26:41   11 IN send_msg sending I5
+2011/6/2 23:26:41   >>>> flag1=2
+2011/6/2 23:26:41   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:41   11 In receive_line()
+2011/6/2 23:26:42   Received J7DD8AE052DB5AF941EB0709AB7750226CF994969
+fuck.fuck/fss/fss-server/params.c
+1306619011
+4671
+2011/6/2 23:26:42   11 IN send_msg sending B
+2011/6/2 23:26:42   11 In status_WAIT_FILE()
+2011/6/2 23:26:42   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\params.c--
+2011/6/2 23:26:42   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\params.cand size is 4671
+2011/6/2 23:26:43   written to file
+2011/6/2 23:26:43   11 In download_sync()
+2011/6/2 23:26:43   11 IN send_msg sending I6
+2011/6/2 23:26:43   >>>> flag1=2
+2011/6/2 23:26:43   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:43   11 In receive_line()
+2011/6/2 23:26:43   Received J8D25F6399AD6277A7C7869178E9785557B67D4B3
+fuck.fuck/fss/fss-server/wrap-sha1.h
+1306619014
+1444
+2011/6/2 23:26:43   11 IN send_msg sending B
+2011/6/2 23:26:43   11 In status_WAIT_FILE()
+2011/6/2 23:26:43   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\wrap-sha1.h--
+2011/6/2 23:26:43   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\wrap-sha1.hand size is 1444
+2011/6/2 23:26:43   written to file
+2011/6/2 23:26:43   11 In download_sync()
+2011/6/2 23:26:43   11 IN send_msg sending I7
+2011/6/2 23:26:43   >>>> flag1=2
+2011/6/2 23:26:43   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:43   11 In receive_line()
+2011/6/2 23:26:44   Received JD06D098A3EB295313BED9BE0D06AAFFC9891C85C
+fuck.fuck/fss/fss-server/sha1.h
+1306619014
+1574
+2011/6/2 23:26:44   11 IN send_msg sending B
+2011/6/2 23:26:44   11 In status_WAIT_FILE()
+2011/6/2 23:26:44   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\sha1.h--
+2011/6/2 23:26:44   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\sha1.hand size is 1574
+2011/6/2 23:26:45   written to file
+2011/6/2 23:26:45   11 In download_sync()
+2011/6/2 23:26:45   11 IN send_msg sending I8
+2011/6/2 23:26:45   >>>> flag1=2
+2011/6/2 23:26:45   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:45   11 In receive_line()
+2011/6/2 23:26:45   Received J942D27702530AB6DE3860D957A7BAAED26D947BE
+fuck.fuck/fss/fss-server/test-diff.c
+1306619013
+246
+2011/6/2 23:26:45   11 IN send_msg sending B
+2011/6/2 23:26:45   11 In status_WAIT_FILE()
+2011/6/2 23:26:45   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\test-diff.c--
+2011/6/2 23:26:45   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\test-diff.cand size is 246
+2011/6/2 23:26:46   written to file
+2011/6/2 23:26:46   11 In download_sync()
+2011/6/2 23:26:46   11 IN send_msg sending I9
+2011/6/2 23:26:46   >>>> flag1=2
+2011/6/2 23:26:46   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:46   11 In receive_line()
+2011/6/2 23:26:46   Received JD2C4E563CABFDC88C4F411ECAAF7A3A875E14C93
+fuck.fuck/fss/fss-server/fss.h
+1306619010
+1364
+2011/6/2 23:26:46   11 IN send_msg sending B
+2011/6/2 23:26:46   11 In status_WAIT_FILE()
+2011/6/2 23:26:46   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\fss.h--
+2011/6/2 23:26:46   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\fss.hand size is 1364
+2011/6/2 23:26:46   written to file
+2011/6/2 23:26:46   11 In download_sync()
+2011/6/2 23:26:46   11 IN send_msg sending I10
+2011/6/2 23:26:46   >>>> flag1=2
+2011/6/2 23:26:46   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:46   11 In receive_line()
+2011/6/2 23:26:47   Received J41B8D93E93682A1004A36CC2590B5B0E681A71EF
+fuck.fuck/fss/fss-server/params.h
+1306619010
+920
+2011/6/2 23:26:47   11 IN send_msg sending B
+2011/6/2 23:26:48   11 In status_WAIT_FILE()
+2011/6/2 23:26:48   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\params.h--
+2011/6/2 23:26:48   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\params.hand size is 920
+2011/6/2 23:26:48   written to file
+2011/6/2 23:26:48   11 In download_sync()
+2011/6/2 23:26:48   11 IN send_msg sending I11
+2011/6/2 23:26:48   >>>> flag1=2
+2011/6/2 23:26:48   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:48   11 In receive_line()
+2011/6/2 23:26:48   Received J1A4EB00B9E4AEB8EE15D1CDCA2756A965FF36B44
+fuck.fuck/fss/fss-server/fss.conf
+1306619013
+369
+2011/6/2 23:26:48   11 IN send_msg sending B
+2011/6/2 23:26:48   11 In status_WAIT_FILE()
+2011/6/2 23:26:48   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\fss.conf--
+2011/6/2 23:26:48   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\fss.confand size is 369
+2011/6/2 23:26:49   written to file
+2011/6/2 23:26:49   11 In download_sync()
+2011/6/2 23:26:49   11 IN send_msg sending I12
+2011/6/2 23:26:49   >>>> flag1=2
+2011/6/2 23:26:49   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:49   11 In receive_line()
+2011/6/2 23:26:49   Received J2FBC25576736C3B09007299392E622456573253D
+fuck.fuck/fss/fss-server/diff.h
+1306619012
+1283
+2011/6/2 23:26:49   11 IN send_msg sending B
+2011/6/2 23:26:49   11 In status_WAIT_FILE()
+2011/6/2 23:26:49   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\diff.h--
+2011/6/2 23:26:49   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\diff.hand size is 1283
+2011/6/2 23:26:49   written to file
+2011/6/2 23:26:49   11 In download_sync()
+2011/6/2 23:26:49   11 IN send_msg sending I13
+2011/6/2 23:26:49   >>>> flag1=2
+2011/6/2 23:26:49   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:49   11 In receive_line()
+2011/6/2 23:26:50   Received J095032438CA049DFB7126BBF291982D8478731BB
+fuck.fuck/fss/fss-server/exe
+1306619012
+18
+2011/6/2 23:26:50   11 IN send_msg sending B
+2011/6/2 23:26:50   11 In status_WAIT_FILE()
+2011/6/2 23:26:50   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\exe--
+2011/6/2 23:26:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\exeand size is 18
+2011/6/2 23:26:50   written to file
+2011/6/2 23:26:50   11 In download_sync()
+2011/6/2 23:26:50   11 IN send_msg sending I14
+2011/6/2 23:26:50   >>>> flag1=2
+2011/6/2 23:26:50   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:50   11 In receive_line()
+2011/6/2 23:26:50   Received J303D6EEFDB723C6BFCD983EC62FEC5F9EB5CE252
+fuck.fuck/fss/fss-server/files.c
+1306619012
+27501
+2011/6/2 23:26:50   11 IN send_msg sending B
+2011/6/2 23:26:50   11 In status_WAIT_FILE()
+2011/6/2 23:26:50   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\files.c--
+2011/6/2 23:26:51   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\files.cand size is 27501
+2011/6/2 23:26:52   written to file
+2011/6/2 23:26:52   11 In download_sync()
+2011/6/2 23:26:52   11 IN send_msg sending I15
+2011/6/2 23:26:52   >>>> flag1=2
+2011/6/2 23:26:52   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:52   11 In receive_line()
+2011/6/2 23:26:53   Received J5F5761E953C59A26904A037F088855C57B160A0F
+fuck.fuck/fss/fss-server/test-sha1.c
+1306619011
+550
+2011/6/2 23:26:53   11 IN send_msg sending B
+2011/6/2 23:26:53   11 In status_WAIT_FILE()
+2011/6/2 23:26:53   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\test-sha1.c--
+2011/6/2 23:26:53   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\test-sha1.cand size is 550
+2011/6/2 23:26:53   written to file
+2011/6/2 23:26:53   11 In download_sync()
+2011/6/2 23:26:53   11 IN send_msg sending I16
+2011/6/2 23:26:53   >>>> flag1=2
+2011/6/2 23:26:53   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:53   11 In receive_line()
+2011/6/2 23:26:53   Received J4AA41A1BC9ADEC2A8E95C65BEA1A74D642F70EB4
+fuck.fuck/fss/fss-server/diff.c
+1306619013
+7296
+2011/6/2 23:26:53   11 IN send_msg sending B
+2011/6/2 23:26:53   11 In status_WAIT_FILE()
+2011/6/2 23:26:53   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\diff.c--
+2011/6/2 23:26:53   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\diff.cand size is 7296
+2011/6/2 23:26:54   written to file
+2011/6/2 23:26:54   11 In download_sync()
+2011/6/2 23:26:54   11 IN send_msg sending I17
+2011/6/2 23:26:54   >>>> flag1=2
+2011/6/2 23:26:54   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:54   11 In receive_line()
+2011/6/2 23:26:55   Received J93492D287883C49BA2AA30E97CD2DF432EB9128E
+fuck.fuck/fss/fss-server/main.c
+1306619012
+1622
+2011/6/2 23:26:55   11 IN send_msg sending B
+2011/6/2 23:26:55   11 In status_WAIT_FILE()
+2011/6/2 23:26:55   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\main.c--
+2011/6/2 23:26:55   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\main.cand size is 1622
+2011/6/2 23:26:55   written to file
+2011/6/2 23:26:55   11 In download_sync()
+2011/6/2 23:26:55   11 IN send_msg sending I18
+2011/6/2 23:26:55   >>>> flag1=2
+2011/6/2 23:26:55   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:55   11 In receive_line()
+2011/6/2 23:26:55   Received J85DB87880E298028991D327630F8D7B4AE018A84
+fuck.fuck/fss/fss-server/sha1.c
+1306619013
+10382
+2011/6/2 23:26:55   11 IN send_msg sending B
+2011/6/2 23:26:55   11 In status_WAIT_FILE()
+2011/6/2 23:26:55   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\sha1.c--
+2011/6/2 23:26:55   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\sha1.cand size is 10382
+2011/6/2 23:26:56   written to file
+2011/6/2 23:26:56   11 In download_sync()
+2011/6/2 23:26:56   11 IN send_msg sending I19
+2011/6/2 23:26:56   >>>> flag1=2
+2011/6/2 23:26:56   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:56   11 In receive_line()
+2011/6/2 23:26:56   Received J8B43B59D4F713F908142D9A394E4B1B1B6484271
+fuck.fuck/fss/fss-server/protocol.h
+1306619011
+1569
+2011/6/2 23:26:56   11 IN send_msg sending B
+2011/6/2 23:26:56   11 In status_WAIT_FILE()
+2011/6/2 23:26:56   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\protocol.h--
+2011/6/2 23:26:56   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\protocol.hand size is 1569
+2011/6/2 23:26:56   written to file
+2011/6/2 23:26:56   11 In download_sync()
+2011/6/2 23:26:56   11 IN send_msg sending I20
+2011/6/2 23:26:57   >>>> flag1=2
+2011/6/2 23:26:57   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:57   11 In receive_line()
+2011/6/2 23:26:57   Received JB07D2EA49018096E84F1B28F94A0F6FAFBCCFB3D
+fuck.fuck/fss/fss-server/test-sock.c
+1306619014
+77
+2011/6/2 23:26:57   11 IN send_msg sending B
+2011/6/2 23:26:57   11 In status_WAIT_FILE()
+2011/6/2 23:26:57   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\test-sock.c--
+2011/6/2 23:26:57   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\test-sock.cand size is 77
+2011/6/2 23:26:57   written to file
+2011/6/2 23:26:57   11 In download_sync()
+2011/6/2 23:26:57   11 IN send_msg sending I21
+2011/6/2 23:26:57   >>>> flag1=2
+2011/6/2 23:26:57   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:57   11 In receive_line()
+2011/6/2 23:26:57   Received J623A20E442FFA2048FBD23BBC3DC05C6205692D3
+fuck.fuck/fss/fss-server/sock.h
+1306619011
+908
+2011/6/2 23:26:57   11 IN send_msg sending B
+2011/6/2 23:26:57   11 In status_WAIT_FILE()
+2011/6/2 23:26:57   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\sock.h--
+2011/6/2 23:26:57   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\sock.hand size is 908
+2011/6/2 23:26:58   written to file
+2011/6/2 23:26:58   11 In download_sync()
+2011/6/2 23:26:58   11 IN send_msg sending I22
+2011/6/2 23:26:58   >>>> flag1=2
+2011/6/2 23:26:58   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:58   11 In receive_line()
+2011/6/2 23:26:58   Received J43DE91A798B3F224409CFF5A18219238A8250DD2
+fuck.fuck/fss/fss-server/files.h
+1306619014
+2611
+2011/6/2 23:26:58   11 IN send_msg sending B
+2011/6/2 23:26:58   11 In status_WAIT_FILE()
+2011/6/2 23:26:58   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\files.h--
+2011/6/2 23:26:58   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\files.hand size is 2611
+2011/6/2 23:26:58   written to file
+2011/6/2 23:26:58   11 In download_sync()
+2011/6/2 23:26:58   11 IN send_msg sending I23
+2011/6/2 23:26:58   >>>> flag1=2
+2011/6/2 23:26:58   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:26:58   11 In receive_line()
+2011/6/2 23:26:59   Received J5018FF8C4B9045BFEB9C67C2DD47ACEE243F5E72
+fuck.fuck/fss/fss-server/protocol.c
+1306619012
+24784
+2011/6/2 23:26:59   11 IN send_msg sending B
+2011/6/2 23:26:59   11 In status_WAIT_FILE()
+2011/6/2 23:26:59   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\protocol.c--
+2011/6/2 23:26:59   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\protocol.cand size is 24784
+2011/6/2 23:27:00   written to file
+2011/6/2 23:27:00   11 In download_sync()
+2011/6/2 23:27:00   11 IN send_msg sending I24
+2011/6/2 23:27:00   >>>> flag1=2
+2011/6/2 23:27:00   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:00   11 In receive_line()
+2011/6/2 23:27:01   Received JAA5B0F6CBAC1FF0F06068266B1EE50702CB5BB12
+fuck.fuck/fss/fss-server/client.h
+1306619011
+1026
+2011/6/2 23:27:01   11 IN send_msg sending B
+2011/6/2 23:27:01   11 In status_WAIT_FILE()
+2011/6/2 23:27:01   In reciev_common_file(), relapth --fuck.fuck\fss\fss-server\client.h--
+2011/6/2 23:27:01   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-server\client.hand size is 1026
+2011/6/2 23:27:01   written to file
+2011/6/2 23:27:01   11 In download_sync()
+2011/6/2 23:27:01   11 IN send_msg sending I25
+2011/6/2 23:27:01   >>>> flag1=2
+2011/6/2 23:27:01   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:01   11 In receive_line()
+2011/6/2 23:27:01   Received NDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+fuck.fuck/fss/fss-server
+1306618999
+4096
+2011/6/2 23:27:01   11 In download_sync()
+2011/6/2 23:27:01   11 IN send_msg sending I26
+2011/6/2 23:27:01   >>>> flag1=2
+2011/6/2 23:27:01   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:01   11 In receive_line()
+2011/6/2 23:27:02   Received J9085CA63CC5218103F81CAF298AE878C6B174F7C
+fuck.fuck/fss/fss-client/wrap-sha1.c
+1306619002
+8985
+2011/6/2 23:27:02   11 IN send_msg sending B
+2011/6/2 23:27:02   11 In status_WAIT_FILE()
+2011/6/2 23:27:02   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\wrap-sha1.c--
+2011/6/2 23:27:02   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\wrap-sha1.cand size is 8985
+2011/6/2 23:27:02   written to file
+2011/6/2 23:27:02   11 In download_sync()
+2011/6/2 23:27:02   11 IN send_msg sending I27
+2011/6/2 23:27:02   >>>> flag1=2
+2011/6/2 23:27:02   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:02   11 In receive_line()
+2011/6/2 23:27:03   Received J96D1F008BD49AED8A25366AEFEB3EAD81559043C
+fuck.fuck/fss/fss-client/build
+1306619009
+163
+2011/6/2 23:27:03   11 IN send_msg sending B
+2011/6/2 23:27:03   11 In status_WAIT_FILE()
+2011/6/2 23:27:03   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\build--
+2011/6/2 23:27:03   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\buildand size is 163
+2011/6/2 23:27:03   written to file
+2011/6/2 23:27:03   11 In download_sync()
+2011/6/2 23:27:03   11 IN send_msg sending I28
+2011/6/2 23:27:03   >>>> flag1=2
+2011/6/2 23:27:03   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:03   11 In receive_line()
+2011/6/2 23:27:03   Received JF5E2A67090AEFB2C4521055B44F991B3086C9BA9
+fuck.fuck/fss/fss-client/README
+1306619008
+615
+2011/6/2 23:27:03   11 IN send_msg sending B
+2011/6/2 23:27:03   11 In status_WAIT_FILE()
+2011/6/2 23:27:03   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\README--
+2011/6/2 23:27:03   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\READMEand size is 615
+2011/6/2 23:27:04   written to file
+2011/6/2 23:27:04   11 In download_sync()
+2011/6/2 23:27:04   11 IN send_msg sending I29
+2011/6/2 23:27:04   >>>> flag1=2
+2011/6/2 23:27:04   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:04   11 In receive_line()
+2011/6/2 23:27:04   Received J72FE678E7ABF3185742A4FBD9312AC64E81E0638
+fuck.fuck/fss/fss-client/wrap-sha1.h.gch
+1306619005
+1833688
+2011/6/2 23:27:04   11 IN send_msg sending B
+2011/6/2 23:27:04   11 In status_WAIT_FILE()
+2011/6/2 23:27:04   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\wrap-sha1.h.gch--
+2011/6/2 23:27:04   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\wrap-sha1.h.gchand size is 1833688
+2011/6/2 23:27:35   written to file
+2011/6/2 23:27:35   11 In download_sync()
+2011/6/2 23:27:35   11 IN send_msg sending I30
+2011/6/2 23:27:35   >>>> flag1=2
+2011/6/2 23:27:35   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:35   11 In receive_line()
+2011/6/2 23:27:35   Received JF6195C27614160EAE63A4FD98346A04AE84E6096
+fuck.fuck/fss/fss-client/sha1.h.gch
+1306619006
+729344
+2011/6/2 23:27:35   11 IN send_msg sending B
+2011/6/2 23:27:35   11 In status_WAIT_FILE()
+2011/6/2 23:27:35   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\sha1.h.gch--
+2011/6/2 23:27:35   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\sha1.h.gchand size is 729344
+2011/6/2 23:27:49   written to file
+2011/6/2 23:27:49   11 In download_sync()
+2011/6/2 23:27:49   11 IN send_msg sending I31
+2011/6/2 23:27:49   >>>> flag1=2
+2011/6/2 23:27:49   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:49   11 In receive_line()
+2011/6/2 23:27:49   Received J2CB4B7DAA5960119DD5F029B450A68DBD8F1285B
+fuck.fuck/fss/fss-client/log
+1306619004
+5853
+2011/6/2 23:27:49   11 IN send_msg sending B
+2011/6/2 23:27:49   11 In status_WAIT_FILE()
+2011/6/2 23:27:49   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\log--
+2011/6/2 23:27:49   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\logand size is 5853
+2011/6/2 23:27:50   written to file
+2011/6/2 23:27:50   11 In download_sync()
+2011/6/2 23:27:50   11 IN send_msg sending I32
+2011/6/2 23:27:50   >>>> flag1=2
+2011/6/2 23:27:50   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:50   11 In receive_line()
+2011/6/2 23:27:50   Received J77F0FB4740C8771145A56FF51A2744CC3305C4EC
+fuck.fuck/fss/fss-client/sock.c
+1306619006
+1590
+2011/6/2 23:27:50   11 IN send_msg sending B
+2011/6/2 23:27:50   11 In status_WAIT_FILE()
+2011/6/2 23:27:50   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\sock.c--
+2011/6/2 23:27:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\sock.cand size is 1590
+2011/6/2 23:27:50   written to file
+2011/6/2 23:27:50   11 In download_sync()
+2011/6/2 23:27:50   11 IN send_msg sending I33
+2011/6/2 23:27:50   >>>> flag1=2
+2011/6/2 23:27:50   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:50   11 In receive_line()
+2011/6/2 23:27:51   Received J9DC59415A01EEE107E1A7B31C968245323820F07
+fuck.fuck/fss/fss-client/params.c
+1306619003
+5041
+2011/6/2 23:27:51   11 IN send_msg sending B
+2011/6/2 23:27:51   11 In status_WAIT_FILE()
+2011/6/2 23:27:51   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\params.c--
+2011/6/2 23:27:51   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\params.cand size is 5041
+2011/6/2 23:27:52   written to file
+2011/6/2 23:27:52   11 In download_sync()
+2011/6/2 23:27:52   11 IN send_msg sending I34
+2011/6/2 23:27:52   >>>> flag1=2
+2011/6/2 23:27:52   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:27:52   11 In receive_line()
+2011/6/2 23:27:52   Received J1CF5567AB4BE4ECC6877D5933B9800EC0801C2BB
+fuck.fuck/fss/fss-client/protocol.h.gch
+1306619007
+733440
+2011/6/2 23:27:52   11 IN send_msg sending B
+2011/6/2 23:27:52   11 In status_WAIT_FILE()
+2011/6/2 23:27:52   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\protocol.h.gch--
+2011/6/2 23:27:52   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\protocol.h.gchand size is 733440
+2011/6/2 23:28:01   written to file
+2011/6/2 23:28:01   11 In download_sync()
+2011/6/2 23:28:01   11 IN send_msg sending I35
+2011/6/2 23:28:01   >>>> flag1=2
+2011/6/2 23:28:01   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:01   11 In receive_line()
+2011/6/2 23:28:01   Received J1ED91F5A5F65D197446855220F57FB6EDFF3796E
+fuck.fuck/fss/fss-client/params.h.gch
+1306619008
+721152
+2011/6/2 23:28:01   11 IN send_msg sending B
+2011/6/2 23:28:01   11 In status_WAIT_FILE()
+2011/6/2 23:28:01   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\params.h.gch--
+2011/6/2 23:28:01   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\params.h.gchand size is 721152
+2011/6/2 23:28:09   written to file
+2011/6/2 23:28:09   11 In download_sync()
+2011/6/2 23:28:09   11 IN send_msg sending I36
+2011/6/2 23:28:09   >>>> flag1=2
+2011/6/2 23:28:09   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:09   11 In receive_line()
+2011/6/2 23:28:10   Received JB13FC3AA51C395D0D513E92DCEE6390837DF195A
+fuck.fuck/fss/fss-client/license.txt
+1306619009
+702
+2011/6/2 23:28:10   11 IN send_msg sending B
+2011/6/2 23:28:10   11 In status_WAIT_FILE()
+2011/6/2 23:28:10   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\license.txt--
+2011/6/2 23:28:10   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\license.txtand size is 702
+2011/6/2 23:28:10   written to file
+2011/6/2 23:28:10   11 In download_sync()
+2011/6/2 23:28:10   11 IN send_msg sending I37
+2011/6/2 23:28:10   >>>> flag1=2
+2011/6/2 23:28:10   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:10   11 In receive_line()
+2011/6/2 23:28:11   Received J8D25F6399AD6277A7C7869178E9785557B67D4B3
+fuck.fuck/fss/fss-client/wrap-sha1.h
+1306619010
+1444
+2011/6/2 23:28:11   11 IN send_msg sending B
+2011/6/2 23:28:11   11 In status_WAIT_FILE()
+2011/6/2 23:28:11   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\wrap-sha1.h--
+2011/6/2 23:28:11   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\wrap-sha1.hand size is 1444
+2011/6/2 23:28:11   written to file
+2011/6/2 23:28:11   11 In download_sync()
+2011/6/2 23:28:11   11 IN send_msg sending I38
+2011/6/2 23:28:11   >>>> flag1=2
+2011/6/2 23:28:11   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:11   11 In receive_line()
+2011/6/2 23:28:11   Received JD06D098A3EB295313BED9BE0D06AAFFC9891C85C
+fuck.fuck/fss/fss-client/sha1.h
+1306619009
+1574
+2011/6/2 23:28:11   11 IN send_msg sending B
+2011/6/2 23:28:11   11 In status_WAIT_FILE()
+2011/6/2 23:28:11   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\sha1.h--
+2011/6/2 23:28:11   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\sha1.hand size is 1574
+2011/6/2 23:28:12   written to file
+2011/6/2 23:28:12   11 In download_sync()
+2011/6/2 23:28:12   11 IN send_msg sending I39
+2011/6/2 23:28:12   >>>> flag1=2
+2011/6/2 23:28:12   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:12   11 In receive_line()
+2011/6/2 23:28:12   Received J387FE230D3A8A1480AE9DBBD0CB3A20614197BB4
+fuck.fuck/fss/fss-client/test-diff.c
+1306619007
+367
+2011/6/2 23:28:12   11 IN send_msg sending B
+2011/6/2 23:28:12   11 In status_WAIT_FILE()
+2011/6/2 23:28:12   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\test-diff.c--
+2011/6/2 23:28:12   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\test-diff.cand size is 367
+2011/6/2 23:28:13   written to file
+2011/6/2 23:28:13   11 In download_sync()
+2011/6/2 23:28:13   11 IN send_msg sending I40
+2011/6/2 23:28:13   >>>> flag1=2
+2011/6/2 23:28:13   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:13   11 In receive_line()
+2011/6/2 23:28:13   Received J9E6B4DE97E8AA1B82AB3D659791D39B167F7C4EA
+fuck.fuck/fss/fss-client/rolling.c
+1306619005
+2023
+2011/6/2 23:28:13   11 IN send_msg sending B
+2011/6/2 23:28:13   11 In status_WAIT_FILE()
+2011/6/2 23:28:13   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\rolling.c--
+2011/6/2 23:28:13   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\rolling.cand size is 2023
+2011/6/2 23:28:13   written to file
+2011/6/2 23:28:13   11 In download_sync()
+2011/6/2 23:28:13   11 IN send_msg sending I41
+2011/6/2 23:28:13   >>>> flag1=2
+2011/6/2 23:28:13   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:13   11 In receive_line()
+2011/6/2 23:28:14   Received J4C51442BB13909BCFD5F0AB123BACC1D1C6C609F
+fuck.fuck/fss/fss-client/files.h.gch
+1306619004
+1841880
+2011/6/2 23:28:14   11 IN send_msg sending B
+2011/6/2 23:28:14   11 In status_WAIT_FILE()
+2011/6/2 23:28:14   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\files.h.gch--
+2011/6/2 23:28:14   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\files.h.gchand size is 1841880
+2011/6/2 23:28:48   written to file
+2011/6/2 23:28:48   11 In download_sync()
+2011/6/2 23:28:48   11 IN send_msg sending I42
+2011/6/2 23:28:48   >>>> flag1=2
+2011/6/2 23:28:48   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:48   11 In receive_line()
+2011/6/2 23:28:49   Received J0FC3FD2290ED16BD1E0C9E719A7C365F4829557D
+fuck.fuck/fss/fss-client/rolling.h
+1306619010
+958
+2011/6/2 23:28:49   11 IN send_msg sending B
+2011/6/2 23:28:49   11 In status_WAIT_FILE()
+2011/6/2 23:28:49   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\rolling.h--
+2011/6/2 23:28:49   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\rolling.hand size is 958
+2011/6/2 23:28:49   written to file
+2011/6/2 23:28:49   11 In download_sync()
+2011/6/2 23:28:49   11 IN send_msg sending I43
+2011/6/2 23:28:49   >>>> flag1=2
+2011/6/2 23:28:49   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:49   11 In receive_line()
+2011/6/2 23:28:50   Received JBA47E7A55F80FEA3A6B885122B7EE913BBD4955C
+fuck.fuck/fss/fss-client/fss.h
+1306619002
+1545
+2011/6/2 23:28:50   11 IN send_msg sending B
+2011/6/2 23:28:50   11 In status_WAIT_FILE()
+2011/6/2 23:28:50   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\fss.h--
+2011/6/2 23:28:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\fss.hand size is 1545
+2011/6/2 23:28:50   written to file
+2011/6/2 23:28:50   11 In download_sync()
+2011/6/2 23:28:50   11 IN send_msg sending I44
+2011/6/2 23:28:50   >>>> flag1=2
+2011/6/2 23:28:50   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:50   11 In receive_line()
+2011/6/2 23:28:50   Received JCFCD9549630713C6BEE016920C1821B5CE9792FD
+fuck.fuck/fss/fss-client/params.h
+1306619003
+921
+2011/6/2 23:28:50   11 IN send_msg sending B
+2011/6/2 23:28:50   11 In status_WAIT_FILE()
+2011/6/2 23:28:50   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\params.h--
+2011/6/2 23:28:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\params.hand size is 921
+2011/6/2 23:28:51   written to file
+2011/6/2 23:28:51   11 In download_sync()
+2011/6/2 23:28:51   11 IN send_msg sending I45
+2011/6/2 23:28:51   >>>> flag1=2
+2011/6/2 23:28:51   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:51   11 In receive_line()
+2011/6/2 23:28:51   Received J8BE45BDE28D99D70F87C371441B4A1AB11147F97
+fuck.fuck/fss/fss-client/fss.conf
+1306619007
+472
+2011/6/2 23:28:51   11 IN send_msg sending B
+2011/6/2 23:28:51   11 In status_WAIT_FILE()
+2011/6/2 23:28:51   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\fss.conf--
+2011/6/2 23:28:51   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\fss.confand size is 472
+2011/6/2 23:28:51   written to file
+2011/6/2 23:28:51   11 In download_sync()
+2011/6/2 23:28:51   11 IN send_msg sending I46
+2011/6/2 23:28:52   >>>> flag1=2
+2011/6/2 23:28:52   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:52   11 In receive_line()
+2011/6/2 23:28:52   Received JD2CE716F8531656D605037AC72776E0B1AE37AD6
+fuck.fuck/fss/fss-client/diff.h
+1306619004
+1283
+2011/6/2 23:28:52   11 IN send_msg sending B
+2011/6/2 23:28:52   11 In status_WAIT_FILE()
+2011/6/2 23:28:52   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\diff.h--
+2011/6/2 23:28:52   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\diff.hand size is 1283
+2011/6/2 23:28:52   written to file
+2011/6/2 23:28:52   11 In download_sync()
+2011/6/2 23:28:52   11 IN send_msg sending I47
+2011/6/2 23:28:52   >>>> flag1=2
+2011/6/2 23:28:52   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:28:52   11 In receive_line()
+2011/6/2 23:28:53   Received JC58E5B9DF9677E318E030802CACFB7DA338936F7
+fuck.fuck/fss/fss-client/fss.h.gch
+1306619009
+1829564
+2011/6/2 23:28:53   11 IN send_msg sending B
+2011/6/2 23:28:53   11 In status_WAIT_FILE()
+2011/6/2 23:28:53   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\fss.h.gch--
+2011/6/2 23:28:53   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\fss.h.gchand size is 1829564
+2011/6/2 23:29:23   written to file
+2011/6/2 23:29:23   11 In download_sync()
+2011/6/2 23:29:23   11 IN send_msg sending I48
+2011/6/2 23:29:23   >>>> flag1=2
+2011/6/2 23:29:23   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:29:23   11 In receive_line()
+2011/6/2 23:29:24   Received J095032438CA049DFB7126BBF291982D8478731BB
+fuck.fuck/fss/fss-client/exe
+1306619006
+18
+2011/6/2 23:29:24   11 IN send_msg sending B
+2011/6/2 23:29:24   11 In status_WAIT_FILE()
+2011/6/2 23:29:24   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\exe--
+2011/6/2 23:29:24   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\exeand size is 18
+2011/6/2 23:29:24   written to file
+2011/6/2 23:29:24   11 In download_sync()
+2011/6/2 23:29:24   11 IN send_msg sending I49
+2011/6/2 23:29:24   >>>> flag1=2
+2011/6/2 23:29:24   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:29:24   11 In receive_line()
+2011/6/2 23:29:24   Received JF2C133058960FA11695CFA3B8463542FB67357BC
+fuck.fuck/fss/fss-client/files.c
+1306619006
+30913
+2011/6/2 23:29:24   11 IN send_msg sending B
+2011/6/2 23:29:24   11 In status_WAIT_FILE()
+2011/6/2 23:29:24   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\files.c--
+2011/6/2 23:29:24   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\files.cand size is 30913
+2011/6/2 23:29:25   written to file
+2011/6/2 23:29:25   11 In download_sync()
+2011/6/2 23:29:25   11 IN send_msg sending I50
+2011/6/2 23:29:25   >>>> flag1=2
+2011/6/2 23:29:25   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:29:25   11 In receive_line()
+2011/6/2 23:29:26   Received JD9A7ECE8D3339B7236064FE8ACA7240BCD635112
+fuck.fuck/fss/fss-client/sock.h.gch
+1306619002
+721152
+2011/6/2 23:29:26   11 IN send_msg sending B
+2011/6/2 23:29:26   11 In status_WAIT_FILE()
+2011/6/2 23:29:26   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\sock.h.gch--
+2011/6/2 23:29:26   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\sock.h.gchand size is 721152
+2011/6/2 23:29:38   written to file
+2011/6/2 23:29:38   11 In download_sync()
+2011/6/2 23:29:38   11 IN send_msg sending I51
+2011/6/2 23:29:38   >>>> flag1=2
+2011/6/2 23:29:38   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:29:38   11 In receive_line()
+2011/6/2 23:29:39   Received JFF64EB931C030F21D6EDC52F3A7A63D484E4DD9D
+fuck.fuck/fss/fss-client/diff.h.gch
+1306619005
+721152
+2011/6/2 23:29:39   11 IN send_msg sending B
+2011/6/2 23:29:39   11 In status_WAIT_FILE()
+2011/6/2 23:29:39   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\diff.h.gch--
+2011/6/2 23:29:39   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\diff.h.gchand size is 721152
+2011/6/2 23:29:55   written to file
+2011/6/2 23:29:55   11 In download_sync()
+2011/6/2 23:29:55   11 IN send_msg sending I52
+2011/6/2 23:29:55   >>>> flag1=2
+2011/6/2 23:29:55   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:29:55   11 In receive_line()
+2011/6/2 23:29:56   Received J052593A1673398CF4056396CA5155DC6DAB42936
+fuck.fuck/fss/fss-client/test-sha1.c
+1306619003
+667
+2011/6/2 23:29:56   11 IN send_msg sending B
+2011/6/2 23:29:56   11 In status_WAIT_FILE()
+2011/6/2 23:29:56   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\test-sha1.c--
+2011/6/2 23:29:56   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\test-sha1.cand size is 667
+2011/6/2 23:29:56   written to file
+2011/6/2 23:29:56   11 In download_sync()
+2011/6/2 23:29:56   11 IN send_msg sending I53
+2011/6/2 23:29:56   >>>> flag1=2
+2011/6/2 23:29:56   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:29:56   11 In receive_line()
+2011/6/2 23:29:56   Received J10C2A2A2E156AFB49204C51102BD1E56B2E8BFDD
+fuck.fuck/fss/fss-client/wrap-inotify.h
+1306619003
+1290
+2011/6/2 23:29:56   11 IN send_msg sending B
+2011/6/2 23:29:56   11 In status_WAIT_FILE()
+2011/6/2 23:29:56   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\wrap-inotify.h--
+2011/6/2 23:29:56   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\wrap-inotify.hand size is 1290
+2011/6/2 23:29:57   written to file
+2011/6/2 23:29:57   11 In download_sync()
+2011/6/2 23:29:57   11 IN send_msg sending I54
+2011/6/2 23:29:57   >>>> flag1=2
+2011/6/2 23:29:57   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:29:57   11 In receive_line()
+2011/6/2 23:29:57   Received JB8322E04499AB0B09F84EFBB23EFD651C34618DC
+fuck.fuck/fss/fss-client/diff.c
+1306619008
+7263
+2011/6/2 23:29:57   11 IN send_msg sending B
+2011/6/2 23:29:57   11 In status_WAIT_FILE()
+2011/6/2 23:29:57   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\diff.c--
+2011/6/2 23:29:57   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\diff.cand size is 7263
+2011/6/2 23:29:58   written to file
+2011/6/2 23:29:58   11 In download_sync()
+2011/6/2 23:29:58   11 IN send_msg sending I55
+2011/6/2 23:29:58   >>>> flag1=2
+2011/6/2 23:29:58   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:29:58   11 In receive_line()
+2011/6/2 23:29:58   Received JE770CCCE6468AA1876F3CF3440C9CA00E9E42175
+fuck.fuck/fss/fss-client/wrap-inotify.c
+1306619007
+13857
+2011/6/2 23:29:58   11 IN send_msg sending B
+2011/6/2 23:29:58   11 In status_WAIT_FILE()
+2011/6/2 23:29:58   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\wrap-inotify.c--
+2011/6/2 23:29:58   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\wrap-inotify.cand size is 13857
+2011/6/2 23:29:59   written to file
+2011/6/2 23:29:59   11 In download_sync()
+2011/6/2 23:29:59   11 IN send_msg sending I56
+2011/6/2 23:29:59   >>>> flag1=2
+2011/6/2 23:29:59   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:29:59   11 In receive_line()
+2011/6/2 23:29:59   Received JC3C3EB3B9CC2B076DD1898C1E0C9C2224EAB0E74
+fuck.fuck/fss/fss-client/main.c
+1306619005
+2150
+2011/6/2 23:29:59   11 IN send_msg sending B
+2011/6/2 23:29:59   11 In status_WAIT_FILE()
+2011/6/2 23:29:59   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\main.c--
+2011/6/2 23:29:59   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\main.cand size is 2150
+2011/6/2 23:30:00   written to file
+2011/6/2 23:30:00   11 In download_sync()
+2011/6/2 23:30:00   11 IN send_msg sending I57
+2011/6/2 23:30:00   >>>> flag1=2
+2011/6/2 23:30:00   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:00   11 In receive_line()
+2011/6/2 23:30:00   Received J3662D37AD8390088583EFBCF05CDB7EAC9EC9A61
+fuck.fuck/fss/fss-client/a.out
+1306619002
+97880
+2011/6/2 23:30:00   11 IN send_msg sending B
+2011/6/2 23:30:00   11 In status_WAIT_FILE()
+2011/6/2 23:30:00   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\a.out--
+2011/6/2 23:30:00   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\a.outand size is 97880
+2011/6/2 23:30:02   written to file
+2011/6/2 23:30:02   11 In download_sync()
+2011/6/2 23:30:02   11 IN send_msg sending I58
+2011/6/2 23:30:02   >>>> flag1=2
+2011/6/2 23:30:02   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:02   11 In receive_line()
+2011/6/2 23:30:02   Received J85DB87880E298028991D327630F8D7B4AE018A84
+fuck.fuck/fss/fss-client/sha1.c
+1306619007
+10382
+2011/6/2 23:30:02   11 IN send_msg sending B
+2011/6/2 23:30:02   11 In status_WAIT_FILE()
+2011/6/2 23:30:02   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\sha1.c--
+2011/6/2 23:30:02   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\sha1.cand size is 10382
+2011/6/2 23:30:03   written to file
+2011/6/2 23:30:03   11 In download_sync()
+2011/6/2 23:30:03   11 IN send_msg sending I59
+2011/6/2 23:30:03   >>>> flag1=2
+2011/6/2 23:30:03   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:03   11 In receive_line()
+2011/6/2 23:30:04   Received J2BE4DE9D62A90F49EDE3E50CDE3D4958D76D4076
+fuck.fuck/fss/fss-client/test-rolling.c
+1306619006
+161
+2011/6/2 23:30:04   11 IN send_msg sending B
+2011/6/2 23:30:04   11 In status_WAIT_FILE()
+2011/6/2 23:30:04   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\test-rolling.c--
+2011/6/2 23:30:04   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\test-rolling.cand size is 161
+2011/6/2 23:30:04   written to file
+2011/6/2 23:30:04   11 In download_sync()
+2011/6/2 23:30:04   11 IN send_msg sending I60
+2011/6/2 23:30:04   >>>> flag1=2
+2011/6/2 23:30:04   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:04   11 In receive_line()
+2011/6/2 23:30:04   Received J2CE0FE153F6F14FBDCDBA30829C5A38C50195DE8
+fuck.fuck/fss/fss-client/protocol.h
+1306619003
+1620
+2011/6/2 23:30:04   11 IN send_msg sending B
+2011/6/2 23:30:04   11 In status_WAIT_FILE()
+2011/6/2 23:30:04   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\protocol.h--
+2011/6/2 23:30:04   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\protocol.hand size is 1620
+2011/6/2 23:30:05   written to file
+2011/6/2 23:30:05   11 In download_sync()
+2011/6/2 23:30:05   11 IN send_msg sending I61
+2011/6/2 23:30:05   >>>> flag1=2
+2011/6/2 23:30:05   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:05   11 In receive_line()
+2011/6/2 23:30:05   Received J3D803008D3096B9E03EFA96841AF91147D10326A
+fuck.fuck/fss/fss-client/sock.h
+1306619004
+926
+2011/6/2 23:30:05   11 IN send_msg sending B
+2011/6/2 23:30:05   11 In status_WAIT_FILE()
+2011/6/2 23:30:05   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\sock.h--
+2011/6/2 23:30:05   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\sock.hand size is 926
+2011/6/2 23:30:06   written to file
+2011/6/2 23:30:06   11 In download_sync()
+2011/6/2 23:30:06   11 IN send_msg sending I62
+2011/6/2 23:30:06   >>>> flag1=2
+2011/6/2 23:30:06   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:06   11 In receive_line()
+2011/6/2 23:30:06   Received J62A3F5F35E769C20B7491F5FCD51887A0AB3F06B
+fuck.fuck/fss/fss-client/files.h
+1306619008
+3032
+2011/6/2 23:30:06   11 IN send_msg sending B
+2011/6/2 23:30:06   11 In status_WAIT_FILE()
+2011/6/2 23:30:06   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\files.h--
+2011/6/2 23:30:06   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\files.hand size is 3032
+2011/6/2 23:30:06   written to file
+2011/6/2 23:30:06   11 In download_sync()
+2011/6/2 23:30:06   11 IN send_msg sending I63
+2011/6/2 23:30:06   >>>> flag1=2
+2011/6/2 23:30:06   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:06   11 In receive_line()
+2011/6/2 23:30:07   Received J3DDFDA1917F12E776A5CD1EB3921D16BF4B35657
+fuck.fuck/fss/fss-client/protocol.c
+1306619005
+21454
+2011/6/2 23:30:07   11 IN send_msg sending B
+2011/6/2 23:30:07   11 In status_WAIT_FILE()
+2011/6/2 23:30:07   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\protocol.c--
+2011/6/2 23:30:07   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\protocol.cand size is 21454
+2011/6/2 23:30:08   written to file
+2011/6/2 23:30:08   11 In download_sync()
+2011/6/2 23:30:08   11 IN send_msg sending I64
+2011/6/2 23:30:08   >>>> flag1=2
+2011/6/2 23:30:08   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:08   11 In receive_line()
+2011/6/2 23:30:09   Received J1DE7BACB4FBBD7B6D391A69ABFE174C2509EC303
+fuck.fuck/fss/fss-client/COPYING
+1306619008
+35146
+2011/6/2 23:30:09   11 IN send_msg sending B
+2011/6/2 23:30:09   11 In status_WAIT_FILE()
+2011/6/2 23:30:09   In reciev_common_file(), relapth --fuck.fuck\fss\fss-client\COPYING--
+2011/6/2 23:30:09   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\fss-client\COPYINGand size is 35146
+2011/6/2 23:30:10   written to file
+2011/6/2 23:30:10   11 In download_sync()
+2011/6/2 23:30:10   11 IN send_msg sending I65
+2011/6/2 23:30:10   >>>> flag1=2
+2011/6/2 23:30:10   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:10   11 In receive_line()
+2011/6/2 23:30:11   Received NDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+fuck.fuck/fss/fss-client
+1306618994
+4096
+2011/6/2 23:30:11   11 In download_sync()
+2011/6/2 23:30:11   11 IN send_msg sending I66
+2011/6/2 23:30:11   >>>> flag1=2
+2011/6/2 23:30:11   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:11   11 In receive_line()
+2011/6/2 23:30:11   Received JCEFF8BB5AC3079A25C63BEC5B38E13FCEE18760D
+fuck.fuck/fss/todo/strconv.c
+1306619001
+1610
+2011/6/2 23:30:11   11 IN send_msg sending B
+2011/6/2 23:30:11   11 In status_WAIT_FILE()
+2011/6/2 23:30:11   In reciev_common_file(), relapth --fuck.fuck\fss\todo\strconv.c--
+2011/6/2 23:30:11   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\todo\strconv.cand size is 1610
+2011/6/2 23:30:12   written to file
+2011/6/2 23:30:12   11 In download_sync()
+2011/6/2 23:30:12   11 IN send_msg sending I67
+2011/6/2 23:30:12   >>>> flag1=2
+2011/6/2 23:30:12   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:12   11 In receive_line()
+2011/6/2 23:30:12   Received J1A84F0829A3D367A47FE4CB9E008EE5FBCE37EEB
+fuck.fuck/fss/todo/strconv.h
+1306619002
+1005
+2011/6/2 23:30:12   11 IN send_msg sending B
+2011/6/2 23:30:12   11 In status_WAIT_FILE()
+2011/6/2 23:30:12   In reciev_common_file(), relapth --fuck.fuck\fss\todo\strconv.h--
+2011/6/2 23:30:12   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fuck.fuck\fss\todo\strconv.hand size is 1005
+2011/6/2 23:30:12   written to file
+2011/6/2 23:30:12   11 In download_sync()
+2011/6/2 23:30:12   11 IN send_msg sending I68
+2011/6/2 23:30:12   >>>> flag1=2
+2011/6/2 23:30:12   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:12   11 In receive_line()
+2011/6/2 23:30:13   Received NDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+fuck.fuck/fss/todo
+1306618986
+4096
+2011/6/2 23:30:13   11 In download_sync()
+2011/6/2 23:30:13   11 IN send_msg sending I69
+2011/6/2 23:30:13   >>>> flag1=2
+2011/6/2 23:30:13   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:13   11 In receive_line()
+2011/6/2 23:30:13   Received NDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+fuck.fuck/fss
+1306618994
+4096
+2011/6/2 23:30:13   11 In download_sync()
+2011/6/2 23:30:13   11 IN send_msg sending I70
+2011/6/2 23:30:13   >>>> flag1=2
+2011/6/2 23:30:13   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:13   11 In receive_line()
+2011/6/2 23:30:14   Received NDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+fuck.fuck
+1306618985
+4096
+2011/6/2 23:30:14   11 In download_sync()
+2011/6/2 23:30:14   11 IN send_msg sending I71
+2011/6/2 23:30:14   >>>> flag1=2
+2011/6/2 23:30:14   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:14   11 In receive_line()
+2011/6/2 23:30:14   Received J4E1243BD22C66E76C2BA9EDDC1F91394E57F9F83
+test.test
+1306618941
+5
+2011/6/2 23:30:14   11 IN send_msg sending B
+2011/6/2 23:30:14   11 In status_WAIT_FILE()
+2011/6/2 23:30:14   In reciev_common_file(), relapth --test.test--
+2011/6/2 23:30:14   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\test.testand size is 5
+2011/6/2 23:30:14   written to file
+2011/6/2 23:30:14   11 In download_sync()
+2011/6/2 23:30:14   11 IN send_msg sending I72
+2011/6/2 23:30:14   >>>> flag1=2
+2011/6/2 23:30:14   11 In status_WAIT_ENTRY_INFO
+2011/6/2 23:30:14   11 In receive_line()
+2011/6/2 23:30:15   Received JA1321DCA67388456E9DC2AB0A9B0CA549BBCE435
+test.c
+1306618561
+1062
+2011/6/2 23:30:15   11 IN send_msg sending B
+2011/6/2 23:30:15   11 In status_WAIT_FILE()
+2011/6/2 23:30:15   In reciev_common_file(), relapth --test.c--
+2011/6/2 23:30:15   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\test.cand size is 1062
+2011/6/2 23:30:16   written to file
+2011/6/2 23:30:16   11 In download_sync()
+2011/6/2 23:30:16   11 IN send_msg sending G
+2011/6/2 23:30:16   >>>> flag1=4
+2011/6/2 23:30:17   lock unset
+2011/6/2 23:30:17   11 In status_XXX
+2011/6/2 23:30:17   11 In receive_line()
+2011/6/3 0:50:34   14 C:\Users\test\Desktop\FSS\test.test Deleted detected and passed.
+2011/6/3 0:50:36   updated and genearted
+2011/6/3 0:50:36    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
+2011/6/3 0:50:36   root is --C:\Users\test\Desktop\FSS-- 25
+2011/6/3 0:50:36   relapath is --\.fss\diff.remote.index--
+2011/6/3 0:50:36   14 IN send_msg sending K4A4BC0A954AACAF16E27B9CF9A4A14BA09C25036
+.fss/diff.remote.index
+1307033436
+3
+2011/6/3 0:51:24   11 Received line 
+2011/6/3 0:59:32   10 Connected to 204.74.216.120
+2011/6/3 0:59:33   11 In status_WAIT_HASH_FSS_INFO
+2011/6/3 0:59:33   11 In receive_line()
+2011/6/3 0:59:33   Received H14E300FD3ECEFF4790EAEA7F7542CDD4B27240C2
+.fss/hash.fss
+1306619017
+2952
+2011/6/3 0:59:33   11 Received line H14E300FD3ECEFF4790EAEA7F7542CDD4B27240C2
+.fss/hash.fss
+1306619017
+2952
+2011/6/3 0:59:33   11 IN send_msg sending A
+2011/6/3 0:59:33   11 IN status_WAIT_HASH_FSS
+2011/6/3 0:59:33   11 In recieve_hash_fss of Files.cs
+2011/6/3 0:59:33   11 In receive_file of Files.cs
+2011/6/3 0:59:33   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 2952
+2011/6/3 0:59:33   written to file
+2011/6/3 0:59:34   11 In analyse_hash()
+2011/6/3 0:59:34   mtime is: 1306619017
+2011/6/3 0:59:34   hash_fss_mtime(): 1307033973
+2011/6/3 0:59:34    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
+2011/6/3 0:59:34   root is --C:\Users\test\Desktop\FSS-- 25
+2011/6/3 0:59:34   relapath is --\.fss\diff.remote.index--
+2011/6/3 0:59:34   11 IN send_msg sending K63EE17D0A47D221D6D30292D26C62FEF7DA7506F
+.fss/diff.remote.index
+1307033974
+6
+2011/6/3 0:59:34   >>>> flag1=2
+2011/6/3 0:59:34   11 analyse_hash()-ed
+2011/6/3 0:59:34   11 In status_WIAT_MSG_SER_REQ_DEL_IDX
+2011/6/3 0:59:34   11 In receive_line()
+2011/6/3 0:59:35   Received E
+2011/6/3 0:59:35   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 6
+2011/6/3 0:59:35   11 In status_WAIT_HASH_FSS_INFO
+2011/6/3 0:59:35   11 In receive_line()
+2011/6/3 0:59:36   Received H17F43B7D2F48C62A361E61B08566BC4BADABEA03
+.fss/hash.fss
+1
+2870
+2011/6/3 0:59:36   11 Received line H17F43B7D2F48C62A361E61B08566BC4BADABEA03
+.fss/hash.fss
+1
+2870
+2011/6/3 0:59:36   11 IN send_msg sending A
+2011/6/3 0:59:36   11 IN status_WAIT_HASH_FSS
+2011/6/3 0:59:36   11 In recieve_hash_fss of Files.cs
+2011/6/3 0:59:36   11 In receive_file of Files.cs
+2011/6/3 0:59:36   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 2870
+2011/6/3 0:59:36   written to file
+2011/6/3 0:59:37   11 In analyse_hash()
+2011/6/3 0:59:37   mtime is: 1
+2011/6/3 0:59:37   hash_fss_mtime(): 1307033973
+2011/6/3 0:59:37   11 IN send_msg sending L
+2011/6/3 0:59:37   11 analyse_hash()-ed
+2011/6/3 0:59:37   11 In status_XXX
+2011/6/3 0:59:37   11 In receive_line()
+2011/6/3 1:05:53   10 Connected to 204.74.216.120
+2011/6/3 1:05:54   11 In status_WAIT_HASH_FSS_INFO
+2011/6/3 1:05:54   11 In receive_line()
+2011/6/3 1:05:54   Received H17F43B7D2F48C62A361E61B08566BC4BADABEA03
+.fss/hash.fss
+1307033977
+2870
+2011/6/3 1:05:54   11 Received line H17F43B7D2F48C62A361E61B08566BC4BADABEA03
+.fss/hash.fss
+1307033977
+2870
+2011/6/3 1:05:54   11 IN send_msg sending A
+2011/6/3 1:05:54   11 IN status_WAIT_HASH_FSS
+2011/6/3 1:05:54   11 In recieve_hash_fss of Files.cs
+2011/6/3 1:05:54   11 In receive_file of Files.cs
+2011/6/3 1:05:54   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 2870
+2011/6/3 1:05:54   written to file
+2011/6/3 1:05:55   11 In analyse_hash()
+2011/6/3 1:05:55   mtime is: 1307033977
+2011/6/3 1:05:55   hash_fss_mtime(): 1307033973
+2011/6/3 1:05:55   11 IN send_msg sending G
+2011/6/3 1:05:55   11 analyse_hash()-ed
+2011/6/3 1:05:55   11 In status_XXX
+2011/6/3 1:05:55   11 In receive_line()
+2011/6/3 1:06:11   12 C:\Users\test\Desktop\FSS\fuck.c Deleted detected and passed.
+2011/6/3 1:06:12   updated and genearted
+2011/6/3 1:06:12    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
+2011/6/3 1:06:12   root is --C:\Users\test\Desktop\FSS-- 25
+2011/6/3 1:06:12   relapath is --\.fss\diff.remote.index--
+2011/6/3 1:06:12   12 IN send_msg sending KE5FA44F2B31C1FB553B6021E7360D07D5D91FF5E
+.fss/diff.remote.index
+1307034372
+2
+2011/6/3 1:06:13   Received E
+2011/6/3 1:06:13   11 Received line E
+2011/6/3 1:06:13   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 2
+2011/6/3 1:06:13   11 In status_WAIT_HASH_FSS_INFO
+2011/6/3 1:06:13   11 In receive_line()
+2011/6/3 1:06:13   Received H7A51922CA2C9D35F933A15BD924FFB8E98FBD81D
+.fss/hash.fss
+1
+2829
+2011/6/3 1:06:13   11 Received line H7A51922CA2C9D35F933A15BD924FFB8E98FBD81D
+.fss/hash.fss
+1
+2829
+2011/6/3 1:06:13   11 IN send_msg sending A
+2011/6/3 1:06:13   11 IN status_WAIT_HASH_FSS
+2011/6/3 1:06:13   11 In recieve_hash_fss of Files.cs
+2011/6/3 1:06:13   11 In receive_file of Files.cs
+2011/6/3 1:06:13   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 2829
+2011/6/3 1:06:14   written to file
+2011/6/3 1:06:15   11 In analyse_hash()
+2011/6/3 1:06:15   mtime is: 1
+2011/6/3 1:06:15   hash_fss_mtime(): 1307034372
+2011/6/3 1:06:15   11 IN send_msg sending L
+2011/6/3 1:06:15   11 analyse_hash()-ed
+2011/6/3 1:06:15   11 In status_XXX
+2011/6/3 1:06:15   11 In receive_line()
+2011/6/3 1:06:55   Received H61C5AE8BEE70328BC184CA9DF8232DD6AF25B58F
+.fss/hash.fss
+1307034415
+4469
+2011/6/3 1:06:55   11 Received line H61C5AE8BEE70328BC184CA9DF8232DD6AF25B58F
+.fss/hash.fss
+1307034415
+4469
+2011/6/3 1:06:55   11 IN send_msg sending A
+2011/6/3 1:06:55   11 IN status_WAIT_HASH_FSS
+2011/6/3 1:06:55   11 In recieve_hash_fss of Files.cs
+2011/6/3 1:06:55   11 In receive_file of Files.cs
+2011/6/3 1:06:55   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 4469
+2011/6/3 1:06:56   written to file
+2011/6/3 1:06:56   11 In analyse_hash()
+2011/6/3 1:06:56   mtime is: 1307034415
+2011/6/3 1:06:57   hash_fss_mtime(): 1307034372
+2011/6/3 1:06:57   11 IN send_msg sending I70
+2011/6/3 1:06:57   11 analyse_hash()-ed
+2011/6/3 1:06:57   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:06:57   11 In receive_line()
+2011/6/3 1:06:57   Received J9085CA63CC5218103F81CAF298AE878C6B174F7C
+fss-client/wrap-sha1.c
+1307034403
+8985
+2011/6/3 1:06:57   11 IN send_msg sending B
+2011/6/3 1:06:57   11 In status_WAIT_FILE()
+2011/6/3 1:06:57   In reciev_common_file(), relapth --fss-client\wrap-sha1.c--
+2011/6/3 1:06:57   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\wrap-sha1.cand size is 8985
+2011/6/3 1:06:58   written to file
+2011/6/3 1:06:58   11 In download_sync()
+2011/6/3 1:06:58   11 IN send_msg sending I71
+2011/6/3 1:06:58   >>>> flag1=2
+2011/6/3 1:06:58   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:06:58   11 In receive_line()
+2011/6/3 1:06:58   Received J96D1F008BD49AED8A25366AEFEB3EAD81559043C
+fss-client/build
+1307034412
+163
+2011/6/3 1:06:58   11 IN send_msg sending B
+2011/6/3 1:06:58   11 In status_WAIT_FILE()
+2011/6/3 1:06:58   In reciev_common_file(), relapth --fss-client\build--
+2011/6/3 1:06:58   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\buildand size is 163
+2011/6/3 1:06:58   written to file
+2011/6/3 1:06:58   11 In download_sync()
+2011/6/3 1:06:58   11 IN send_msg sending I72
+2011/6/3 1:06:58   >>>> flag1=2
+2011/6/3 1:06:58   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:06:58   11 In receive_line()
+2011/6/3 1:06:59   Received JF5E2A67090AEFB2C4521055B44F991B3086C9BA9
+fss-client/README
+1307034410
+615
+2011/6/3 1:06:59   11 IN send_msg sending B
+2011/6/3 1:06:59   11 In status_WAIT_FILE()
+2011/6/3 1:06:59   In reciev_common_file(), relapth --fss-client\README--
+2011/6/3 1:06:59   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\READMEand size is 615
+2011/6/3 1:06:59   written to file
+2011/6/3 1:06:59   11 In download_sync()
+2011/6/3 1:06:59   11 IN send_msg sending I73
+2011/6/3 1:06:59   >>>> flag1=2
+2011/6/3 1:06:59   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:06:59   11 In receive_line()
+2011/6/3 1:07:00   Received J72FE678E7ABF3185742A4FBD9312AC64E81E0638
+fss-client/wrap-sha1.h.gch
+1307034406
+1833688
+2011/6/3 1:07:00   11 IN send_msg sending B
+2011/6/3 1:07:00   11 In status_WAIT_FILE()
+2011/6/3 1:07:00   In reciev_common_file(), relapth --fss-client\wrap-sha1.h.gch--
+2011/6/3 1:07:00   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\wrap-sha1.h.gchand size is 1833688
+2011/6/3 1:07:15   written to file
+2011/6/3 1:07:15   11 In download_sync()
+2011/6/3 1:07:15   11 IN send_msg sending I74
+2011/6/3 1:07:15   >>>> flag1=2
+2011/6/3 1:07:15   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:15   11 In receive_line()
+2011/6/3 1:07:15   Received JF6195C27614160EAE63A4FD98346A04AE84E6096
+fss-client/sha1.h.gch
+1307034408
+729344
+2011/6/3 1:07:15   11 IN send_msg sending B
+2011/6/3 1:07:15   11 In status_WAIT_FILE()
+2011/6/3 1:07:15   In reciev_common_file(), relapth --fss-client\sha1.h.gch--
+2011/6/3 1:07:15   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\sha1.h.gchand size is 729344
+2011/6/3 1:07:27   written to file
+2011/6/3 1:07:27   11 In download_sync()
+2011/6/3 1:07:27   11 IN send_msg sending I75
+2011/6/3 1:07:27   >>>> flag1=2
+2011/6/3 1:07:27   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:27   11 In receive_line()
+2011/6/3 1:07:27   Received J2CB4B7DAA5960119DD5F029B450A68DBD8F1285B
+fss-client/log
+1307034405
+5853
+2011/6/3 1:07:27   11 IN send_msg sending B
+2011/6/3 1:07:27   11 In status_WAIT_FILE()
+2011/6/3 1:07:27   In reciev_common_file(), relapth --fss-client\log--
+2011/6/3 1:07:27   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\logand size is 5853
+2011/6/3 1:07:28   written to file
+2011/6/3 1:07:28   11 In download_sync()
+2011/6/3 1:07:28   11 IN send_msg sending I76
+2011/6/3 1:07:28   >>>> flag1=2
+2011/6/3 1:07:28   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:28   11 In receive_line()
+2011/6/3 1:07:29   Received J77F0FB4740C8771145A56FF51A2744CC3305C4EC
+fss-client/sock.c
+1307034409
+1590
+2011/6/3 1:07:29   11 IN send_msg sending B
+2011/6/3 1:07:29   11 In status_WAIT_FILE()
+2011/6/3 1:07:29   In reciev_common_file(), relapth --fss-client\sock.c--
+2011/6/3 1:07:29   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\sock.cand size is 1590
+2011/6/3 1:07:29   written to file
+2011/6/3 1:07:29   11 In download_sync()
+2011/6/3 1:07:29   11 IN send_msg sending I77
+2011/6/3 1:07:29   >>>> flag1=2
+2011/6/3 1:07:29   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:29   11 In receive_line()
+2011/6/3 1:07:29   Received J9DC59415A01EEE107E1A7B31C968245323820F07
+fss-client/params.c
+1307034404
+5041
+2011/6/3 1:07:30   11 IN send_msg sending B
+2011/6/3 1:07:30   11 In status_WAIT_FILE()
+2011/6/3 1:07:30   In reciev_common_file(), relapth --fss-client\params.c--
+2011/6/3 1:07:30   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\params.cand size is 5041
+2011/6/3 1:07:30   written to file
+2011/6/3 1:07:30   11 In download_sync()
+2011/6/3 1:07:30   11 IN send_msg sending I78
+2011/6/3 1:07:30   >>>> flag1=2
+2011/6/3 1:07:30   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:30   11 In receive_line()
+2011/6/3 1:07:31   Received J1CF5567AB4BE4ECC6877D5933B9800EC0801C2BB
+fss-client/protocol.h.gch
+1307034410
+733440
+2011/6/3 1:07:31   11 IN send_msg sending B
+2011/6/3 1:07:31   11 In status_WAIT_FILE()
+2011/6/3 1:07:31   In reciev_common_file(), relapth --fss-client\protocol.h.gch--
+2011/6/3 1:07:31   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\protocol.h.gchand size is 733440
+2011/6/3 1:07:38   written to file
+2011/6/3 1:07:38   11 In download_sync()
+2011/6/3 1:07:38   11 IN send_msg sending I79
+2011/6/3 1:07:38   >>>> flag1=2
+2011/6/3 1:07:38   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:38   11 In receive_line()
+2011/6/3 1:07:38   Received J1ED91F5A5F65D197446855220F57FB6EDFF3796E
+fss-client/params.h.gch
+1307034411
+721152
+2011/6/3 1:07:38   11 IN send_msg sending B
+2011/6/3 1:07:38   11 In status_WAIT_FILE()
+2011/6/3 1:07:38   In reciev_common_file(), relapth --fss-client\params.h.gch--
+2011/6/3 1:07:38   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\params.h.gchand size is 721152
+2011/6/3 1:07:50   written to file
+2011/6/3 1:07:50   11 In download_sync()
+2011/6/3 1:07:50   11 IN send_msg sending I80
+2011/6/3 1:07:50   >>>> flag1=2
+2011/6/3 1:07:50   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:50   11 In receive_line()
+2011/6/3 1:07:50   Received JB13FC3AA51C395D0D513E92DCEE6390837DF195A
+fss-client/license.txt
+1307034412
+702
+2011/6/3 1:07:50   11 IN send_msg sending B
+2011/6/3 1:07:50   11 In status_WAIT_FILE()
+2011/6/3 1:07:50   In reciev_common_file(), relapth --fss-client\license.txt--
+2011/6/3 1:07:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\license.txtand size is 702
+2011/6/3 1:07:51   written to file
+2011/6/3 1:07:51   11 In download_sync()
+2011/6/3 1:07:51   11 IN send_msg sending I81
+2011/6/3 1:07:51   >>>> flag1=2
+2011/6/3 1:07:51   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:51   11 In receive_line()
+2011/6/3 1:07:51   Received J8D25F6399AD6277A7C7869178E9785557B67D4B3
+fss-client/wrap-sha1.h
+1307034414
+1444
+2011/6/3 1:07:51   11 IN send_msg sending B
+2011/6/3 1:07:51   11 In status_WAIT_FILE()
+2011/6/3 1:07:51   In reciev_common_file(), relapth --fss-client\wrap-sha1.h--
+2011/6/3 1:07:51   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\wrap-sha1.hand size is 1444
+2011/6/3 1:07:52   written to file
+2011/6/3 1:07:52   11 In download_sync()
+2011/6/3 1:07:52   11 IN send_msg sending I82
+2011/6/3 1:07:52   >>>> flag1=2
+2011/6/3 1:07:52   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:52   11 In receive_line()
+2011/6/3 1:07:52   Received JD06D098A3EB295313BED9BE0D06AAFFC9891C85C
+fss-client/sha1.h
+1307034412
+1574
+2011/6/3 1:07:52   11 IN send_msg sending B
+2011/6/3 1:07:52   11 In status_WAIT_FILE()
+2011/6/3 1:07:52   In reciev_common_file(), relapth --fss-client\sha1.h--
+2011/6/3 1:07:52   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\sha1.hand size is 1574
+2011/6/3 1:07:52   written to file
+2011/6/3 1:07:52   11 In download_sync()
+2011/6/3 1:07:52   11 IN send_msg sending I83
+2011/6/3 1:07:52   >>>> flag1=2
+2011/6/3 1:07:52   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:52   11 In receive_line()
+2011/6/3 1:07:53   Received J387FE230D3A8A1480AE9DBBD0CB3A20614197BB4
+fss-client/test-diff.c
+1307034410
+367
+2011/6/3 1:07:53   11 IN send_msg sending B
+2011/6/3 1:07:53   11 In status_WAIT_FILE()
+2011/6/3 1:07:53   In reciev_common_file(), relapth --fss-client\test-diff.c--
+2011/6/3 1:07:53   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\test-diff.cand size is 367
+2011/6/3 1:07:53   written to file
+2011/6/3 1:07:53   11 In download_sync()
+2011/6/3 1:07:53   11 IN send_msg sending I84
+2011/6/3 1:07:53   >>>> flag1=2
+2011/6/3 1:07:53   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:53   11 In receive_line()
+2011/6/3 1:07:54   Received J9E6B4DE97E8AA1B82AB3D659791D39B167F7C4EA
+fss-client/rolling.c
+1307034407
+2023
+2011/6/3 1:07:54   11 IN send_msg sending B
+2011/6/3 1:07:54   11 In status_WAIT_FILE()
+2011/6/3 1:07:54   In reciev_common_file(), relapth --fss-client\rolling.c--
+2011/6/3 1:07:54   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\rolling.cand size is 2023
+2011/6/3 1:07:55   written to file
+2011/6/3 1:07:55   11 In download_sync()
+2011/6/3 1:07:55   11 IN send_msg sending I85
+2011/6/3 1:07:55   >>>> flag1=2
+2011/6/3 1:07:55   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:07:55   11 In receive_line()
+2011/6/3 1:07:55   Received J4C51442BB13909BCFD5F0AB123BACC1D1C6C609F
+fss-client/files.h.gch
+1307034406
+1841880
+2011/6/3 1:07:55   11 IN send_msg sending B
+2011/6/3 1:07:55   11 In status_WAIT_FILE()
+2011/6/3 1:07:55   In reciev_common_file(), relapth --fss-client\files.h.gch--
+2011/6/3 1:07:55   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\files.h.gchand size is 1841880
+2011/6/3 1:08:45   written to file
+2011/6/3 1:08:45   11 In download_sync()
+2011/6/3 1:08:45   11 IN send_msg sending I86
+2011/6/3 1:08:45   >>>> flag1=2
+2011/6/3 1:08:45   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:08:45   11 In receive_line()
+2011/6/3 1:08:46   Received J0FC3FD2290ED16BD1E0C9E719A7C365F4829557D
+fss-client/rolling.h
+1307034413
+958
+2011/6/3 1:08:46   11 IN send_msg sending B
+2011/6/3 1:08:46   11 In status_WAIT_FILE()
+2011/6/3 1:08:46   In reciev_common_file(), relapth --fss-client\rolling.h--
+2011/6/3 1:08:46   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\rolling.hand size is 958
+2011/6/3 1:08:46   written to file
+2011/6/3 1:08:46   11 In download_sync()
+2011/6/3 1:08:46   11 IN send_msg sending I87
+2011/6/3 1:08:46   >>>> flag1=2
+2011/6/3 1:08:46   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:08:46   11 In receive_line()
+2011/6/3 1:08:47   Received JBA47E7A55F80FEA3A6B885122B7EE913BBD4955C
+fss-client/fss.h
+1307034403
+1545
+2011/6/3 1:08:47   11 IN send_msg sending B
+2011/6/3 1:08:47   11 In status_WAIT_FILE()
+2011/6/3 1:08:47   In reciev_common_file(), relapth --fss-client\fss.h--
+2011/6/3 1:08:47   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\fss.hand size is 1545
+2011/6/3 1:08:47   written to file
+2011/6/3 1:08:47   11 In download_sync()
+2011/6/3 1:08:47   11 IN send_msg sending I88
+2011/6/3 1:08:47   >>>> flag1=2
+2011/6/3 1:08:47   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:08:47   11 In receive_line()
+2011/6/3 1:08:48   Received JCFCD9549630713C6BEE016920C1821B5CE9792FD
+fss-client/params.h
+1307034403
+921
+2011/6/3 1:08:48   11 IN send_msg sending B
+2011/6/3 1:08:48   11 In status_WAIT_FILE()
+2011/6/3 1:08:48   In reciev_common_file(), relapth --fss-client\params.h--
+2011/6/3 1:08:48   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\params.hand size is 921
+2011/6/3 1:08:48   written to file
+2011/6/3 1:08:48   11 In download_sync()
+2011/6/3 1:08:48   11 IN send_msg sending I89
+2011/6/3 1:08:48   >>>> flag1=2
+2011/6/3 1:08:48   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:08:48   11 In receive_line()
+2011/6/3 1:08:48   Received J8BE45BDE28D99D70F87C371441B4A1AB11147F97
+fss-client/fss.conf
+1307034409
+472
+2011/6/3 1:08:48   11 IN send_msg sending B
+2011/6/3 1:08:48   11 In status_WAIT_FILE()
+2011/6/3 1:08:48   In reciev_common_file(), relapth --fss-client\fss.conf--
+2011/6/3 1:08:48   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\fss.confand size is 472
+2011/6/3 1:08:49   written to file
+2011/6/3 1:08:49   11 In download_sync()
+2011/6/3 1:08:49   11 IN send_msg sending I90
+2011/6/3 1:08:49   >>>> flag1=2
+2011/6/3 1:08:49   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:08:49   11 In receive_line()
+2011/6/3 1:08:49   Received JD2CE716F8531656D605037AC72776E0B1AE37AD6
+fss-client/diff.h
+1307034405
+1283
+2011/6/3 1:08:49   11 IN send_msg sending B
+2011/6/3 1:08:49   11 In status_WAIT_FILE()
+2011/6/3 1:08:49   In reciev_common_file(), relapth --fss-client\diff.h--
+2011/6/3 1:08:49   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\diff.hand size is 1283
+2011/6/3 1:08:50   written to file
+2011/6/3 1:08:50   11 In download_sync()
+2011/6/3 1:08:50   11 IN send_msg sending I91
+2011/6/3 1:08:50   >>>> flag1=2
+2011/6/3 1:08:50   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:08:50   11 In receive_line()
+2011/6/3 1:08:50   Received JC58E5B9DF9677E318E030802CACFB7DA338936F7
+fss-client/fss.h.gch
+1307034413
+1829564
+2011/6/3 1:08:50   11 IN send_msg sending B
+2011/6/3 1:08:50   11 In status_WAIT_FILE()
+2011/6/3 1:08:50   In reciev_common_file(), relapth --fss-client\fss.h.gch--
+2011/6/3 1:08:50   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\fss.h.gchand size is 1829564
+2011/6/3 1:09:44   System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Net.UnsafeNclNativeMethods.OSSOCK.recv(IntPtr socketHandle, Byte* pinnedBuffer, Int32 len, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, SocketError& errorCode)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 fss_client.Net.receive_file(String path, Int64 size) 位置 Z:\fss-client\fss-client\Net.cs:行号 122
+   在 fss_client.Files.receive_common_file(String relapath, Int64 size) 位置 Z:\fss-client\fss-client\Files.cs:行号 76
+   在 fss_client.Protocol.status_WAIT_FILE() 位置 Z:\fss-client\fss-client\Protocol.cs:行号 446
+2011/6/3 1:21:58   10 Connected to 204.74.216.120
+2011/6/3 1:22:01   11 In status_WAIT_HASH_FSS_INFO
+2011/6/3 1:22:01   11 In receive_line()
+2011/6/3 1:22:01   Received H61C5AE8BEE70328BC184CA9DF8232DD6AF25B58F
+.fss/hash.fss
+1307034415
+4469
+2011/6/3 1:22:01   11 Received line H61C5AE8BEE70328BC184CA9DF8232DD6AF25B58F
+.fss/hash.fss
+1307034415
+4469
+2011/6/3 1:22:01   11 IN send_msg sending A
+2011/6/3 1:22:01   11 IN status_WAIT_HASH_FSS
+2011/6/3 1:22:01   11 In recieve_hash_fss of Files.cs
+2011/6/3 1:22:01   11 In receive_file of Files.cs
+2011/6/3 1:22:01   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 4469
+2011/6/3 1:22:02   written to file
+2011/6/3 1:22:03   11 In analyse_hash()
+2011/6/3 1:22:03   mtime is: 1307034415
+2011/6/3 1:22:03   hash_fss_mtime(): 1307035320
+2011/6/3 1:22:03    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\fss-client\fss.h.gch--
+2011/6/3 1:22:03   root is --C:\Users\test\Desktop\FSS-- 25
+2011/6/3 1:22:03   relapath is --\fss-client\fss.h.gch--
+2011/6/3 1:22:03   11 IN send_msg sending J4500781D3CE22D835C99C626976B8FD1BD4137D7
+fss-client/fss.h.gch
+1307034584
+925696
+2011/6/3 1:22:03   >>>> flag0=2
+2011/6/3 1:22:03   11 analyse_hash()-ed
+2011/6/3 1:22:03   11 In status_ENTRY_INFO_SENT
+2011/6/3 1:22:03   11 In receive_line()
+2011/6/3 1:22:04   Received D
+2011/6/3 1:22:04   In send_file, sending C:\Users\test\Desktop\FSS\fss-client\fss.h.gch 925696
+2011/6/3 1:23:52   11 In status_WAIT_MSG_SER_RECEVIED()
+2011/6/3 1:23:52   11 In receive_line()
+2011/6/3 1:23:54   Received F
+2011/6/3 1:23:54   11 In wait_msg_ser_received()
+2011/6/3 1:23:54   11 IN send_msg sending M
+2011/6/3 1:23:54   >>>> flag0=8
+2011/6/3 1:23:54   11 In status_WAIT_HASH_FSS_INFO
+2011/6/3 1:23:54   11 In receive_line()
+2011/6/3 1:24:00   Received H7A0CBB96CBF07DA61E6363986BD8CD5C547B46D8
+.fss/hash.fss
+1
+4469
+2011/6/3 1:24:00   11 Received line H7A0CBB96CBF07DA61E6363986BD8CD5C547B46D8
+.fss/hash.fss
+1
+4469
+2011/6/3 1:24:00   11 IN send_msg sending A
+2011/6/3 1:24:00   11 IN status_WAIT_HASH_FSS
+2011/6/3 1:24:00   11 In recieve_hash_fss of Files.cs
+2011/6/3 1:24:00   11 In receive_file of Files.cs
+2011/6/3 1:24:00   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 4469
+2011/6/3 1:24:01   written to file
+2011/6/3 1:24:03   11 In analyse_hash()
+2011/6/3 1:24:03   mtime is: 1
+2011/6/3 1:24:03   hash_fss_mtime(): 1307035320
+2011/6/3 1:24:03    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
+2011/6/3 1:24:03   root is --C:\Users\test\Desktop\FSS-- 25
+2011/6/3 1:24:03   relapath is --\.fss\diff.remote.index--
+2011/6/3 1:24:03   11 IN send_msg sending K40B4AAA0664D51F2C55D780CD0ACEF736205B320
+.fss/diff.remote.index
+1307035443
+63
+2011/6/3 1:24:03   >>>> flag1=2
+2011/6/3 1:24:03   11 analyse_hash()-ed
+2011/6/3 1:24:03   11 In status_WIAT_MSG_SER_REQ_DEL_IDX
+2011/6/3 1:24:03   11 In receive_line()
+2011/6/3 1:24:03   Received E
+2011/6/3 1:24:03   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 63
+2011/6/3 1:24:03   11 In status_WAIT_HASH_FSS_INFO
+2011/6/3 1:24:03   11 In receive_line()
+2011/6/3 1:24:04   Received HD1865B448E42D296310298DBB07B591CA00BDE16
+.fss/hash.fss
+1
+3731
+2011/6/3 1:24:04   11 Received line HD1865B448E42D296310298DBB07B591CA00BDE16
+.fss/hash.fss
+1
+3731
+2011/6/3 1:24:04   11 IN send_msg sending A
+2011/6/3 1:24:04   11 IN status_WAIT_HASH_FSS
+2011/6/3 1:24:04   11 In recieve_hash_fss of Files.cs
+2011/6/3 1:24:04   11 In receive_file of Files.cs
+2011/6/3 1:24:04   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 3731
+2011/6/3 1:24:04   written to file
+2011/6/3 1:24:05   11 In analyse_hash()
+2011/6/3 1:24:06   mtime is: 1
+2011/6/3 1:24:06   hash_fss_mtime(): 1307035320
+2011/6/3 1:24:06   11 IN send_msg sending L
+2011/6/3 1:24:06   11 analyse_hash()-ed
+2011/6/3 1:24:06   11 In status_XXX
+2011/6/3 1:24:06   11 In receive_line()
+2011/6/3 1:24:27   3 C:\Users\test\Desktop\FSS\fss-client Deleted detected and passed.
+2011/6/3 1:24:29   updated and genearted
+2011/6/3 1:24:29    in get_relapath, fullpath is --C:\Users\test\Desktop\FSS\.fss\diff.remote.index--
+2011/6/3 1:24:29   root is --C:\Users\test\Desktop\FSS-- 25
+2011/6/3 1:24:29   relapath is --\.fss\diff.remote.index--
+2011/6/3 1:24:29   3 IN send_msg sending K4BBA36F1E36DD284F9B934F2BE4BF334EC7D6B16
+.fss/diff.remote.index
+1307035469
+66
+2011/6/3 1:24:29   Received E
+2011/6/3 1:24:29   11 Received line E
+2011/6/3 1:24:29   In send_file, sending C:\Users\test\Desktop\FSS\.fss\diff.remote.index 66
+2011/6/3 1:24:29   11 In status_WAIT_HASH_FSS_INFO
+2011/6/3 1:24:29   11 In receive_line()
+2011/6/3 1:24:30   Received H7A51922CA2C9D35F933A15BD924FFB8E98FBD81D
+.fss/hash.fss
+1
+2829
+2011/6/3 1:24:30   11 Received line H7A51922CA2C9D35F933A15BD924FFB8E98FBD81D
+.fss/hash.fss
+1
+2829
+2011/6/3 1:24:30   11 IN send_msg sending A
+2011/6/3 1:24:30   11 IN status_WAIT_HASH_FSS
+2011/6/3 1:24:30   11 In recieve_hash_fss of Files.cs
+2011/6/3 1:24:30   11 In receive_file of Files.cs
+2011/6/3 1:24:30   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 2829
+2011/6/3 1:24:30   written to file
+2011/6/3 1:24:31   11 In analyse_hash()
+2011/6/3 1:24:31   mtime is: 1
+2011/6/3 1:24:31   hash_fss_mtime(): 1307035469
+2011/6/3 1:24:31   11 IN send_msg sending L
+2011/6/3 1:24:31   11 analyse_hash()-ed
+2011/6/3 1:24:31   11 In status_XXX
+2011/6/3 1:24:31   11 In receive_line()
+2011/6/3 1:24:57   Received H61C5AE8BEE70328BC184CA9DF8232DD6AF25B58F
+.fss/hash.fss
+1307035497
+4469
+2011/6/3 1:24:57   11 Received line H61C5AE8BEE70328BC184CA9DF8232DD6AF25B58F
+.fss/hash.fss
+1307035497
+4469
+2011/6/3 1:24:57   11 IN send_msg sending A
+2011/6/3 1:24:57   11 IN status_WAIT_HASH_FSS
+2011/6/3 1:24:57   11 In recieve_hash_fss of Files.cs
+2011/6/3 1:24:57   11 In receive_file of Files.cs
+2011/6/3 1:24:57   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 4469
+2011/6/3 1:24:58   written to file
+2011/6/3 1:24:59   11 In analyse_hash()
+2011/6/3 1:25:00   mtime is: 1307035497
+2011/6/3 1:25:00   hash_fss_mtime(): 1307035469
+2011/6/3 1:25:00   11 IN send_msg sending I70
+2011/6/3 1:25:00   11 analyse_hash()-ed
+2011/6/3 1:25:00   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:00   11 In receive_line()
+2011/6/3 1:25:00   Received J9085CA63CC5218103F81CAF298AE878C6B174F7C
+fss-client/wrap-sha1.c
+1307035485
+8985
+2011/6/3 1:25:00   @reuse_file, System.IO.DirectoryNotFoundException: 未能找到路径“C:\Users\test\Desktop\FSS\fss-client\wrap-sha1.c”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   在 fss_client.Files.reuse_file(String sha1_str, String rela_fname) 位置 Z:\fss-client\fss-client\Files.cs:行号 353
+2011/6/3 1:25:00   11 IN send_msg sending B
+2011/6/3 1:25:00   11 In status_WAIT_FILE()
+2011/6/3 1:25:00   In reciev_common_file(), relapth --fss-client\wrap-sha1.c--
+2011/6/3 1:25:00   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\fss-client\wrap-sha1.cand size is 8985
+2011/6/3 1:25:01   written to file
+2011/6/3 1:25:02   11 In download_sync()
+2011/6/3 1:25:02   11 IN send_msg sending I71
+2011/6/3 1:25:02   >>>> flag1=2
+2011/6/3 1:25:02   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:02   11 In receive_line()
+2011/6/3 1:25:03   Received J96D1F008BD49AED8A25366AEFEB3EAD81559043C
+fss-client/build
+1307035495
+163
+2011/6/3 1:25:03   11 In download_sync()
+2011/6/3 1:25:03   11 IN send_msg sending I72
+2011/6/3 1:25:03   >>>> flag1=2
+2011/6/3 1:25:03   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:03   11 In receive_line()
+2011/6/3 1:25:03   Received JF5E2A67090AEFB2C4521055B44F991B3086C9BA9
+fss-client/README
+1307035493
+615
+2011/6/3 1:25:03   11 In download_sync()
+2011/6/3 1:25:03   11 IN send_msg sending I73
+2011/6/3 1:25:03   >>>> flag1=2
+2011/6/3 1:25:03   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:03   11 In receive_line()
+2011/6/3 1:25:04   Received J72FE678E7ABF3185742A4FBD9312AC64E81E0638
+fss-client/wrap-sha1.h.gch
+1307035488
+1833688
+2011/6/3 1:25:04   11 In download_sync()
+2011/6/3 1:25:04   11 IN send_msg sending I74
+2011/6/3 1:25:04   >>>> flag1=2
+2011/6/3 1:25:04   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:04   11 In receive_line()
+2011/6/3 1:25:05   Received JF6195C27614160EAE63A4FD98346A04AE84E6096
+fss-client/sha1.h.gch
+1307035490
+729344
+2011/6/3 1:25:05   11 In download_sync()
+2011/6/3 1:25:05   11 IN send_msg sending I75
+2011/6/3 1:25:05   >>>> flag1=2
+2011/6/3 1:25:05   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:05   11 In receive_line()
+2011/6/3 1:25:05   Received J2CB4B7DAA5960119DD5F029B450A68DBD8F1285B
+fss-client/log
+1307035487
+5853
+2011/6/3 1:25:05   11 In download_sync()
+2011/6/3 1:25:05   11 IN send_msg sending I76
+2011/6/3 1:25:05   >>>> flag1=2
+2011/6/3 1:25:05   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:05   11 In receive_line()
+2011/6/3 1:25:06   Received J77F0FB4740C8771145A56FF51A2744CC3305C4EC
+fss-client/sock.c
+1307035491
+1590
+2011/6/3 1:25:06   11 In download_sync()
+2011/6/3 1:25:06   11 IN send_msg sending I77
+2011/6/3 1:25:06   >>>> flag1=2
+2011/6/3 1:25:06   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:06   11 In receive_line()
+2011/6/3 1:25:06   Received J9DC59415A01EEE107E1A7B31C968245323820F07
+fss-client/params.c
+1307035487
+5041
+2011/6/3 1:25:06   11 In download_sync()
+2011/6/3 1:25:06   11 IN send_msg sending I78
+2011/6/3 1:25:06   >>>> flag1=2
+2011/6/3 1:25:06   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:06   11 In receive_line()
+2011/6/3 1:25:07   Received J1CF5567AB4BE4ECC6877D5933B9800EC0801C2BB
+fss-client/protocol.h.gch
+1307035492
+733440
+2011/6/3 1:25:07   11 In download_sync()
+2011/6/3 1:25:07   11 IN send_msg sending I79
+2011/6/3 1:25:07   >>>> flag1=2
+2011/6/3 1:25:07   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:07   11 In receive_line()
+2011/6/3 1:25:07   Received J1ED91F5A5F65D197446855220F57FB6EDFF3796E
+fss-client/params.h.gch
+1307035494
+721152
+2011/6/3 1:25:07   11 In download_sync()
+2011/6/3 1:25:07   11 IN send_msg sending I80
+2011/6/3 1:25:07   >>>> flag1=2
+2011/6/3 1:25:07   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:07   11 In receive_line()
+2011/6/3 1:25:08   Received JB13FC3AA51C395D0D513E92DCEE6390837DF195A
+fss-client/license.txt
+1307035494
+702
+2011/6/3 1:25:08   11 In download_sync()
+2011/6/3 1:25:08   11 IN send_msg sending I81
+2011/6/3 1:25:09   >>>> flag1=2
+2011/6/3 1:25:09   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:09   11 In receive_line()
+2011/6/3 1:25:11   Received J8D25F6399AD6277A7C7869178E9785557B67D4B3
+fss-client/wrap-sha1.h
+1307035496
+1444
+2011/6/3 1:25:11   11 In download_sync()
+2011/6/3 1:25:11   11 IN send_msg sending I82
+2011/6/3 1:25:11   >>>> flag1=2
+2011/6/3 1:25:11   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:11   11 In receive_line()
+2011/6/3 1:25:11   Received JD06D098A3EB295313BED9BE0D06AAFFC9891C85C
+fss-client/sha1.h
+1307035495
+1574
+2011/6/3 1:25:11   11 In download_sync()
+2011/6/3 1:25:11   11 IN send_msg sending I83
+2011/6/3 1:25:11   >>>> flag1=2
+2011/6/3 1:25:11   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:12   11 In receive_line()
+2011/6/3 1:25:12   Received J387FE230D3A8A1480AE9DBBD0CB3A20614197BB4
+fss-client/test-diff.c
+1307035493
+367
+2011/6/3 1:25:12   11 In download_sync()
+2011/6/3 1:25:12   11 IN send_msg sending I84
+2011/6/3 1:25:12   >>>> flag1=2
+2011/6/3 1:25:12   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:12   11 In receive_line()
+2011/6/3 1:25:13   Received J9E6B4DE97E8AA1B82AB3D659791D39B167F7C4EA
+fss-client/rolling.c
+1307035490
+2023
+2011/6/3 1:25:13   11 In download_sync()
+2011/6/3 1:25:13   11 IN send_msg sending I85
+2011/6/3 1:25:13   >>>> flag1=2
+2011/6/3 1:25:13   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:13   11 In receive_line()
+2011/6/3 1:25:14   Received J4C51442BB13909BCFD5F0AB123BACC1D1C6C609F
+fss-client/files.h.gch
+1307035488
+1841880
+2011/6/3 1:25:14   11 In download_sync()
+2011/6/3 1:25:14   11 IN send_msg sending I86
+2011/6/3 1:25:14   >>>> flag1=2
+2011/6/3 1:25:14   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:14   11 In receive_line()
+2011/6/3 1:25:14   Received J0FC3FD2290ED16BD1E0C9E719A7C365F4829557D
+fss-client/rolling.h
+1307035496
+958
+2011/6/3 1:25:15   11 In download_sync()
+2011/6/3 1:25:15   11 IN send_msg sending I87
+2011/6/3 1:25:15   >>>> flag1=2
+2011/6/3 1:25:15   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:15   11 In receive_line()
+2011/6/3 1:25:15   Received JBA47E7A55F80FEA3A6B885122B7EE913BBD4955C
+fss-client/fss.h
+1307035485
+1545
+2011/6/3 1:25:15   11 In download_sync()
+2011/6/3 1:25:15   11 IN send_msg sending I88
+2011/6/3 1:25:15   >>>> flag1=2
+2011/6/3 1:25:15   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:15   11 In receive_line()
+2011/6/3 1:25:15   Received JCFCD9549630713C6BEE016920C1821B5CE9792FD
+fss-client/params.h
+1307035486
+921
+2011/6/3 1:25:16   11 In download_sync()
+2011/6/3 1:25:16   11 IN send_msg sending I89
+2011/6/3 1:25:16   >>>> flag1=2
+2011/6/3 1:25:16   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:16   11 In receive_line()
+2011/6/3 1:25:16   Received J8BE45BDE28D99D70F87C371441B4A1AB11147F97
+fss-client/fss.conf
+1307035492
+472
+2011/6/3 1:25:16   11 In download_sync()
+2011/6/3 1:25:16   11 IN send_msg sending I90
+2011/6/3 1:25:16   >>>> flag1=2
+2011/6/3 1:25:16   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:16   11 In receive_line()
+2011/6/3 1:25:16   Received JD2CE716F8531656D605037AC72776E0B1AE37AD6
+fss-client/diff.h
+1307035488
+1283
+2011/6/3 1:25:16   11 In download_sync()
+2011/6/3 1:25:17   11 IN send_msg sending I91
+2011/6/3 1:25:17   >>>> flag1=2
+2011/6/3 1:25:17   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:17   11 In receive_line()
+2011/6/3 1:25:17   Received JC58E5B9DF9677E318E030802CACFB7DA338936F7
+fss-client/fss.h.gch
+1307035495
+1829564
+2011/6/3 1:25:18   11 In download_sync()
+2011/6/3 1:25:18   11 IN send_msg sending I92
+2011/6/3 1:25:18   >>>> flag1=2
+2011/6/3 1:25:18   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:18   11 In receive_line()
+2011/6/3 1:25:18   Received J095032438CA049DFB7126BBF291982D8478731BB
+fss-client/exe
+1307035490
+18
+2011/6/3 1:25:18   11 In download_sync()
+2011/6/3 1:25:18   11 IN send_msg sending I93
+2011/6/3 1:25:18   >>>> flag1=2
+2011/6/3 1:25:18   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:18   11 In receive_line()
+2011/6/3 1:25:18   Received JF2C133058960FA11695CFA3B8463542FB67357BC
+fss-client/files.c
+1307035490
+30913
+2011/6/3 1:25:18   11 In download_sync()
+2011/6/3 1:25:18   11 IN send_msg sending I94
+2011/6/3 1:25:18   >>>> flag1=2
+2011/6/3 1:25:18   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:19   11 In receive_line()
+2011/6/3 1:25:19   Received JD9A7ECE8D3339B7236064FE8ACA7240BCD635112
+fss-client/sock.h.gch
+1307035485
+721152
+2011/6/3 1:25:19   11 In download_sync()
+2011/6/3 1:25:19   11 IN send_msg sending I95
+2011/6/3 1:25:19   >>>> flag1=2
+2011/6/3 1:25:19   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:19   11 In receive_line()
+2011/6/3 1:25:19   Received JFF64EB931C030F21D6EDC52F3A7A63D484E4DD9D
+fss-client/diff.h.gch
+1307035489
+721152
+2011/6/3 1:25:20   11 In download_sync()
+2011/6/3 1:25:20   11 IN send_msg sending I96
+2011/6/3 1:25:20   >>>> flag1=2
+2011/6/3 1:25:20   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:20   11 In receive_line()
+2011/6/3 1:25:20   Received J052593A1673398CF4056396CA5155DC6DAB42936
+fss-client/test-sha1.c
+1307035487
+667
+2011/6/3 1:25:20   11 In download_sync()
+2011/6/3 1:25:20   11 IN send_msg sending I97
+2011/6/3 1:25:20   >>>> flag1=2
+2011/6/3 1:25:20   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:20   11 In receive_line()
+2011/6/3 1:25:21   Received J10C2A2A2E156AFB49204C51102BD1E56B2E8BFDD
+fss-client/wrap-inotify.h
+1307035486
+1290
+2011/6/3 1:25:21   11 In download_sync()
+2011/6/3 1:25:21   11 IN send_msg sending I98
+2011/6/3 1:25:21   >>>> flag1=2
+2011/6/3 1:25:21   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:21   11 In receive_line()
+2011/6/3 1:25:21   Received JB8322E04499AB0B09F84EFBB23EFD651C34618DC
+fss-client/diff.c
+1307035493
+7263
+2011/6/3 1:25:21   11 In download_sync()
+2011/6/3 1:25:21   11 IN send_msg sending I99
+2011/6/3 1:25:21   >>>> flag1=2
+2011/6/3 1:25:21   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:21   11 In receive_line()
+2011/6/3 1:25:22   Received JE770CCCE6468AA1876F3CF3440C9CA00E9E42175
+fss-client/wrap-inotify.c
+1307035491
+13857
+2011/6/3 1:25:22   11 In download_sync()
+2011/6/3 1:25:22   11 IN send_msg sending I100
+2011/6/3 1:25:22   >>>> flag1=2
+2011/6/3 1:25:22   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:22   11 In receive_line()
+2011/6/3 1:25:23   Received JC3C3EB3B9CC2B076DD1898C1E0C9C2224EAB0E74
+fss-client/main.c
+1307035489
+2150
+2011/6/3 1:25:23   11 In download_sync()
+2011/6/3 1:25:23   11 IN send_msg sending I101
+2011/6/3 1:25:23   >>>> flag1=2
+2011/6/3 1:25:23   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:23   11 In receive_line()
+2011/6/3 1:25:24   Received J3662D37AD8390088583EFBCF05CDB7EAC9EC9A61
+fss-client/a.out
+1307035485
+97880
+2011/6/3 1:25:24   11 In download_sync()
+2011/6/3 1:25:24   11 IN send_msg sending I102
+2011/6/3 1:25:24   >>>> flag1=2
+2011/6/3 1:25:24   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:24   11 In receive_line()
+2011/6/3 1:25:24   Received J85DB87880E298028991D327630F8D7B4AE018A84
+fss-client/sha1.c
+1307035492
+10382
+2011/6/3 1:25:24   11 In download_sync()
+2011/6/3 1:25:24   11 IN send_msg sending I103
+2011/6/3 1:25:24   >>>> flag1=2
+2011/6/3 1:25:24   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:24   11 In receive_line()
+2011/6/3 1:25:25   Received J2BE4DE9D62A90F49EDE3E50CDE3D4958D76D4076
+fss-client/test-rolling.c
+1307035491
+161
+2011/6/3 1:25:25   11 In download_sync()
+2011/6/3 1:25:25   11 IN send_msg sending I104
+2011/6/3 1:25:25   >>>> flag1=2
+2011/6/3 1:25:25   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:25   11 In receive_line()
+2011/6/3 1:25:25   Received J2CE0FE153F6F14FBDCDBA30829C5A38C50195DE8
+fss-client/protocol.h
+1307035486
+1620
+2011/6/3 1:25:26   11 In download_sync()
+2011/6/3 1:25:26   11 IN send_msg sending I105
+2011/6/3 1:25:26   >>>> flag1=2
+2011/6/3 1:25:26   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:26   11 In receive_line()
+2011/6/3 1:25:26   Received J3D803008D3096B9E03EFA96841AF91147D10326A
+fss-client/sock.h
+1307035487
+926
+2011/6/3 1:25:26   11 In download_sync()
+2011/6/3 1:25:26   11 IN send_msg sending I106
+2011/6/3 1:25:26   >>>> flag1=2
+2011/6/3 1:25:26   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:26   11 In receive_line()
+2011/6/3 1:25:27   Received J62A3F5F35E769C20B7491F5FCD51887A0AB3F06B
+fss-client/files.h
+1307035494
+3032
+2011/6/3 1:25:27   11 In download_sync()
+2011/6/3 1:25:27   11 IN send_msg sending I107
+2011/6/3 1:25:27   >>>> flag1=2
+2011/6/3 1:25:27   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:27   11 In receive_line()
+2011/6/3 1:25:28   Received J3DDFDA1917F12E776A5CD1EB3921D16BF4B35657
+fss-client/protocol.c
+1307035489
+21454
+2011/6/3 1:25:28   11 In download_sync()
+2011/6/3 1:25:28   11 IN send_msg sending I108
+2011/6/3 1:25:28   >>>> flag1=2
+2011/6/3 1:25:28   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:28   11 In receive_line()
+2011/6/3 1:25:28   Received J1DE7BACB4FBBD7B6D391A69ABFE174C2509EC303
+fss-client/COPYING
+1307035493
+35146
+2011/6/3 1:25:28   11 In download_sync()
+2011/6/3 1:25:28   11 IN send_msg sending I109
+2011/6/3 1:25:28   >>>> flag1=2
+2011/6/3 1:25:28   11 In status_WAIT_ENTRY_INFO
+2011/6/3 1:25:28   11 In receive_line()
+2011/6/3 1:25:29   Received NDA39A3EE5E6B4B0D3255BFEF95601890AFD80709
+fss-client
+1307035496
+4096
+2011/6/3 1:25:29   11 In download_sync()
+2011/6/3 1:25:29   11 IN send_msg sending G
+2011/6/3 1:25:29   >>>> flag1=4
+2011/6/3 1:25:32   lock unset
+2011/6/3 1:25:32   11 In status_XXX
+2011/6/3 1:25:32   11 In receive_line()
+2011/6/3 1:26:29   Received H11ED9F5022266BAF59366288DAC59A2A4A044A2F
+.fss/hash.fss
+1307035589
+4346
+2011/6/3 1:26:29   11 Received line H11ED9F5022266BAF59366288DAC59A2A4A044A2F
+.fss/hash.fss
+1307035589
+4346
+2011/6/3 1:26:29   11 IN send_msg sending A
+2011/6/3 1:26:29   11 IN status_WAIT_HASH_FSS
+2011/6/3 1:26:29   11 In recieve_hash_fss of Files.cs
+2011/6/3 1:26:29   11 In receive_file of Files.cs
+2011/6/3 1:26:29   In receive_file() of Net.cs, path is C:\Users\test\Desktop\FSS\.fss\remote.hash.fssand size is 4346
+2011/6/3 1:26:30   written to file
+2011/6/3 1:26:31   11 In analyse_hash()
+2011/6/3 1:26:31   mtime is: 1307035589
+2011/6/3 1:26:31   hash_fss_mtime(): 1307035532
+2011/6/3 1:26:33   11 IN send_msg sending G
+2011/6/3 1:26:33   11 analyse_hash()-ed
+2011/6/3 1:26:33   11 In status_XXX
+2011/6/3 1:26:33   11 In receive_line()
