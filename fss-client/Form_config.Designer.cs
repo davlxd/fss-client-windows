@@ -41,6 +41,7 @@
             this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label_ = new System.Windows.Forms.Label();
             this.contextMenuStrip_tray.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             // 
             // button_ok
             // 
-            this.button_ok.Location = new System.Drawing.Point(229, 99);
+            this.button_ok.Location = new System.Drawing.Point(231, 170);
             this.button_ok.Name = "button_ok";
             this.button_ok.Size = new System.Drawing.Size(75, 23);
             this.button_ok.TabIndex = 4;
@@ -91,7 +92,7 @@
             // 
             // button_cancel
             // 
-            this.button_cancel.Location = new System.Drawing.Point(323, 99);
+            this.button_cancel.Location = new System.Drawing.Point(325, 170);
             this.button_cancel.Name = "button_cancel";
             this.button_cancel.Size = new System.Drawing.Size(75, 23);
             this.button_cancel.TabIndex = 5;
@@ -120,30 +121,40 @@
             // preferencesToolStripMenuItem
             // 
             this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.preferencesToolStripMenuItem.Text = "Preferences";
             this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.preferencesToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(141, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // label_
+            // 
+            this.label_.AutoSize = true;
+            this.label_.Location = new System.Drawing.Point(76, 95);
+            this.label_.Name = "label_";
+            this.label_.Size = new System.Drawing.Size(41, 12);
+            this.label_.TabIndex = 6;
+            this.label_.Text = "label1";
             // 
             // Form_config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 134);
+            this.ClientSize = new System.Drawing.Size(434, 219);
+            this.Controls.Add(this.label_);
             this.Controls.Add(this.button_cancel);
-            this.Controls.Add(this.button_ok);
             this.Controls.Add(this.textBox_path);
+            this.Controls.Add(this.button_ok);
             this.Controls.Add(this.textBox_server);
             this.Controls.Add(this.label_path);
             this.Controls.Add(this.label_sever);
@@ -170,6 +181,7 @@
         private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.Label label_;
     }
 }
 
